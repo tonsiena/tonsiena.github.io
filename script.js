@@ -1,1 +1,102 @@
-const _0x589658=_0x2681;(function(_0xce67df,_0x1e1150){const _0x44d76a=_0x2681,_0x31227c=_0xce67df();while(!![]){try{const _0x36e4e7=parseInt(_0x44d76a(0x197))/0x1*(parseInt(_0x44d76a(0x18a))/0x2)+parseInt(_0x44d76a(0x17e))/0x3+-parseInt(_0x44d76a(0x15d))/0x4*(parseInt(_0x44d76a(0x167))/0x5)+-parseInt(_0x44d76a(0x165))/0x6*(parseInt(_0x44d76a(0x18b))/0x7)+-parseInt(_0x44d76a(0x16b))/0x8*(parseInt(_0x44d76a(0x195))/0x9)+-parseInt(_0x44d76a(0x17d))/0xa+parseInt(_0x44d76a(0x163))/0xb;if(_0x36e4e7===_0x1e1150)break;else _0x31227c['push'](_0x31227c['shift']());}catch(_0x57d99d){_0x31227c['push'](_0x31227c['shift']());}}}(_0xed59,0x40e93));import{e3,q5,cfetch}from'./utils.js';const tonConnectUI=new TON_CONNECT_UI['TonConnectUI']({'manifestUrl':_0x589658(0x168),'buttonRootId':_0x589658(0x177)}),WebApp=window[_0x589658(0x190)]['WebApp'];function _0xed59(){const _0x2186b0=['Copied!','#parser-list','style','toast','ton-connect','createElement','Address','href','Testnet\x20Non-Bounceable','isFullscreen','4499080lltGXY','1038168Jwxahu','10px\x2020px','body','https://tonapi.io/v2/accounts/','Telegram\x20usernames','5px','location','Mainnet\x20Bounceable','append','requestFullscreen','assign','</span>','19224ENgFtT','329cXoYEs','#fff','Name','/collections.html?collection=ggusernames&address=','address','Telegram','forEach','break-all','innerHTML','clipboard','455013EMfuCR','account','44yphuWA','Is\x20wallet','appendChild','Last\x20activity','Mainnet\x20Non-Bounceable','log','div','opacity','toString','732NuveZd','300px','onclick','1000','textContent','<span\x20class=\x27key\x27>','13135243XeJPTk','.list','61986KOtsdr','remove','12525JSuBwu','https://tonsiena.github.io/tonconnect-manifest.json','/collections.html?collection=usernames&address=','opacity\x200.3s','48pQlshw','fd-c','Telegram\x20anonymous\x20numbers','</span><span\x20class=\x27value\x27>','Testnet\x20Bounceable','Is\x20scam','className','toFixed'];_0xed59=function(){return _0x2186b0;};return _0xed59();}WebApp['ready'](),console[_0x589658(0x19c)](WebApp['initData']);WebApp[_0x589658(0x17c)]&&WebApp[_0x589658(0x187)]();tonConnectUI['onStatusChange'](async _0x3d5bc1=>{const _0x359e0c=_0x589658,_0xf6f5f3=q5(_0x359e0c(0x164)),_0x271087=q5('#address-list');if(_0x3d5bc1){const {address:_0x26e0ab,balance:_0x373a96,name:_0x21ddeb,status:_0x18678e,is_scam:_0x1ee2f4,is_wallet:_0x5c352f,last_activity:_0x1623ef}=await fetchAccount(_0x3d5bc1[_0x359e0c(0x196)][_0x359e0c(0x18f)]);createItem(_0x359e0c(0x182),'',q5(_0x359e0c(0x174)))[_0x359e0c(0x15f)]=_0x4d7610=>window[_0x359e0c(0x184)][_0x359e0c(0x17a)]=_0x359e0c(0x169)+_0x3d5bc1['account'][_0x359e0c(0x18f)],createItem(_0x359e0c(0x16d),'',q5(_0x359e0c(0x174)))[_0x359e0c(0x15f)]=_0x2bd095=>window[_0x359e0c(0x184)][_0x359e0c(0x17a)]='/collections.html?collection=numbers&address='+_0x3d5bc1[_0x359e0c(0x196)][_0x359e0c(0x18f)],createItem('Getgems\x20usernames','',q5(_0x359e0c(0x174)))[_0x359e0c(0x15f)]=_0x10cbd7=>window[_0x359e0c(0x184)][_0x359e0c(0x17a)]=_0x359e0c(0x18e)+_0x3d5bc1[_0x359e0c(0x196)]['address'],createItem('TON\x20DNS','',q5(_0x359e0c(0x174)))['onclick']=_0x308a94=>window[_0x359e0c(0x184)][_0x359e0c(0x17a)]='/collections.html?collection=tondns&address='+_0x3d5bc1[_0x359e0c(0x196)][_0x359e0c(0x18f)];const _0x432f02=[{'key':_0x359e0c(0x18d),'value':_0x21ddeb},{'key':'Balance','value':(parseInt(_0x373a96)/0x3b9aca00)[_0x359e0c(0x172)](0x2)},{'key':'Status','value':_0x18678e},{'key':_0x359e0c(0x170),'value':_0x1ee2f4},{'key':_0x359e0c(0x198),'value':_0x5c352f},{'key':_0x359e0c(0x19a),'value':new Date(_0x1623ef*0x3e8)['toLocaleString']()}];_0x432f02[_0x359e0c(0x191)](({key:_0x2da1de,value:_0x259fef})=>createItem(_0x2da1de,_0x259fef,_0xf6f5f3));const _0x480252=new TonWeb[(_0x359e0c(0x179))](_0x26e0ab);convertAddress(_0x480252)[_0x359e0c(0x191)](({label:_0x1a3d5b,value:_0x535d66})=>createWalletAddressItem(_0x1a3d5b,_0x535d66,_0x271087));}});function _0x2681(_0x10e3e9,_0x5432ec){const _0xed5981=_0xed59();return _0x2681=function(_0x268127,_0x474f2f){_0x268127=_0x268127-0x15c;let _0x455752=_0xed5981[_0x268127];return _0x455752;},_0x2681(_0x10e3e9,_0x5432ec);}const fetchAccount=async _0x376bc4=>{const _0x4cccf3=_0x589658;return await cfetch(_0x4cccf3(0x181)+encodeURIComponent(_0x376bc4));},createItem=(_0x3a13de,_0x3bb018,_0x186be3)=>{const _0x80248=_0x589658,_0x2cdcca=e3('p');return _0x2cdcca[_0x80248(0x171)]='account-content-item',_0x2cdcca[_0x80248(0x193)]=_0x80248(0x162)+_0x3a13de+_0x80248(0x16e)+_0x3bb018+'</span>',_0x186be3[_0x80248(0x186)](_0x2cdcca),_0x2cdcca;},createWalletAddressItem=(_0x3bce8b,_0x1c7c08,_0x2aaa4f)=>{const _0xc18af7=_0x589658,_0x39b913=e3('p');_0x39b913[_0xc18af7(0x171)]=_0xc18af7(0x16c),_0x39b913[_0xc18af7(0x193)]=_0xc18af7(0x162)+_0x3bce8b+_0xc18af7(0x16e)+_0x1c7c08+_0xc18af7(0x189),_0x39b913[_0xc18af7(0x15f)]=()=>{const _0x509a40=_0xc18af7;navigator[_0x509a40(0x194)]['writeText'](_0x1c7c08),showToast(_0x509a40(0x173));},_0x2aaa4f[_0xc18af7(0x186)](_0x39b913);},showToast=_0x20e31c=>{const _0x58ca42=_0x589658,_0x1cefdd=document[_0x58ca42(0x178)](_0x58ca42(0x19d));_0x1cefdd[_0x58ca42(0x171)]=_0x58ca42(0x176),_0x1cefdd[_0x58ca42(0x161)]=_0x20e31c,Object[_0x58ca42(0x188)](_0x1cefdd[_0x58ca42(0x175)],{'position':'fixed','bottom':'50%','width':_0x58ca42(0x15e),'maxWidth':'400px','background':'#333','color':_0x58ca42(0x18c),'padding':_0x58ca42(0x17f),'borderRadius':_0x58ca42(0x183),'opacity':'0','transition':_0x58ca42(0x16a),'zIndex':_0x58ca42(0x160),'wordBreak':_0x58ca42(0x192)}),document[_0x58ca42(0x180)][_0x58ca42(0x199)](_0x1cefdd),setTimeout(()=>{const _0x2162f4=_0x58ca42;_0x1cefdd[_0x2162f4(0x175)][_0x2162f4(0x19e)]='1',setTimeout(()=>{const _0xfa6e0f=_0x2162f4;_0x1cefdd[_0xfa6e0f(0x175)][_0xfa6e0f(0x19e)]='0',setTimeout(()=>_0x1cefdd[_0xfa6e0f(0x166)](),0x12c);},0x7d0);},0xa);},convertAddress=_0x507e25=>[{'label':'Hex','value':_0x507e25[_0x589658(0x15c)](![])},{'label':_0x589658(0x185),'value':_0x507e25['toString'](!![],!![],!![],![])},{'label':_0x589658(0x19b),'value':_0x507e25[_0x589658(0x15c)](!![],!![],![],![])},{'label':_0x589658(0x16f),'value':_0x507e25['toString'](!![],!![],!![],!![])},{'label':_0x589658(0x17b),'value':_0x507e25['toString'](!![],!![],![],!![])}];
+import { e3, q5, cfetch } from './utils.js';
+
+const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+    manifestUrl: 'https://tonsiena.github.io/tonconnect-manifest.json',
+    buttonRootId: 'ton-connect'
+});
+
+const WebApp = window.Telegram.WebApp;
+WebApp.ready();
+console.log(WebApp.initData);
+if (WebApp.isFullscreen) {
+    console.log(WebApp.isFullscreen)
+  WebApp.requestFullscreen();
+}
+
+tonConnectUI.onStatusChange(async walletInfo => {
+    const content = q5(".list");
+    const addrList = q5("#address-list");
+
+    if (walletInfo) {
+        const { address, balance, name, status, is_scam, is_wallet, last_activity } = await fetchAccount(walletInfo.account.address);
+
+        createItem("Telegram usernames", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=usernames&address=" + walletInfo.account.address;
+        createItem("Telegram anonymous numbers", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=numbers&address=" + walletInfo.account.address;
+        createItem("Getgems usernames", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=ggusernames&address=" + walletInfo.account.address;
+        createItem("TON DNS", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=tondns&address=" + walletInfo.account.address;
+       
+        const items = [
+            { key: "Name", value: name },
+            { key: "Balance", value: (parseInt(balance) / 1e9).toFixed(2) },
+            { key: "Status", value: status },
+            { key: "Is scam", value: is_scam },
+            { key: "Is wallet", value: is_wallet },
+            { key: "Last activity", value: new Date(last_activity * 1000).toLocaleString() }
+        ];
+
+        items.forEach(({ key, value }) => createItem(key, value, content));
+
+        const addr = new TonWeb.Address(address);
+        convertAddress(addr).forEach(({ label, value }) => createWalletAddressItem(label, value, addrList));
+    }
+});
+
+const fetchAccount = async address => {
+    return await cfetch(`https://tonapi.io/v2/accounts/${encodeURIComponent(address)}`);
+};
+
+
+const createItem = (key, value, parent) => {
+    const div = e3("p");
+    div.className = "account-content-item";
+    div.innerHTML = `<span class='key'>${key}</span><span class='value'>${value}</span>`;
+    parent.append(div);
+    return div;
+};
+
+const createWalletAddressItem = (key, value, parent) => {
+    const div = e3("p");
+    div.className = "fd-c";
+    div.innerHTML = `<span class='key'>${key}</span><span class='value'>${value}</span>`;
+    div.onclick = () => {
+        navigator.clipboard.writeText(value);
+        showToast(`Copied!`);
+    };
+    parent.append(div);
+};
+
+
+const showToast = (message) => {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+    Object.assign(toast.style, {
+        position: "fixed",
+        bottom: "50%",
+        width: "300px",
+        maxWidth: "400px",
+        background: "#333",
+        color: "#fff",
+        padding: "10px 20px",
+        borderRadius: "5px",
+        opacity: "0",
+        transition: "opacity 0.3s",
+        zIndex: "1000",
+        wordBreak: "break-all"
+    });
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.style.opacity = "1";
+        setTimeout(() => {
+            toast.style.opacity = "0";
+            setTimeout(() => toast.remove(), 300);
+        }, 2000);
+    }, 10);
+};
+const convertAddress = addr => [
+    { label: "Hex", value: addr.toString(false) },
+    { label: "Mainnet Bounceable", value: addr.toString(true, true, true, false) },
+    { label: "Mainnet Non-Bounceable", value: addr.toString(true, true, false, false) },
+    { label: "Testnet Bounceable", value: addr.toString(true, true, true, true) },
+    { label: "Testnet Non-Bounceable", value: addr.toString(true, true, false, true) }
+];
