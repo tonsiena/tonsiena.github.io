@@ -4,7 +4,7 @@ const isTelegramWebApp = window.Telegram &&
                          window.Telegram.WebApp && 
                          window.Telegram.WebApp.initData !== '' && 
                          window.Telegram.WebApp.isVersionAtLeast('6.0');
-if (isTelegram) {
+if (isTelegramWebApp) {
     const WebApp = window.Telegram.WebApp;
     WebApp.ready();
     WebApp.requestFullscreen();
