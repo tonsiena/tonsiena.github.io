@@ -1,7 +1,9 @@
 import { convertAddress, connect, e3, q5, cfetch } from './utils.js';
 
-const isTelegram = typeof window.Telegram !== 'undefined' && typeof window.Telegram.WebApp !== 'undefined';
-
+const isTelegramWebApp = window.Telegram && 
+                         window.Telegram.WebApp && 
+                         window.Telegram.WebApp.initData !== '' && 
+                         window.Telegram.WebApp.isVersionAtLeast('6.0');
 if (isTelegram) {
     const WebApp = window.Telegram.WebApp;
     WebApp.ready();
