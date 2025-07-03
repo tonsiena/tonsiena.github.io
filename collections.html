@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TON Siena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+    <script src="https://unpkg.com/tonweb@0.0.64/dist/tonweb.js"></script>
+    <div class="content overflow">
+        <div class="header">
+            <div id="ton-connect"></div>
+        </div>
+        <ul id="modalList" class="grid-list overflow"></ul>
+    </div>
+    <script type="module">
+       const _0x1e4c20=_0x4595;(function(_0x13234f,_0x5d0929){const _0x5a92a8=_0x4595,_0xf8ce58=_0x13234f();while(!![]){try{const _0x12e046=parseInt(_0x5a92a8(0x18d))/0x1*(-parseInt(_0x5a92a8(0x18c))/0x2)+-parseInt(_0x5a92a8(0x179))/0x3+parseInt(_0x5a92a8(0x184))/0x4+parseInt(_0x5a92a8(0x17e))/0x5*(parseInt(_0x5a92a8(0x17f))/0x6)+-parseInt(_0x5a92a8(0x18e))/0x7+-parseInt(_0x5a92a8(0x195))/0x8+parseInt(_0x5a92a8(0x192))/0x9*(parseInt(_0x5a92a8(0x197))/0xa);if(_0x12e046===_0x5d0929)break;else _0xf8ce58['push'](_0xf8ce58['shift']());}catch(_0x38ea6b){_0xf8ce58['push'](_0xf8ce58['shift']());}}}(_0x5c0c,0x3d130));function _0x4595(_0x4a20f9,_0x4f1a05){const _0x5c0cb7=_0x5c0c();return _0x4595=function(_0x45950a,_0x59759b){_0x45950a=_0x45950a-0x178;let _0x5e97ee=_0x5c0cb7[_0x45950a];return _0x5e97ee;},_0x4595(_0x4a20f9,_0x4f1a05);}import{e3,q5,cfetch}from'./utils.js';const urlParams=new URLSearchParams(window['location'][_0x1e4c20(0x189)]),address=urlParams['get'](_0x1e4c20(0x185)),collection=urlParams[_0x1e4c20(0x196)](_0x1e4c20(0x17d));function _0x5c0c(){const _0x3bddca=['collections-item','63hcMXcJ','textContent','name','3485784tzhubb','get','1514950jddCkh','https://tonsiena.github.io/tonconnect-manifest.json','EQC3dNlesgVD8YbAazcauIrXBPfiVhMMr5YYk2in0Mtsz0Bz','onStatusChange','EQDhlVq6cknyPk_SCGZUoXZRbZixNODfcBMCZ3wDfDWLFze7','metadata','/nfts?collection=','forEach','log','src','502155LBgDga','EQCA14o1-VWhS2efqoh_9M1b_A9DtKTuoqfmkn83AbJzwnPi','numbers','appendChild','collection','17245Kmerxa','294QUvgdQ','ggusernames','img','innerHTML','usernames','1083128yRpuKZ','address','TonConnectUI','url','nft_items','search','EQAOQdwdw8kGftJCSFgOErM1mBjYPe4DBPq8-AhF6vr9si5N','classList','566KoWTdx','711YFHxkL','3120369wUHdjy','previews','#modalList'];_0x5c0c=function(){return _0x3bddca;};return _0x5c0c();}console['log'](collection);if(address&&collection){const tonConnectUI=new TON_CONNECT_UI[(_0x1e4c20(0x186))]({'manifestUrl':_0x1e4c20(0x198),'buttonRootId':'ton-connect'});tonConnectUI[_0x1e4c20(0x19a)](async _0x4c131c=>{const _0x264ac3=_0x1e4c20;if(_0x4c131c){var _0x3a69a9=collection;if(collection==_0x264ac3(0x17b))_0x3a69a9=_0x264ac3(0x18a);else{if(collection==_0x264ac3(0x183))_0x3a69a9=_0x264ac3(0x17a);else{if(collection=='tondns')_0x3a69a9=_0x264ac3(0x199);else{if(collection==_0x264ac3(0x180))_0x3a69a9=_0x264ac3(0x19b);}}}const _0xabe041=await fetchNumbers(address,_0x3a69a9),_0x309c55=q5(_0x264ac3(0x190));_0x309c55[_0x264ac3(0x182)]='',console[_0x264ac3(0x19f)](_0xabe041),_0xabe041[_0x264ac3(0x188)][_0x264ac3(0x19e)](_0x3d5776=>{const _0x33c2f2=_0x264ac3;var _0x5b4c8f=e3('div');_0x5b4c8f[_0x33c2f2(0x18b)]=_0x33c2f2(0x191);const _0x43ff3f=e3(_0x33c2f2(0x181));_0x43ff3f[_0x33c2f2(0x178)]=_0x3d5776[_0x33c2f2(0x18f)][0x1][_0x33c2f2(0x187)],_0x5b4c8f[_0x33c2f2(0x17c)](_0x43ff3f);const _0x384dba=e3('span');_0x384dba[_0x33c2f2(0x193)]=_0x3d5776[_0x33c2f2(0x19c)][_0x33c2f2(0x194)],_0x5b4c8f['appendChild'](_0x384dba),_0x309c55['appendChild'](_0x5b4c8f);});}});const fetchNumbers=async(_0x1ff393,_0x558a08)=>{const _0x295540=_0x1e4c20;return await cfetch('https://tonapi.io/v2/accounts/'+encodeURIComponent(_0x1ff393)+_0x295540(0x19d)+_0x558a08+'&limit=1000&offset=0&indirect_ownership=false');};}
+    </script>
+</body>
+
+</html>
