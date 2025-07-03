@@ -7,11 +7,8 @@ const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
 
 const WebApp = window.Telegram.WebApp;
 WebApp.ready();
-console.log(WebApp.initData);
-if (WebApp.isFullscreen) {
-    console.log(WebApp.isFullscreen)
-  WebApp.requestFullscreen();
-}
+WebApp.requestFullscreen();
+
 
 tonConnectUI.onStatusChange(async walletInfo => {
     const content = q5(".list");
