@@ -1,7 +1,9 @@
 import { convertAddress, connect, e3, q5, cfetch } from './utils.js';
 
-const WebApp = window.Telegram.WebApp;
-if (WebApp.Telegram) {
+const isTelegram = typeof window.Telegram !== 'undefined' && typeof window.Telegram.WebApp !== 'undefined';
+
+if (isTelegram) {
+    const WebApp = window.Telegram.WebApp;
     WebApp.ready();
     WebApp.requestFullscreen();
 }
