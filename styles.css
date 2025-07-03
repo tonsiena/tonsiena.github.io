@@ -14,7 +14,7 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    height: 70%;
+    height: 800px;
     max-height: 800px;
     background: #00000030;
     border-radius: 15px;
@@ -118,6 +118,7 @@ body {
     overflow-x: hidden;
     scrollbar-color: #3385ac transparent;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 
 .overflow::-webkit-scrollbar {
@@ -202,5 +203,6 @@ body {
         border-radius: 0px;
         box-shadow: none;
         width: 100vw;
+        padding-top: 40px;
     }
 }

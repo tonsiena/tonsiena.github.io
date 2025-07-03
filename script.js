@@ -1,42 +1,39 @@
-import { e3, q5, cfetch } from './utils.js';
-
-const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-    manifestUrl: 'https://tonsiena.github.io/tonconnect-manifest.json',
-    buttonRootId: 'ton-connect'
-});
+import { convertAddress, connect, e3, q5, cfetch } from './utils.js';
 
 const WebApp = window.Telegram.WebApp;
-WebApp.ready();
-WebApp.requestFullscreen();
+if (WebApp.Telegram) {
+    WebApp.ready();
+    WebApp.requestFullscreen();
+}
 
+const tonConnect = connect(connect_);
 
-tonConnectUI.onStatusChange(async walletInfo => {
+async function connect_(walletInfo) {
     const content = q5(".list");
     const addrList = q5("#address-list");
 
-    if (walletInfo) {
-        const { address, balance, name, status, is_scam, is_wallet, last_activity } = await fetchAccount(walletInfo.account.address);
+    const { address, balance, name, status, is_scam, is_wallet, last_activity } = await fetchAccount(walletInfo.account.address);
 
-        createItem("Telegram usernames", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=usernames&address=" + walletInfo.account.address;
-        createItem("Telegram anonymous numbers", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=numbers&address=" + walletInfo.account.address;
-        createItem("Getgems usernames", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=ggusernames&address=" + walletInfo.account.address;
-        createItem("TON DNS", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=tondns&address=" + walletInfo.account.address;
-       
-        const items = [
-            { key: "Name", value: name },
-            { key: "Balance", value: (parseInt(balance) / 1e9).toFixed(2) },
-            { key: "Status", value: status },
-            { key: "Is scam", value: is_scam },
-            { key: "Is wallet", value: is_wallet },
-            { key: "Last activity", value: new Date(last_activity * 1000).toLocaleString() }
-        ];
+    createItem("Telegram usernames", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=usernames&address=" + walletInfo.account.address;
+    createItem("Telegram anonymous numbers", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=numbers&address=" + walletInfo.account.address;
+    createItem("Getgems usernames", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=ggusernames&address=" + walletInfo.account.address;
+    createItem("TON DNS", "", q5("#parser-list")).onclick = (e) => window.location.href = "/collections.html?collection=tondns&address=" + walletInfo.account.address;
 
-        items.forEach(({ key, value }) => createItem(key, value, content));
+    const items = [
+        { key: "Name", value: name },
+        { key: "Balance", value: (parseInt(balance) / 1e9).toFixed(2) },
+        { key: "Status", value: status },
+        { key: "Is scam", value: is_scam },
+        { key: "Is wallet", value: is_wallet },
+        { key: "Last activity", value: new Date(last_activity * 1000).toLocaleString() }
+    ];
 
-        const addr = new TonWeb.Address(address);
-        convertAddress(addr).forEach(({ label, value }) => createWalletAddressItem(label, value, addrList));
-    }
-});
+    items.forEach(({ key, value }) => createItem(key, value, content));
+
+    const addr = new TonWeb.Address(address);
+    convertAddress(addr).forEach(({ label, value }) => createWalletAddressItem(label, value, addrList));
+
+};
 
 const fetchAccount = async address => {
     return await cfetch(`https://tonapi.io/v2/accounts/${encodeURIComponent(address)}`);
@@ -90,10 +87,3 @@ const showToast = (message) => {
         }, 2000);
     }, 10);
 };
-const convertAddress = addr => [
-    { label: "Hex", value: addr.toString(false) },
-    { label: "Mainnet Bounceable", value: addr.toString(true, true, true, false) },
-    { label: "Mainnet Non-Bounceable", value: addr.toString(true, true, false, false) },
-    { label: "Testnet Bounceable", value: addr.toString(true, true, true, true) },
-    { label: "Testnet Non-Bounceable", value: addr.toString(true, true, false, true) }
-];
