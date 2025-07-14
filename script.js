@@ -78,7 +78,7 @@ buttonGridView.onclick = () => {
     document.querySelectorAll(".collections-item, .collections-grid-item")
         .forEach(i => i.className = isgridview ? "collections-grid-item" : "collections-item");
     console.log(isgridview);
-    buttonGridView.textContent = isgridview ?  "list" : "grid"
+    buttonGridView.textContent = isgridview ?  "List" : "Grid"
 };
 
 
@@ -96,6 +96,24 @@ const setCurrentAddress = (address) => {
     display(searchHeader, "none");
     display(buttonSearch, 'none');
     if(!address) return;
-    tabAddress.textContent = sliceAddress(currentAddress = address, 16);
+    currentAddress = address;
+    tabAddress.textContent = sliceAddress(new TonWeb.Address(currentAddress).toString(true, true, false, false), 16);
     if(!tabsLoaded) loadTabs();
+}
+
+var isAscending = true;
+q5("#sort-list-button").onclick = () => {
+    isAscending = !isAscending; 
+    sortItems(); 
+};
+
+
+function sortItems() {
+
+    filtrableItems.sort((a, b) => 
+        isAscending ? a.name.length - b.name.length : b.name.length - a.name.length
+    );
+
+    divContnent.innerHTML = '';
+    filtrableItems.forEach(item => divContnent.appendChild(item.element));
 }

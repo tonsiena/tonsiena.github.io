@@ -14,12 +14,13 @@ html,
 body,
 .page,
 .tabs,
-.tab {
+.tab,
+.modal-page {
     display: flex;
     align-items: center;
 }
 
-.page {
+.page, .modal-page {
     width: 600px;
     height: 800px;
     background: #ffffff05;
@@ -61,9 +62,7 @@ body,
 }
 
 .content {
-    flex: 1;
     max-height: 680px;
-    height: min-content;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     padding: 1 0px;
@@ -76,6 +75,7 @@ body,
     display: flex;
     flex-direction: column;
     width: 360px;
+    justify-content: space-between;
 }
 
 .page-content {
@@ -146,6 +146,7 @@ button {
     border-radius: 5px;
     background: #ffffff05;
     color: white;
+    outline: none;
 }
 
 button:hover {
@@ -166,7 +167,6 @@ button:hover {
 
 #tab-address {
     color: grey;
-    display: flex;
     padding-top: 15px;
 }
 
@@ -196,7 +196,7 @@ button:hover {
     align-items: center;
 }
 
-#grid-view-button {
+#grid-view-button, #sort-list-button{
     border-radius: 20px;
     height: 30px;
     font-size: 12px;
@@ -264,4 +264,9 @@ button:hover {
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.modal-page {
+    background-color: #10101050;
+    position: absolute;
 }
