@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tonsiena.github.io</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="page border">
+        <div class="tabs-header">
+            <p id="tab-address"></p>
+            <div class="search-container border">
+                <input type="text" class="search-input" id="search-address" autocomplete="off" autocorrect="off"
+                    spellcheck="false" placeholder="Address...">
+                <button id="search-address-button">Search</button>
+            </div>
+        </div>
+
+        <div class="page-content">
+            <div class="tabs"></div>
+            <div class="container">
+
+                <div class="content overflow"></div>
+                <div class="search-header">
+                    <button id="grid-view-button">list</button>
+                    <div class="search-container">
+                        <input type="text" id="search-filter" class="search-input" autocomplete="off" autocorrect="off"
+                            spellcheck="false" placeholder="Filter">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js">
+
+    </script>
+</body>
+
+</html>

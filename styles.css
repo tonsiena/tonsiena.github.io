@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    justify-content: center;
+    background: black;
+}
+
+html,
+body,
+.page,
+.tabs,
+.tab {
+    display: flex;
+    align-items: center;
+}
+
+.page {
+    width: 600px;
+    height: 800px;
+    background: #ffffff05;
+    border-radius: 15px;
+    flex-direction: column;
+}
+
+.border {
+    border: 2px solid rgba(139, 139, 139, 0.1);
+}
+
+
+.tabs {
+    flex-direction: column;
+    height: 100%;
+    justify-content: start;
+    gap: 10px;
+    max-width: 170px;
+    display: flex;
+    padding: 0px 20px;
+
+}
+
+.section {
+    display: flex;
+    height: 10px;
+    width: 100%;
+    background-color: #ffffff03;
+}
+
+.tabs-header {
+    display: flex;
+    width: 90%;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.content {
+    flex: 1;
+    max-height: 680px;
+    height: min-content;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 1 0px;
+    width: 100%;
+}
+
+.container {
+    height: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 100%;
+}
+
+
+.overflow {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: #3385ac transparent;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scroll-snap-type: y mandatory;
+}
+
+.hoverflow {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-color: #3385ac transparent;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scroll-snap-type: y mandatory;
+}
+
+.overflow::-webkit-scrollbar,
+.hoverflow::-webkit-scrollbar {
+    width: 8px;
+}
+
+.overflow::-webkit-scrollbar-track,
+.hoverflow::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.overflow::-webkit-scrollbar-thumb,
+.hoverflow::-webkit-scrollbar-thumb {
+    background: #3385ac;
+    border-radius: 4px;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    background: #ffffff10;
+    border-radius: 25px;
+    width: 170px;
+    height: 30px;
+}
+
+.search-header {
+    display: none;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff05;
+    color: white;
+}
+
+button:hover {
+    background: #ffffff10;
+}
+
+.tab {
+    width: 150px;
+    border-radius: 15px;
+    height: 35px;
+    justify-content: space-between;
+    padding: 0 10px;
+    background: #ffffff05;
+    cursor: pointer;
+    color: grey;
+    white-space: nowrap;
+}
+
+#tab-address {
+    color: grey;
+    display: flex;
+    padding-top: 15px;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 0 15px;
+    height: 30px;
+    font-size: 12px;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.search-input:focus {
+    background-color: transparent;
+}
+
+#search-address-button {
+    border-radius: 20px;
+    height: 30px;
+    font-size: 12px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-view-button {
+    border-radius: 20px;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collections-grid-item {
+    width: 100px;
+    height: 130px;
+    flex-direction: column;
+    background: #ffffff10;
+    border-radius: 15px;
+    border: 1px solid #ffffff50;
+    display: flex;
+}
+
+
+.collections-grid-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px 15px 0 0;
+}
+
+.collections-grid-item span {
+    width: 80px;
+    height: 40px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 8px 8px;
+    overflow: hidden;
+}
+
+
+.collections-item {
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    background: #ffffff10;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.collections-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 15px 0 0 15px;
+}
+
+.collections-item span {
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
