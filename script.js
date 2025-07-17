@@ -51,6 +51,11 @@ var CollectionCore = {
         return await cfetch(
             "https://toncenter.com/api/v3/nft/items?owner_address=" + currentAddress +
             "&limit=" + this.limit + "&offset=" + this.offset);
+    },
+        loadCollections: async function (collection, limit1, offset1) {
+        return await cfetch(
+            "https://toncenter.com/api/v3/nft/items?owner_address=" + currentAddress +
+            "&limit=" + limit1 + "&offset=" + offset1 + "&collection_address=" + collection);
     }
 };
 
@@ -58,12 +63,12 @@ async function loadCollections(prop) {
     var { nft_items: items, metadata: meta, address_book: book } = await CollectionCore.load();
 
 
-       
+             loadNavigationBar(items?.length >= 300) 
+            loadFilterBar(items?.length >= 1)
 if (items?.length) {
         
     console.log(items?.length >= 300)
-            loadNavigationBar(items?.length >= 300) 
-            loadFilterBar(items?.length >= 1)
+      
         q5("#container").innerHTML = `<ul class="content"></ul>`;
         Elements.content = q5(".content"),
             collectionsList = { address: [], names: [] }
@@ -84,7 +89,7 @@ if (items?.length) {
                                 collectionsList.address.push(collection.address)
                                 collectionsList.names.push(token_info.name)
                                 li.appendChild(o4("img", { width: 100, height: 100, loading: "lazy", src: meta[collection_address].token_info[0].image }));
-                                li.appendChild(o4("span", { textContent: token_info.name }));
+                                li.appendChild(o4("span", { textContent: token_info.name, onclick: () => {  createModalWindow(collection_address) }}));
                                 Elements.content.appendChild(li);
                                 filtrableItems.push({ element: li, name: token_info.name });
                             }
@@ -147,6 +152,39 @@ const loadNavigationBar = (remove) => {
 }
 
 
+const createModalWindow = async (address) => {
+    var page = q5(".page.border");
+    var modal = o7("div", { classList: "page modal border" }, page);
+    var modalHeader = o7("div", { classList: "modal-header" }, modal);
+    var modalTitle = o7("p", { textContent:"Title"}, modalHeader);
+    var modalClose = o7("p", { textContent:"close", onclick: () => modal.remove()}, modalHeader);
+     var modalContent = o7("ul", {classList:"content overflow modal-content" }, modal);
+    var res = await CollectionCore.loadCollections(address, 1000, 0)
+    console.log(res)
+var { nft_items: items, metadata: meta, address_book: book }  = res;
+// //  divContnent.innerHTML = '';
+    filtrableItems = [];
+
+
+    if (items?.length) {
+        
+        display(modalContent, isgridview ? "grid" : "flex");
+        items.forEach(({ collection, address }) => {
+                  var metadata = meta[address];
+                var token_info = metadata.token_info[0];
+                var isvalid = token_info.valid;
+            const div = e3("div");
+               var icon = meta[address].token_info[0].image;
+                     
+            div.className = isgridview ? "collections-grid-item" : "collections-item";
+            div.appendChild(o4("img", { src: icon }));
+            div.appendChild(o4("span", { textContent:  token_info.name }));
+            modalContent.appendChild(div);
+            // filtrableItems.push({ element: div, name: metadata.name });
+        });
+    }
+}
+// createModalWindow();
 const loadFilterBar = (remove) => {
 var filt =  q5(".filt");
     if (!remove){
