@@ -207,6 +207,7 @@ body,
     font-size: 25px;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 .collections-grid-item img,
 .collections-grid-item svg {
@@ -231,7 +232,7 @@ body,
 }
 
 .collections-item {
-    width: 30%;
+    width: 100%;
     height: 40px;
     flex-direction: row;
     background: #ffffff05;
@@ -302,4 +303,8 @@ body,
        background-color: transparent;
        overflow: hidden;
     }
+}
+
+.crs-pointer {
+    cursor: pointer;
 }

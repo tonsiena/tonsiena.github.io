@@ -44,5 +44,7 @@ export const sliceAddress = (str, length) => {
 }
 
 export const o4 = (e, s) => Object.assign(e3(e), s);
-
-export const display = (view, type) => view.style.display = type;
+export const o7 = (e, s, p) => p.appendChild(Object.assign(e3(e), s));
+export const display = (view, type) => {
+    if(view && view.style) view.style.display = type;
+}
