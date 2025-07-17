@@ -10,98 +10,92 @@ body {
     background: black;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-centered {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.column-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 html,
 body,
-.page,
-.tabs,
-.tab,
-.modal-page {
+.page {
     display: flex;
     align-items: center;
 }
 
-.page, .modal-page {
-    width: 600px;
-    height: 800px;
+.page {
+    max-width: 396px;
+    max-height: 796px;
+    min-width: 396px;
+    min-height: 796px;
     background: #ffffff05;
     border-radius: 15px;
     flex-direction: column;
+    gap: 15px;
 }
 
 .border {
     border: 2px solid rgba(139, 139, 139, 0.1);
 }
 
-
-.tabs {
-    flex-direction: column;
-    height: 100%;
-    justify-content: start;
-    gap: 10px;
-    max-width: 170px;
+.filt {
+    height: 25px;
+    justify-content: center;
     display: flex;
-    padding: 0px 20px;
-
-}
-
-.section {
-    display: flex;
-    height: 10px;
-    width: 100%;
-    background-color: #ffffff03;
-}
-
-.tabs-header {
-    display: flex;
-    width: 90%;
-    height: 50px;
-    flex-direction: row;
-    justify-content: space-between;
+    gap: 5px;
+    padding: 0px 10px;
     align-items: center;
-    padding: 10px 20px;
+    border-radius: 15px;
 }
+
+
 
 .content {
-    max-height: 680px;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    padding: 1 0px;
     width: 100%;
 }
 
 .container {
-    height: 100%;
-    gap: 10px;
     display: flex;
     flex-direction: column;
-    width: 360px;
-    justify-content: space-between;
-}
-
-.page-content {
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-    height: 100%;
+        flex: 1;
+    width: calc(100% - 40px);
+    padding: 0px 20px;
 }
 
 
-.overflow {
-    overflow-y: auto;
-    overflow-x: hidden;
+.overflow,
+.hoverflow {
+    overflow: auto;
     scrollbar-color: #3385ac transparent;
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scroll-snap-type: y mandatory;
+}
+
+.overflow {
+    overflow-x: hidden;
 }
 
 .hoverflow {
-    overflow-x: auto;
     overflow-y: hidden;
-    scrollbar-color: #3385ac transparent;
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scroll-snap-type: y mandatory;
 }
 
 .overflow::-webkit-scrollbar,
@@ -120,55 +114,18 @@ body,
     border-radius: 4px;
 }
 
-
-.search-container {
-    display: flex;
-    justify-content: center;
-    background: #ffffff10;
-    border-radius: 25px;
-    width: 170px;
-    height: 30px;
-}
-
-.search-header {
-    display: none;
-    justify-content: space-between;
-    padding: 10px;
-    width: 100%;
-}
-
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+#search-button {
+    background-color: #ffffff10;
     border: none;
-    border-radius: 5px;
-    background: #ffffff05;
-    color: white;
     outline: none;
-}
-
-button:hover {
-    background: #ffffff10;
-}
-
-.tab {
-    width: 150px;
+    color: grey;
+    display: none;
+    padding: 0px 10px;
     border-radius: 15px;
-    height: 35px;
-    justify-content: space-between;
-    padding: 0 10px;
-    background: #ffffff05;
-    cursor: pointer;
-    color: grey;
-    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-#tab-address {
-    color: grey;
-    padding-top: 15px;
-}
 
 .search-input {
     background: transparent;
@@ -188,21 +145,23 @@ button:hover {
 }
 
 #search-address-button {
-    border-radius: 20px;
+    border-radius: 15px 0px 0px 15px;
     height: 30px;
+    width: 0px;
     font-size: 12px;
-    display: none;
     justify-content: center;
+    background: #ffffff10;
     align-items: center;
+    border: none;
+    color: grey;
+    outline: none;
+
+    transition: width 0.3s ease-in-out;
 }
 
-#grid-view-button, #sort-list-button{
-    border-radius: 20px;
-    height: 30px;
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#grid-view-button,
+#sort-list-button {
+    cursor: pointer;
 }
 
 .collections-grid-item {
@@ -211,14 +170,48 @@ button:hover {
     flex-direction: column;
     background: #ffffff10;
     border-radius: 15px;
-    border: 1px solid #ffffff50;
     display: flex;
 }
 
 
-.collections-grid-item img {
-    width: 100px;
-    height: 100px;
+
+#nav button {
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: grey;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    background-color: #00000005;
+    border-radius: 15px;
+    height: 30px;
+    width: calc(100% - 40px);
+}
+
+.empty-page {
+    display: flex;
+    color: grey;
+    width: 100%;
+    height: 100%;    
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.collections-grid-item img,
+.collections-grid-item svg {
+    min-width: 100px;
+    min-height: 100px;
     border-radius: 15px 15px 0 0;
 }
 
@@ -237,12 +230,11 @@ button:hover {
     overflow: hidden;
 }
 
-
 .collections-item {
-    width: 100%;
+    width: 30%;
     height: 40px;
     flex-direction: row;
-    background: #ffffff10;
+    background: #ffffff05;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -266,7 +258,48 @@ button:hover {
     color: white;
 }
 
-.modal-page {
-    background-color: #10101050;
-    position: absolute;
+
+.search-container {
+    position: relative;
+    display: flex;
+    background: #00000005;
+    border-radius: 25px;
+    height: 25px;
+    width: calc(100% - 40px);
+    padding-left: 5px;
+    margin-top: 15px;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    transition: width 0.3s ease-in-out;
+    background: transparent;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 25px;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 40px;
+}
+
+
+
+@media (max-width: 450px) {
+    .page {
+        min-width: 100%;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+       border: none;
+       min-height: 100%;
+       background-color: transparent;
+       overflow: hidden;
+    }
 }
