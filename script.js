@@ -16,7 +16,7 @@ const Elements = {
 };
 
 Elements.buttonSearch.onclick = async (e) => {
-    var res = await fetchAccount(Elements.inputSearch.value)
+    var res = await fetchAccount(Elements.inputSearch.value.toLowerCase())
     if (res) setCurrentAddress(res.address);
 }
 Elements.inputSearch.oninput = () => {
@@ -27,7 +27,7 @@ Elements.inputSearch.oninput = () => {
 
 document.addEventListener('keydown', async (event) => {
     if (event.ctrlKey && event.key === '/' && Elements.inputSearch.value.length != 0) {
-        var res = await fetchAccount(Elements.inputSearch.value)
+        var res = await fetchAccount(Elements.inputSearch.value.toLowerCase)
         if (res) setCurrentAddress(res.address);
         event.preventDefault();
     }
@@ -83,17 +83,17 @@ if (items?.length) {
 
                 if (collection.address && collection_address) {
                     if (!collectionsList.address.includes(collection.address)) {
-                        if (isvalid) {
+                     //   if (isvalid) {
                             var icon = meta[collection_address].token_info[0].image;
-                            if (icon) {
+                         //   if (icon) {
                                 collectionsList.address.push(collection.address)
                                 collectionsList.names.push(token_info.name)
-                                li.appendChild(o4("img", { width: 100, height: 100, loading: "lazy", src: meta[collection_address].token_info[0].image }));
-                                li.appendChild(o4("span", { textContent: token_info.name, onclick: () => {  createModalWindow(collection_address) }}));
+                                li.appendChild(o4("img", { width: 100, height: 100, loading: "lazy", onclick: () => {  createModalWindow(collection_address, token_info.name) }, src: meta[collection_address].token_info[0].image }));
+                                li.appendChild(o4("span", { textContent: token_info.name, onclick: () => {  createModalWindow(collection_address, token_info.name) }}));
                                 Elements.content.appendChild(li);
                                 filtrableItems.push({ element: li, name: token_info.name });
-                            }
-                        }
+                           // }
+                       // }
                     }
                 }
             }
@@ -152,11 +152,11 @@ const loadNavigationBar = (remove) => {
 }
 
 
-const createModalWindow = async (address) => {
+const createModalWindow = async (address, name) => {
     var page = q5(".page.border");
     var modal = o7("div", { classList: "page modal border" }, page);
     var modalHeader = o7("div", { classList: "modal-header" }, modal);
-    var modalTitle = o7("p", { textContent:"Title"}, modalHeader);
+    var modalTitle = o7("p", { textContent: name}, modalHeader);
     var modalClose = o7("p", { textContent:"close", onclick: () => modal.remove()}, modalHeader);
      var modalContent = o7("ul", {classList:"content overflow modal-content" }, modal);
     var res = await CollectionCore.loadCollections(address, 1000, 0)
