@@ -78,7 +78,13 @@
                     } else if (data.valid) {
                         var card = createItem("li", { className: "card" }, content);
                         var card_header = createItem("div", { className: "card-header" }, card)
-                        createItem("img", { src: data?.extra?._image_small || "nopic.png" }, card_header)
+                        createItem("img", {
+                            onerror: function () {
+                                this.onerror = null;
+                                this.src = 'nopic.png';
+                            },
+                            src: data?.extra?._image_small || "nopic.png"
+                        }, card_header)
 
                         var card_header_text = createItem("p", { className: "card-header-text", textContent: data?.name + "\n\n" + data?.description }, card_header)
                         card_header_text.onclick = () => { card_header_text.classList.toggle("expanded"); }
