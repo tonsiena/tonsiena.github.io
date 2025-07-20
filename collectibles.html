@@ -33,8 +33,9 @@
         }
 
         var account_address, CollectionCore = {
-            load: async function (limit = 1000, offset = 0) {
-                return await cfetch("https://toncenter.com/api/v3/nft/items?owner_address=" + account_address + "&limit=" + limit + "&offset=" + offset);
+            limit: 1000, offset: 0,
+            load: async function () {
+                return await cfetch("https://toncenter.com/api/v3/nft/items?owner_address=" + account_address + "&limit=" + this.limit + "&offset=" + this.offset);
             }
         };
 
@@ -109,7 +110,11 @@
         if (UrlParams.has('account')) {
             account_address = UrlParams.get('account');
             const res = await fetchAccount(account_address);
-            if (res) setCurrentAddress(res.address);
+            if (res){
+                if (UrlParams.has('offset')) CollectionCore.offset = UrlParams.get('offset');
+                if (UrlParams.has('limit')) CollectionCore.limit = UrlParams.get('limit');
+                setCurrentAddress(res.address);
+            }
         }
 
         initTheme();
