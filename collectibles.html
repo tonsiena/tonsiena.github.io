@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tonsiena.github.io</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+    <page>
+        <header>
+            <nav>
+                <tab id="tab-main">Main</tab>
+                <tab id="tab-archive">Archive</tab>
+            </nav>
+        </header>
+    </page>
+    <script type="module">
+        import { display, cfetch, fetchAccount } from './core.js';
+
+        const $ = (selector, isclass = false) =>
+                   document.querySelector((isclass ? '.' : '#') + selector);
+
+        const UrlParams = new URLSearchParams(window.location.search);
+
+        const setCurrentAddress = (address) => {
+            if (!address) return;
+            account_address = address;
+            loadCollections();
+        }
+
+        var account_address, CollectionCore = {
+                load: async function (limit = 1000, offset = 0) {
+                    return await cfetch("https://toncenter.com/api/v3/nft/items?owner_address=" + account_address + "&limit=" + limit + "&offset=" + offset);
+                }
+            };
+
+
+        const createItem = (el, props, parrent) => {
+            var item = Object.assign(document.createElement(el), props);
+            parrent?.append(item);
+            return item;
+        }
+
+        async function loadCollections() {
+            var { metadata: meta } = await CollectionCore.load();
+
+            var page = document.querySelector("page");
+            var content = createItem("ul", { className: "content", id: "content-main" }, page);
+            var archive = createItem("ul", { className: "content", id: "content-archive" })
+
+            $("tab-archive").onclick = () => {
+                if (!$("content-archive")) {
+                    page.append(archive)
+                    content.remove();
+                }
+            }
+            $("tab-main").onclick = () => {
+                if (!$("content-main")) {
+                    page.append(content)
+                    archive.remove();
+                }
+            }
+
+            Object.keys(meta).forEach(address => {
+                const data = meta[address].token_info[0];
+                if (data.type === "nft_collections") {
+                    if (!data.valid || !data.image){
+                        var card = createItem("li", { classList: "card" }, archive);
+                        var card_header = createItem("div", { className: "card-header" }, card)
+                        createItem("img", { src: "nopic.png" }, card_header)
+
+                        createItem("p", { className: "card-header-text", textContent: data?.name ? data.name : address } , card_header)
+                    } else if (data.valid) {
+                        var card = createItem("li", { className: "card" }, content);
+                        var card_header = createItem("div", { className: "card-header" }, card)
+                        createItem("img", { src: data?.extra?._image_small || "nopic.png" }, card_header)
+
+                        var card_header_text = createItem("p", { className: "card-header-text", textContent: data?.name + "\n\n" + data?.description} , card_header)
+                        card_header_text.onclick = () => { card_header_text.classList.toggle("expanded"); }                   
+                    }
+                }
+            });
+        }
+
+   if (UrlParams.has('account')) {
+        account_address = UrlParams.get('account');
+        const res = await fetchAccount(account_address);
+        if (res) setCurrentAddress(res.address);
+      }
+    </script>
+</body>
+
+</html>
