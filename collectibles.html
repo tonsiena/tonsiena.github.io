@@ -13,6 +13,7 @@
         <header>
             <nav>
                 <tab id="tab-main">Main</tab>
+                <button id="theme-toggle" aria-label="Change theme">Dark</button>
                 <tab id="tab-archive">Archive</tab>
             </nav>
         </header>
@@ -21,7 +22,7 @@
         import { display, cfetch, fetchAccount } from './core.js';
 
         const $ = (selector, isclass = false) =>
-                   document.querySelector((isclass ? '.' : '#') + selector);
+            document.querySelector((isclass ? '.' : '#') + selector);
 
         const UrlParams = new URLSearchParams(window.location.search);
 
@@ -32,10 +33,10 @@
         }
 
         var account_address, CollectionCore = {
-                load: async function (limit = 1000, offset = 0) {
-                    return await cfetch("https://toncenter.com/api/v3/nft/items?owner_address=" + account_address + "&limit=" + limit + "&offset=" + offset);
-                }
-            };
+            load: async function (limit = 1000, offset = 0) {
+                return await cfetch("https://toncenter.com/api/v3/nft/items?owner_address=" + account_address + "&limit=" + limit + "&offset=" + offset);
+            }
+        };
 
 
         const createItem = (el, props, parrent) => {
@@ -67,29 +68,51 @@
             Object.keys(meta).forEach(address => {
                 const data = meta[address].token_info[0];
                 if (data.type === "nft_collections") {
-                    if (!data.valid || !data.image){
+                    if (!data.valid || !data.image) {
                         var card = createItem("li", { classList: "card" }, archive);
                         var card_header = createItem("div", { className: "card-header" }, card)
                         createItem("img", { src: "nopic.png" }, card_header)
 
-                        createItem("p", { className: "card-header-text", textContent: data?.name ? data.name : address } , card_header)
+                        createItem("p", { className: "card-header-text", textContent: data?.name ? data.name : address }, card_header)
                     } else if (data.valid) {
                         var card = createItem("li", { className: "card" }, content);
                         var card_header = createItem("div", { className: "card-header" }, card)
                         createItem("img", { src: data?.extra?._image_small || "nopic.png" }, card_header)
 
-                        var card_header_text = createItem("p", { className: "card-header-text", textContent: data?.name + "\n\n" + data?.description} , card_header)
-                        card_header_text.onclick = () => { card_header_text.classList.toggle("expanded"); }                   
+                        var card_header_text = createItem("p", { className: "card-header-text", textContent: data?.name + "\n\n" + data?.description }, card_header)
+                        card_header_text.onclick = () => { card_header_text.classList.toggle("expanded"); }
                     }
                 }
             });
         }
+            const initTheme = () => {
+                const toggleBtn = document.getElementById('theme-toggle');
+                const body = document.body;
 
-   if (UrlParams.has('account')) {
-        account_address = UrlParams.get('account');
-        const res = await fetchAccount(account_address);
-        if (res) setCurrentAddress(res.address);
-      }
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    body.classList.add('dark');
+                    toggleBtn.textContent = 'Light';
+                } else {
+                    toggleBtn.textContent = 'Dark';
+                }
+
+                toggleBtn.addEventListener('click', () => {
+                    body.classList.toggle('dark');
+
+                    const isDark = body.classList.contains('dark');
+                    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                    toggleBtn.textContent = isDark ? 'Light' : 'Dark';
+                });
+            }
+
+        if (UrlParams.has('account')) {
+            account_address = UrlParams.get('account');
+            const res = await fetchAccount(account_address);
+            if (res) setCurrentAddress(res.address);
+        }
+
+        initTheme();
     </script>
 </body>
 
