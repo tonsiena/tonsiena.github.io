@@ -190,6 +190,7 @@ tab {
     justify-content: right;
     padding-right: 5px;
     color: var(--link-color);
+    flex: 1;
 }
 
 .card-ton-scan {
@@ -198,9 +199,14 @@ tab {
     cursor: pointer;
 }
 
+.card-get-gems {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
 .card-footer {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    width: 100;
     align-items: center;
 }
