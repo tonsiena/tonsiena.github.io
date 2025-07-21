@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tonsiena.github.io</title>
+    <link rel="stylesheet" href="../global.css">
+</head>
+
+<body>
+    <page>
+        <header>
+            <nav>
+                <tab id="tab-main">Main</tab>
+                <button id="theme-toggle" aria-label="Change theme">Dark</button>
+                <tab id="tab-archive">Archive</tab>
+            </nav>
+        </header>
+    </page>
+    <script src="https://unpkg.com/tonweb@0.0.64/dist/tonweb.js"></script>
+    <script type="module">
+        import { display, cfetch, fetchAccount } from '../core.js';
+
+        const $ = (selector, isclass = false) =>
+            document.querySelector((isclass ? '.' : '#') + selector);
+
+        const UrlParams = new URLSearchParams(window.location.search);
+
+        const setCurrentAddress = (address) => {
+            if (!address) return;
+            account_address = address;
+            loadCollections();
+        }
+
+        var account_address, CollectionCore = {
+            limit: 1000, offset: 0,
+            load: async function () {
+                return await cfetch("https://toncenter.com/api/v3/nft/items?owner_address=" + account_address + "&limit=" + this.limit + "&offset=" + this.offset);
+            }
+        };
+
+
+        const createItem = (el, props, parrent) => {
+            var item = Object.assign(document.createElement(el), props);
+            parrent?.append(item);
+            return item;
+        }
+
+        async function loadCollections() {
+            var { metadata: meta } = await CollectionCore.load();
+
+            var page = document.querySelector("page");
+            var content = createItem("ul", { className: "content", id: "content-main" }, page);
+            var archive = createItem("ul", { className: "content", id: "content-archive" })
+
+            $("tab-archive").onclick = () => {
+                if (!$("content-archive")) {
+                    page.append(archive)
+                    content.remove();
+                }
+            }
+            $("tab-main").onclick = () => {
+                if (!$("content-main")) {
+                    page.append(content)
+                    archive.remove();
+                }
+            }
+
+            Object.keys(meta).forEach(address => {
+                const data = meta[address].token_info[0];
+                if (data.type === "nft_collections") {
+                    if (!data.valid || !data.image) {
+                        var card = createItem("li", { classList: "card" }, archive);
+                        var card_header = createItem("div", { className: "card-header" }, card)
+                        createItem("img", { src: "../nopic.png" }, card_header)
+
+                        createItem("p", { className: "card-header-text", textContent: data?.name ? data.name : address }, card_header)
+                    } else if (data.valid) {
+                        var card = createItem("li", { className: "card" }, content);
+                        var card_header = createItem("div", { className: "card-header" }, card)
+                        createItem("img", {
+                            onerror: function () {
+                                this.onerror = null;
+                                this.src = '../nopic.png';
+                            },
+                            src: data?.extra?._image_small || "../nopic.png"
+                        }, card_header)
+
+
+                        var card_header_text = createItem("p", { className: "card-header-text", textContent: data?.name + "\n\n" + data?.description }, card_header)
+
+                        var card_footer = createItem("div", { className: "card-footer" }, card);
+                        var card_ton_scan = createItem("img", { className: "card-ton-scan", src: "../icons/ic-tonscan.svg", onclick: () => window.open("https://tonscan.org/collection/" + new TonWeb.Address(address).toString(true, true, false, false), "_blank") }, card_footer);
+
+                        const card_show_more = createItem("p", { className: "card-show-more", textContent: "expand" }, card_footer);
+                        card_show_more.onclick = () => {
+                            card_header_text.classList.toggle("expanded");
+
+                            card_show_more.textContent = !card_header_text.classList.toString().includes("expanded") ? "expand" : "minimize";
+                        };
+                    }
+                }
+            });
+        }
+        const initTheme = () => {
+            const toggleBtn = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark');
+                toggleBtn.textContent = 'Light';
+            } else {
+                toggleBtn.textContent = 'Dark';
+            }
+
+            toggleBtn.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                const isDark = body.classList.contains('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                toggleBtn.textContent = isDark ? 'Light' : 'Dark';
+            });
+        }
+
+        if (UrlParams.has('account')) {
+            account_address = UrlParams.get('account');
+            const res = await fetchAccount(account_address);
+            if (res) {
+                if (UrlParams.has('offset')) CollectionCore.offset = UrlParams.get('offset');
+                if (UrlParams.has('limit')) CollectionCore.limit = UrlParams.get('limit');
+                setCurrentAddress(res.address);
+            }
+        }
+
+        initTheme();
+    </script>
+</body>
+
+</html>
