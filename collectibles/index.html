@@ -93,12 +93,14 @@
                         var card_footer = createItem("div", { className: "card-footer" }, card);
                         var card_ton_scan = createItem("img", { className: "card-ton-scan", src: "../icons/ic-tonscan.svg", onclick: () => window.open("https://tonscan.org/collection/" + new TonWeb.Address(address).toString(true, true, false, false), "_blank") }, card_footer);
 
-                        const card_show_more = createItem("p", { className: "card-show-more", textContent: "expand" }, card_footer);
-                        card_show_more.onclick = () => {
-                            card_header_text.classList.toggle("expanded");
+                        if (card_header_text.scrollHeight  >= 85) {
+                            const card_show_more = createItem("p", { className: "card-show-more", textContent: "expand" }, card_footer);
+                            card_show_more.onclick = () => {
+                                card_header_text.classList.toggle("expanded");
 
-                            card_show_more.textContent = !card_header_text.classList.toString().includes("expanded") ? "expand" : "minimize";
-                        };
+                                card_show_more.textContent = !card_header_text.classList.toString().includes("expanded") ? "expand" : "minimize";
+                            };
+                        }
                     }
                 }
             });
