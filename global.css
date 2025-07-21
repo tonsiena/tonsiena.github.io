@@ -118,15 +118,21 @@ tab {
 
 
 .card-header-text {
-    max-height: 80px;
-    overflow: hidden;
     transition: max-height 0.3s ease;
     white-space: pre-line;
     display: flex;
     word-break: break-all;
 }
 
-.card-header-text.expanded {
+.card-content {
+    max-height: 80px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+.card-content.expanded {
     max-height: 1000px;
 }
 
@@ -139,13 +145,22 @@ tab {
 }
 
 .details-sp-key {
-    width: 130px;
+    width: 125px;
+    padding-left: 5px;
+    color: var(--text-color);
+    opacity: 0.7;
 }
 
 .details-sp-val {
     width: 100%;
+    color: var(--link-color);
+    cursor: pointer;
+    opacity: 0.7;
 }
 
+.details-sp-val:hover {
+    opacity: 1;
+}
 
 @media screen and (max-width: 450px) {
     page {
