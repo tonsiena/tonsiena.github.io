@@ -225,3 +225,59 @@ tab {
     width: 100;
     align-items: center;
 }
+
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 80%;
+  background-color: var(--card-color);
+}
+
+.preview-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.preview-input-label {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 5px;
+  color: var(--link-color)
+}
+
+.preview-input-field {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid var(--link-color);
+  background-color: var(--card-color);
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.preview-input-field:focus {
+    opacity: 1;
+}
+
+.preview-search-container {
+  display: flex;
+  gap: 10px;
+}
+
+.preview-search-btn {
+  background-color: var(--link-color);
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}

@@ -154,19 +154,60 @@
             });
         }
 
+
+        async function loadParams(){
         if (UrlParams.has('account')) {
             account_address = UrlParams.get('account');
+            if (UrlParams.has('collection')) CollectionCore.collection_address = UrlParams.get('collection');
+            if (UrlParams.has('offset')) CollectionCore.offset = UrlParams.get('offset');
+            if (UrlParams.has('limit')) CollectionCore.limit = UrlParams.get('limit');
+         
             const res = await fetchAccount(account_address);
-            if (res) {
-                if (UrlParams.has('collection')) CollectionCore.collection_address = UrlParams.get('collection');
-                if (UrlParams.has('offset')) CollectionCore.offset = UrlParams.get('offset');
-                if (UrlParams.has('limit')) CollectionCore.limit = UrlParams.get('limit');
-                setCurrentAddress(res.address);
-            }
+                if(res.error){
+                    previewScreen();
+                    return;
+                }
+
+                if (res)  setCurrentAddress(res.address);
+        }else previewScreen();    
         }
 
+        loadParams();
         initTheme();
-    </script>
+
+    const previewScreen = () => {
+        var previewContainer = createItem("div", { className: "preview-container" }, document.querySelector("page"));
+
+        var accountWrapper = createItem("div", { className: "preview-input-wrapper" }, previewContainer);
+        createItem("label", { className: "preview-input-label", innerText: "Account" }, accountWrapper);
+        var accountInput = createItem("input", { className: "preview-input-field", type: "text", placeholder: "Enter account", value: account_address }, accountWrapper);
+
+        var offsetWrapper = createItem("div", { className: "preview-input-wrapper" }, previewContainer);
+        createItem("label", { className: "preview-input-label", innerText: "Offset" }, offsetWrapper);
+        var offsetInput = createItem("input", { className: "preview-input-field", type: "number", placeholder: "Enter offset", value: CollectionCore.offset }, offsetWrapper);
+
+        var limitWrapper = createItem("div", { className: "preview-input-wrapper" }, previewContainer);
+        createItem("label", { className: "preview-input-label", innerText: "Limit" }, limitWrapper);
+        var limitInput = createItem("input", { className: "preview-input-field", type: "number", placeholder: "Enter limit", value: CollectionCore.limit }, limitWrapper);
+
+        var collectionWrapper = createItem("div", { className: "preview-input-wrapper" }, previewContainer);
+        createItem("label", { className: "preview-input-label", innerText: "Collection" }, collectionWrapper);
+        var collectionInput = createItem("input", { className: "preview-input-field", type: "text", placeholder: "Enter collection", value: CollectionCore.collection ? CollectionCore : "" }, collectionWrapper);
+
+        const buttonContainer = createItem("div", { className: "preview-search-container" }, previewContainer);
+        createItem("button", {
+                    className: "preview-search-btn", innerText: "Search", onclick: () => {
+                        if (accountInput.value.length != 0) {
+                            var url = "https://tonsiena.github.io/collectibles/?account=" + accountInput.value;
+                            if (offsetInput.value.length != 0) url += "&offset=" + offsetInput.value;
+                            if (limitInput.value.length != 0) url += "&limit=" + limitInput.value;
+                            if (collectionInput.value.length != 0) url += "&collection=" + collectionInput.value;
+                            window.location.href = url;
+                        }
+                    }
+                }, buttonContainer);
+            }
+        </script>
 </body>
 
 </html>
