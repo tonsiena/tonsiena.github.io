@@ -35,8 +35,8 @@ body.dark {
 page, overlay {
     max-width: 400px;
     min-width: 400px;
-                min-height: calc(100vh - 50px);
-        max-height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -214,6 +214,7 @@ tab {
         border-radius: 0px;
         border: none;
         overflow: auto;
+        display: flex;
     }
 
     .content {
