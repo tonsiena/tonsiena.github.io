@@ -68,18 +68,20 @@ overlay.active {
 }
 header {
     display: flex;
-    width: 100%;
     height: 50px;
     justify-content: center;
     align-items: center;
     background-color: var(--card-color);
     flex-direction: column;
+    width: 380px;
+
     max-width: 400px;
+    padding: 0px 10px;
 }
 
 nav {
     display: flex;
-    width: calc(100% - 20px);
+    width: 100%;
     align-items: center;
     gap: 10px;
 }
@@ -217,6 +219,11 @@ tab {
     .content {
         justify-content: center;
         align-items: center;
+    }
+
+    header {
+            max-width: calc(100vw - 20px);
+            padding: 0px 10px;
     }
 }
 
