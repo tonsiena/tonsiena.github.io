@@ -4,6 +4,22 @@ export const fetchAccount = async (address) => {
     if(address.length != 0) return await cfetch(`https://tonapi.io/v2/accounts/${encodeURIComponent(address)}`);
 };
 
-export const display = (view, type) => {
-    if(view && view.style) view.style.display = type;
+
+export const Builder = {
+    display: (view, type) => {
+        if (view && view.style) view.style.display = type;
+    },
+    add: (el, props, parrent) => {
+        var item = Object.assign(document.createElement(el), props);
+        parrent?.append(item);
+        return item;
+    },
+    details: (key, value, parent, href = value) => {
+        if (value) {
+            var details = Builder.add("p", { className: "dt" }, parent)
+            Builder.add("span", { className: "dt-sp-key", textContent: key }, details)
+            Builder.add("a", { className: "dt-sp-val", href: href, target: "_blank", textContent: value }, details)
+            return details;
+        }
+    }
 }

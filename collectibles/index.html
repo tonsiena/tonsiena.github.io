@@ -9,32 +9,36 @@
 </head>
 
 <body>
-
     <header>
-
         <nav>
-            <tab id="tab-main">Main</tab>
-            <tab id="tab-archive">Archive</tab>
-
+            <tab id="tab-main" class="active">Main</tab>
+            <tab id="tab-arch">Archive</tab>
             <p class="title">
-
                 tonsiena.github.io
                 <img id="tab-menu" src="/icons/ic_menu.svg"></img>
             </p>
-
         </nav>
     </header>
     <page></page>
-
     <overlay>
-        <button id="theme-toggle" aria-label="Change theme">Dark</button>
     </overlay>
     <script src="https://unpkg.com/tonweb@0.0.64/dist/tonweb.js"></script>
     <script type="module">
-        import { display, cfetch, fetchAccount } from '../core.js';
+        import { cfetch, fetchAccount, Builder } from '../core.js';
 
-        const $ = (selector, isclass = false) =>
-            document.querySelector((isclass ? '.' : '#') + selector);
+        const $ = (selector) => document.querySelector(selector);
+
+        const loadDetails = (address, data, parent) => {
+            [{ key: "Image", value: data?.image },
+            { key: "Domain", value: data.extra?.domain },
+            { key: "External link", value: data.extra?.external_link },
+            { key: "External url", value: data.extra?.external_url },
+            { key: "Cover image", value: data.extra?.cover_image },
+            { key: "Uri", value: data.extra?.uri }
+            ].forEach(({ key, value }) => Builder.details(key, value, parent));
+        }
+        
+        const page = $("page");
 
         const UrlParams = new URLSearchParams(window.location.search);
 
@@ -52,29 +56,30 @@
         };
 
 
-        const createItem = (el, props, parrent) => {
-            var item = Object.assign(document.createElement(el), props);
-            parrent?.append(item);
-            return item;
-        }
 
         async function loadCollections() {
-            var { metadata: meta } = await CollectionCore.load();
+            var { nft_items: nft, metadata: meta } = await CollectionCore.load();
+            if(!nft.length){
+            Builder.add("p", { className: "em-p", textContent: "no collectible items on this address" }, page)
+            }else{
             var targetType = CollectionCore.collection_address ? "nft_items" : "nft_collections"
-            var page = document.querySelector("page");
-            var content = createItem("ul", { className: "content", id: "content-main" }, page);
-            var archive = createItem("ul", { className: "content", id: "content-archive" })
+            var content = Builder.add("ul", { className: "content", id: "content-main" }, page);
+            var archive = Builder.add("ul", { className: "content", id: "content-archive" })
 
-            $("tab-archive").onclick = () => {
-                if (!$("content-archive")) {
+            $("#tab-arch").onclick = () => {
+                if (!$("#content-archive")) {
                     page.append(archive)
                     content.remove();
+                     $("#tab-arch").classList.toggle("active");
+                     $("#tab-main").classList.toggle("active");
                 }
             }
-            $("tab-main").onclick = () => {
-                if (!$("content-main")) {
+            $("#tab-main").onclick = () => {
+                if (!$("#content-main")) {
                     page.append(content)
                     archive.remove();
+                    $("#tab-arch").classList.toggle("active");
+                    $("#tab-main").classList.toggle("active");
                 }
             }
 
@@ -82,80 +87,35 @@
                 const data = meta[address].token_info[0];
                 if (data.type === targetType) {
                     if (!data.valid || !data.image) {
-                        var card = createItem("li", { classList: "card" }, archive);
-                        var card_header = createItem("div", { className: "card-header" }, card)
-                        createItem("img", { src: "../nopic.png" }, card_header)
+                        var card = Builder.add("li", { classList: "card" }, archive);
+                        var card_header = Builder.add("div", { className: "card-header" }, card)
+                        Builder.add("img", { src: "../nopic.png" }, card_header)
 
-                        createItem("p", { className: "card-header-text", textContent: data?.name ? data.name : address }, card_header)
+                        Builder.add("p", { className: "card-header-text", textContent: data?.name ? data.name : address }, card_header)
                     } else if (data.valid) {
-                        var card = createItem("li", { className: "card" }, content);
+                        var card = Builder.add("li", { className: "card" }, content);
+                        var card_header = Builder.add("div", { className: "card-header" }, card)
 
-
-                        var card_header = createItem("div", { className: "card-header" }, card)
-                        
-                        var card_content = createItem("div", { className: "card-content" }, card)
-
-                        var card_header_text = createItem("p", { className: "card-header-text", textContent: data?.name }, card_header)
-                        createItem("img", {
+                        var card_header_text = Builder.add("p", { className: "card-header-text", textContent: data?.name }, card_header)
+                        Builder.add("img", {
                             onerror: function () {
                                 this.onerror = null;
                                 this.src = '../nopic.png';
                             },
                             src: data?.extra?._image_small || "../nopic.png"
                         }, card_header)
-                        var card_header_address = createItem("a", { href: "https://tonscan.org/collection/" + new TonWeb.Address(address).toString(true, true, false, false), className: "details-sp-address", textContent: address }, card)
-                        createItem("span", { className: "details-sp-dscr", textContent: data?.description }, card_header_text)
+                        var card_header_address = Builder.add("a", { href: "https://tonscan.org/collection/" + new TonWeb.Address(address).toString(true, true, false, false), className: "dt-sp-address", textContent: address }, card)
+                        Builder.add("span", { className: "dt-sp-dscr", textContent: data?.description }, card_header_text)
 
-                        var card_footer = createItem("div", { className: "card-footer" }, card);
-                        
 
-                         loadDetails(address, data, card_footer)
+                        loadDetails(address, data, Builder.add("div", { className: "card-footer" }, card))
                     }
                 }
             });
         }
+    }
 
-        const addDetails = (key, value, parent, href = value) => {
-            if (value) {
-                var details = createItem("p", { className: "details" }, parent)
-                createItem("span", { className: "details-sp-key", textContent: key }, details)
-                createItem("a", { className: "details-sp-val", href: href, target: "_blank", textContent: value }, details)
-                return details;
-            }
-        }
-
-        const loadDetails = (address, data, parrent) => {
-            addDetails("Image", data?.image, parrent);
-            addDetails("Domain", data.extra?.domain, parrent);
-            addDetails("External link", data.extra?.external_link, parrent);
-            addDetails("External url", data.extra?.external_url, parrent);
-            addDetails("Cover image", data.extra?.cover_image, parrent);
-            addDetails("Uri", data.extra?.uri, parrent);
-        }
-        $("tab-menu").onclick = () => document.querySelector("overlay").classList.toggle("active")
-
-
-        const initTheme = () => {
-
-            const toggleBtn = document.getElementById('theme-toggle');
-            const body = document.body;
-
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                body.classList.add('dark');
-                toggleBtn.textContent = 'Light';
-            } else {
-                toggleBtn.textContent = 'Dark';
-            }
-
-            toggleBtn.addEventListener('click', () => {
-                body.classList.toggle('dark');
-                const isDark = body.classList.contains('dark');
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-                toggleBtn.textContent = isDark ? 'Light' : 'Dark';
-            });
-        }
-
+        $("#tab-menu").onclick = () => document.querySelector("overlay").classList.toggle("active")
 
         async function loadParams() {
             if (UrlParams.has('account')) {
@@ -174,41 +134,35 @@
             } else previewScreen();
         }
 
-        initTheme();
-
         const previewScreen = () => {
-            var previewContainer = createItem("div", { className: "preview-container" }, document.querySelector("page"));
+                const previewContainer = Builder.add("div", { className: "pr-cn" },page);
 
-            var accountWrapper = createItem("div", { className: "preview-input-wrapper" }, previewContainer);
-            createItem("label", { className: "preview-input-label", innerText: "Account" }, accountWrapper);
-            var accountInput = createItem("input", { className: "preview-input-field", type: "text", placeholder: "Enter account", value: account_address || "" }, accountWrapper);
+                const inputs = [{ label: "Account", type: "text", placeholder: "Enter account", value: account_address || "", key: "account" },
+                                { label: "Offset", type: "number", placeholder: "Enter offset", value: CollectionCore.offset, key: "offset" },
+                                { label: "Limit", type: "number", placeholder: "Enter limit", value: CollectionCore.limit, key: "limit" },
+                                { label: "Collection", type: "text", placeholder: "Enter collection", value: CollectionCore.collectin || "", key: "collection" }];
 
-            var offsetWrapper = createItem("div", { className: "preview-input-wrapper" }, previewContainer);
-            createItem("label", { className: "preview-input-label", innerText: "Offset" }, offsetWrapper);
-            var offsetInput = createItem("input", { className: "preview-input-field", type: "number", placeholder: "Enter offset", value: CollectionCore.offset }, offsetWrapper);
+                const inputElements = inputs.map(({ label, type, placeholder, value, key }) => {
+                    const wrapper = Builder.add("div", { className: "pr-iw" }, previewContainer);
+                    Builder.add("label", { className: "pr-il", innerText: label }, wrapper);
+                    return Builder.add("input", { className: "pr-if", type, placeholder, value }, wrapper);
+                });
 
-            var limitWrapper = createItem("div", { className: "preview-input-wrapper" }, previewContainer);
-            createItem("label", { className: "preview-input-label", innerText: "Limit" }, limitWrapper);
-            var limitInput = createItem("input", { className: "preview-input-field", type: "number", placeholder: "Enter limit", value: CollectionCore.limit }, limitWrapper);
-
-            var collectionWrapper = createItem("div", { className: "preview-input-wrapper" }, previewContainer);
-            createItem("label", { className: "preview-input-label", innerText: "Collection" }, collectionWrapper);
-            var collectionInput = createItem("input", { className: "preview-input-field", type: "text", placeholder: "Enter collection", value: CollectionCore.collectin || "" }, collectionWrapper);
-
-            const buttonContainer = createItem("div", { className: "preview-search-container" }, previewContainer);
-            createItem("button", {
-                className: "preview-search-btn", innerText: "Search", onclick: () => {
-                    if (accountInput.value.length != 0) {
-                        var url = "https://tonsiena.github.io/collectibles/?account=" + accountInput.value;
-                        if (offsetInput.value.length != 0) url += "&offset=" + offsetInput.value;
-                        if (limitInput.value.length != 0) url += "&limit=" + limitInput.value;
-                        if (collectionInput.value.length != 0) url += "&collection=" + collectionInput.value;
-                        window.location.href = url;
+                const buttonContainer = Builder.add("div", { className: "pr-sr-cn" }, previewContainer);
+                Builder.add("button", {
+                    className: "pr-sr-bt",
+                    innerText: "Search",
+                    onclick: () => {
+                        if (inputElements[0].value) {
+                            let url = `https://tonsiena.github.io/collectibles/?account=${inputElements[0].value}`;
+                            inputElements.slice(1).forEach((input, i) => {
+                                if (input.value) url += `&${inputs[i + 1].key}=${input.value}`;
+                            });
+                            window.location.href = url;
+                        }
                     }
-                }
-            }, buttonContainer);
-        }
-
+                }, buttonContainer);
+            };
 
         loadParams();
     </script>
