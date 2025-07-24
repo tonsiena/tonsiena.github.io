@@ -92,6 +92,10 @@
 
 
                         var card_header = createItem("div", { className: "card-header" }, card)
+                        
+                        var card_content = createItem("div", { className: "card-content" }, card)
+
+                        var card_header_text = createItem("p", { className: "card-header-text", textContent: data?.name }, card_header)
                         createItem("img", {
                             onerror: function () {
                                 this.onerror = null;
@@ -99,22 +103,13 @@
                             },
                             src: data?.extra?._image_small || "../nopic.png"
                         }, card_header)
-                        createItem("span", { className: "details-sp-dscr", textContent: data?.description }, card)
-                        var card_content = createItem("div", { className: "card-content" }, card)
-
-                        var card_header_text = createItem("p", { className: "card-header-text", textContent: data?.name }, card_header)
-                        var card_header_address = createItem("a", { href: "https://tonscan.org/collection/" + new TonWeb.Address(address).toString(true, true, false, false), className: "details-sp-address", textContent: address }, card_header_text)
+                        var card_header_address = createItem("a", { href: "https://tonscan.org/collection/" + new TonWeb.Address(address).toString(true, true, false, false), className: "details-sp-address", textContent: address }, card)
+                        createItem("span", { className: "details-sp-dscr", textContent: data?.description }, card_header_text)
 
                         var card_footer = createItem("div", { className: "card-footer" }, card);
+                        
 
-                        const card_show_more = createItem("p", { className: "card-show-more", textContent: "expand" }, card_footer);
-                        card_show_more.onclick = () => {
-                            card_content.classList.toggle("expanded");
-
-                            card_show_more.textContent = !card_content.classList.toString().includes("expanded") ? "expand" : "minimize";
-                        };
-
-                        loadDetails(address, data, card_content)
+                         loadDetails(address, data, card_footer)
                     }
                 }
             });
@@ -130,7 +125,7 @@
         }
 
         const loadDetails = (address, data, parrent) => {
-            addDetails("Image", data?.address, parrent);
+            addDetails("Image", data?.image, parrent);
             addDetails("Domain", data.extra?.domain, parrent);
             addDetails("External link", data.extra?.external_link, parrent);
             addDetails("External url", data.extra?.external_url, parrent);

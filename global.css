@@ -33,8 +33,8 @@ body.dark {
 }
 
 page, overlay {
-    max-width: 400px;
-    min-width: 400px;
+    max-width: 600px;
+    min-width: 600px;
     min-height: calc(100vh - 50px);
     max-height: calc(100vh - 50px);
     flex-direction: column;
@@ -42,6 +42,10 @@ page, overlay {
     align-items: center;
     position: relative;
     overflow: auto;
+}
+
+page::-webkit-scrollbar {
+    display: none;
 }
 
 overlay {
@@ -73,10 +77,10 @@ header {
     align-items: center;
     background-color: var(--card-color);
     flex-direction: column;
-    width: 380px;
-
-    max-width: 400px;
+    width: 580px;
+    max-width: 600px;
     padding: 0px 10px;
+    border-bottom: 1px solid #ffffff20;
 }
 
 nav {
@@ -101,6 +105,7 @@ tab {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 10px
 }
 
 
@@ -111,13 +116,13 @@ tab {
 }
 
 .card {
-    width: calc(100% - 40px);
+    width: calc(100% - 42px);
     flex-direction: column;
     background: var(--card-color);
     display: flex;
     padding: 20px;
     font-size: 15px;
-    border-bottom: 1px solid var(--shadow-color);
+    border: 1px solid #ffffff20;
 }
 
 
@@ -127,24 +132,24 @@ tab {
     gap: 20px;
     padding-bottom: 5px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
 .card-header img {
-    min-height: 55px;
-    min-width: 55px;
-    max-height: 55px;
-    max-width: 55px;
+    min-height: 40px;
+    min-width: 40px;
+    max-height: 40px;
+    max-width: 40px;
     border-radius: 15px;
 }
 
 .card-header-text {
     transition: max-height 0.3s ease;
-    white-space: pre-line;
     display: flex;
-    word-break: break-all;
     flex-direction: column;
+    flex: 1;
+    border-left: 1px solid #ffffff20;
+    padding: 10px;
+    background: linear-gradient(90grad, #ffffff05, transparent);
 }
 
 .card-content {
@@ -153,7 +158,8 @@ tab {
     overflow: hidden;
     flex-direction: column;
     gap: 10px;
-    margin: 10px 0px;
+    width: calc(100% - 60px);
+    margin: 10px 0px 0px 60px
 }
 
 .card-content.expanded {
@@ -167,8 +173,9 @@ tab {
     flex-direction: column;
     gap: 5px;
     padding: 10px 10px;
-    background-color: #ffffff10;
-    border-radius: 10px;
+    border-radius: 0px;
+    width: 100% / 3;
+    height: 100%;
 }
 
 .details-sp-key {
@@ -185,20 +192,23 @@ tab {
     opacity: 0.7;
 }
 
-.details-sp-dscr {
-    width: calc(100% - 20px);
-    color: var(--text-color);
-    padding: 10px 10px;
-    background-color: #ffffff10;
-    margin-top: 15px;
-    border-radius: 10px;
+.details-sp-address {
+            max-width: 90%;
+            color: var(--link-color);
+            border-left: 1px solid #ffffff20;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            opacity: 0.7;
+            justify-content: center;
+            align-items: center;
 }
 
-.details-sp-address {
+.details-sp-dscr {
+    width: calc(100% - 20px);
+    margin-top: 10px;
     width: 100%;
-    color: var(--link-color);
-    margin-top: 5px;
-    opacity: 0.5;
+    color: grey;
 }
 
 .details-sp-val:hover {
@@ -209,8 +219,8 @@ tab {
     page {
         min-width: 100vw;
         max-width: 100vw;
-        min-height: calc(100vh - 50px);
-        max-height: calc(100vh - 50px);
+        min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 51px);
+        max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 51px);
         border-radius: 0px;
         border: none;
         overflow: auto;
@@ -220,6 +230,10 @@ tab {
     .content {
         justify-content: center;
         align-items: center;
+    }
+
+    .card {
+        border: none;
     }
 
     header {
@@ -265,9 +279,13 @@ tab {
 }
 
 .card-footer {
-    display: flex;
-    width: 100;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: calc(100% - 20px);
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 1px solid #ffffff20;
 }
 
 .preview-container {
