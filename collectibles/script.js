@@ -7,7 +7,7 @@ var $content, $archive, $page = $("page"), urlparams;
 function loadCollections(urladdress, todo){
         Collections.address = urladdress;
         $.getJSON(`https://${Collections.testnet == true ? "testnet." : "" }toncenter.com/api/v3/nft/items?owner_address=${Collections.address}&limit=${Collections.limit <= 1000 ? Collections.limit : 1000}&offset=${Collections.offset}${Collections.collection ? "&collection_address=" + Collections.collection : ""}`)
-            .then(res => todo(res)).catch(error => previewScreen($page, urlparams, error));
+            .then(res => todo(res)).catch(error => previewScreen($page, urlparams,  error.responseJSON.error));
 }
 
 function initTabs() { 
@@ -45,7 +45,7 @@ function buildCollectionList(address, metadata) {
     Object.keys(metadata).forEach(address => {
         const data = metadata[address].token_info[0];
         if (data.type === targetType) {
-                CardBuilder.build(address, data, (data.valid && data.image) ? $content : $archive)
+                CardBuilder.build(address, data, (data.valid && data.image) ? $content : $archive, Collections.testnet, Collections.minimized)
         }
     });
 }
@@ -57,6 +57,7 @@ function onStart() {
     Collections.offset = Number(urlparams.get("offset")) || 0;
     Collections.limit = Number(urlparams.get("limit")) || 1000;
     Collections.testnet = urlparams.get("testnet") || false;
+    Collections.minimized = Number(urlparams.get("minimized")) || 0;
 
     $page.html('<div class="alert-message">Loading...</div>');
 

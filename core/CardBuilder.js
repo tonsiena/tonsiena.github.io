@@ -30,6 +30,7 @@ export const CardBuilder = {
                CardBuilder.cardDetail("Uri", CardBuilder.data?.extra?.uri));
      },
     cardExpand: () => {
+        if(!CardBuilder.minimized){
         var $cardexpand =  $('<p>').addClass('detail-expand').text('expand');
         $cardexpand.on('click', () => {
             const $cardcontent = $cardexpand.siblings(".card-content");
@@ -37,12 +38,15 @@ export const CardBuilder = {
             $cardexpand.text($cardcontent.hasClass("expanded") ? "minimize" : "expand");
         });
         return $cardexpand;
+    }
     },
     card: () => {
         var $card;
         if (CardBuilder.data?.valid) {
+            var className = "card-content"
+            if(CardBuilder.minimized === 1) className += " expanded";
             $card = $('<li>').addClass('card').append(
-                $('<div>').addClass('card-content')
+                $('<div>').addClass(className)
                     .append(CardBuilder.cardHeader(),
                         CardBuilder.cardAddress(),
                         CardBuilder.cardFooter()),
@@ -59,19 +63,12 @@ export const CardBuilder = {
 
         return $card;
     },
-    build:(address, data, target, testnet, archive) => {
+    build:(address, data, target, testnet, minimized) => {
            CardBuilder.address = address;
            CardBuilder.data = data;
            CardBuilder.target = target;
            CardBuilder.testnet = testnet;
-           if(archive) return CardBuilder.cardDeleted();
+           CardBuilder.minimized = minimized;
     return CardBuilder.card();
-    },
-    cardDeleted: () => {
-        return $('<div>').addClass('card-header').append(CardBuilder.cardAddress(),
-            $('<img>').attr({
-                src: CardBuilder.parseExtra("_image_small", "../nopic.png"),
-                loading: 'lazy', onerror: "this.src='../nopic.png'"
-            }));
     }
 }
