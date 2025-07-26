@@ -7,10 +7,10 @@ var $content, $archive, $page = $("page"), urlparams;
 function loadCollections(urladdress, todo){
         Collections.address = urladdress;
         $.getJSON(`https://${Collections.testnet == true ? "testnet." : "" }toncenter.com/api/v3/nft/items?owner_address=${Collections.address}&limit=${Collections.limit <= 1000 ? Collections.limit : 1000}&offset=${Collections.offset}${Collections.collection ? "&collection_address=" + Collections.collection : ""}`)
-            .then(res => todo(res)).catch(error => console.error(error));
+            .then(res => todo(res)).catch(error => previewScreen($page, urlparams, error));
 }
 
-function initTabs() {
+function initTabs() { 
     $content = $('<ul>').addClass('content').attr('id', 'content-main').appendTo($page);
     $archive = $('<ul>').addClass('content').attr('id', 'content-archive').hide().appendTo($page);
 
