@@ -2,7 +2,7 @@ import { CardBuilder } from "../core/CardBuilder.js";
 import { previewScreen } from "../core/PreviewCollectibles.js";
 
 const $ = jQuery, Collections = {};
-var $content, $archive, $page = $("page"), urlparams;
+var $content, $archive, $page = $("page"), $overlay = $("overlay"), urlparams;
 
 function loadCollections(urladdress, todo){
         Collections.address = urladdress;
@@ -25,9 +25,22 @@ function initTabs() {
         $('#tab-main').toggleClass('active', !isArchive);
         $('#tab-arch').toggleClass('active', isArchive);
     };
-
+    
     $('#tab-arch').on('click', () => tabClick(true));
-    $('#tab-main').on('click', () => tabClick(false));}
+    $('#tab-main').on('click', () => tabClick(false));
+
+    $('#tab-menu').on('click', () => {
+        if($page.is(":visible")){
+        $page.hide();
+        $overlay.show();
+        }else{
+        $overlay.hide();
+        $page.show();
+        }
+
+    });
+
+}
 
 class onAddressIdentification {
     constructor(address, todo) {
