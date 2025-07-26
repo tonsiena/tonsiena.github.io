@@ -3,23 +3,3 @@ function _0x364a(_0x37243b, _0x16c1e9) { const _0x2777b4 = _0x2777(); return _0x
 export const fetchAccount = async (address) => {
     if(address.length != 0) return await cfetch(`https://tonapi.io/v2/accounts/${encodeURIComponent(address)}`);
 };
-
-
-export const Builder = {
-    display: (view, type) => {
-        if (view && view.style) view.style.display = type;
-    },
-    add: (el, props, parrent) => {
-        var item = Object.assign(document.createElement(el), props);
-        parrent?.append(item);
-        return item;
-    },
-    details: (key, value, parent, href = value) => {
-        if (value) {
-            var details = Builder.add("p", { className: "dt" }, parent)
-            Builder.add("span", { className: "dt-sp-key", textContent: key }, details)
-            Builder.add("a", { className: "dt-sp-val", href: href, target: "_blank", textContent: value }, details)
-            return details;
-        }
-    }
-}
