@@ -14,18 +14,20 @@ nav {
     display: flex;
     width: 100%;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
 }
 
 tab {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
     background-color: transparent;
-    height: 40px;
     font-size: 13px;
     cursor: pointer;
+    border: 1px solid #ffffff20;
+    height: 20px;
+    width: 60px;
+    color: grey;
 }
 
 .content {
@@ -38,8 +40,7 @@ tab {
 }
 
 .siena-title {
-    background-color: #536d8b2d;
-    color: var(--link-color);
+    color: grey;
     opacity: 0.6;
     height: 80%;
     display: flex;
@@ -47,16 +48,28 @@ tab {
     padding: 0px 10px;
     border-radius: 20px;
     gap: 5px;
+    flex:1; 
+    justify-content: start;
 }
 
 #tab-menu {
     cursor: pointer;
+    height: 25px;
+}
+
+.tab-menu-cn {
+    flex: 1;
+    display: flex;
+    justify-content: end;
 }
 #tab-main.active {
-    color: var(--link-color)
+    background-color: #ffffff20;
+    color: white;
 }
 #tab-arch.active {
-    color: var(--link-color)
+    background-color: #ffffff20;
+    color: white;
+
 }
 
 .alert-message, .alert-e-message{
@@ -64,13 +77,19 @@ tab {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 51px);
-    width: 100%;
+    width: calc(90% - 40px);
+    justify-self: center;
+    padding: 0px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
     color: grey;
     font-size: 20px;
 }
 
 .alert-e-message {
     height: 100px;
+        background-color: var(--card-color);
+
 }
 .em-p {
     color: grey;
@@ -269,6 +288,19 @@ margin-top: 10px;
   width: 100%;
 }
 
+.info-channel {
+flex:1;
+display: flex;
+    margin: 10px 20px;
+    padding: 5px 10px;
+    background-color: #ffffff10;
+    border: 1px solid #ffffff20;
+justify-content: space-between;
+}
+
+.info-channel a {
+    color: var(--link-color)
+}
 @media screen and (max-width: 450px) {
 html, body {
     overflow: hidden;
@@ -286,7 +318,7 @@ html, body {
         justify-content: center;
         align-items: center;
         overflow: auto;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
     }
 
     .card {

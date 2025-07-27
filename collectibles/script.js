@@ -37,9 +37,20 @@ function initTabs() {
         $overlay.hide();
         $page.show();
         }
-
     });
 
+
+    var $off_ch = $("<p>").addClass("info-channel");
+    $off_ch.text("official telegram channel");
+    $off_ch.appendTo($overlay)
+
+    $("<a>").attr("href", "https://t.me/meowearmuff").text("@meowearmuff").appendTo($off_ch);
+
+    var $dev_url = $("<p>").addClass("info-channel");
+    $dev_url.text("contact dev");
+    $dev_url.appendTo($overlay)
+
+    $("<a>").attr("href", "https://t.me/sheasame").text("@sheasame").appendTo($dev_url);
 }
 
 class onAddressIdentification {
