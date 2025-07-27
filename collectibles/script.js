@@ -64,7 +64,6 @@ class onAddressIdentification {
 
 function buildCollectionList(address, metadata) {
     $page.empty();
-    initTabs();
     const targetType = Collections.collection ? "nft_items" : "nft_collections";
     Object.keys(metadata).forEach(address => {
         const data = metadata[address].token_info[0];
@@ -82,7 +81,7 @@ function onStart() {
     Collections.limit = Number(urlparams.get("limit")) || 1000;
     Collections.testnet = Number(urlparams.get("testnet")) || 0;
     Collections.minimized = Number(urlparams.get("minimized")) || 0;
-
+    initTabs();
     $page.html('<div class="alert-message">Loading...</div>');
 
     new onAddressIdentification(urlparams.get("account"), ({ address }) => {
