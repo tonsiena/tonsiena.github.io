@@ -280,7 +280,6 @@ html, body {
         max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 51px);
         border-radius: 0px;
         border: none;
-        overflow: hidden;
     }
 
     .content {
