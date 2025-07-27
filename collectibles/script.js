@@ -75,6 +75,7 @@ function onStart() {
     $page.html('<div class="alert-message">Loading...</div>');
 
     new onAddressIdentification(urlparams.get("account"), ({ address }) => {
+        $("<p>").addClass("alert-e-message").text(address).appendTo($page);
         loadCollections(address, ({ nft_items, metadata }) => {
             if(nft_items.length != 0) buildCollectionList(address, metadata);
             else previewScreen($page, urlparams, "NFT wasn't found on this address");
