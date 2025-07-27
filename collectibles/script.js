@@ -62,11 +62,11 @@ function onStart() {
     urlparams = new URLSearchParams(window.location.search);
 
     Object.assign(Collections, {
-        collection: params.get("collection") || "",
-        offset: Number(params.get("offset")) || 0,
-        limit: Number(params.get("limit")) || 1000,
-        testnet: Number(params.get("testnet")) || 0,
-        minimized: Number(params.get("minimized")) || 0
+        collection: urlparams.get("collection") || "",
+        offset: Number(urlparams.get("offset")) || 0,
+        limit: Number(urlparams.get("limit")) || 1000,
+        testnet: Number(urlparams.get("testnet")) || 0,
+        minimized: Number(urlparams.get("minimized")) || 0
     });
 
     initTabs();
