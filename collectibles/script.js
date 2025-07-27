@@ -64,6 +64,7 @@ class onAddressIdentification {
 
 function buildCollectionList(address, metadata) {
     $page.empty();
+    initTabs();
     const targetType = Collections.collection ? "nft_items" : "nft_collections";
     Object.keys(metadata).forEach(address => {
         const data = metadata[address].token_info[0];
