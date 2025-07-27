@@ -32,6 +32,21 @@ export const previewScreen = ($page, url, message = null) => {
         value: url.get('collection') || ''
     }).appendTo($collectionWrapper);
 
+      const $testnetWrapper = $('<div>').addClass('pr-iw').appendTo($previewContainer);
+    $('<label>').addClass('pr-il').text('Is testnet? (1 true, 0 false)').appendTo($testnetWrapper);
+    const $testnetInput = $('<input>').addClass('pr-if').attr({
+        type: 'text',
+        value: url.get('testnet') || ''
+    }).appendTo($testnetWrapper);
+
+      const $minimizedWrapper = $('<div>').addClass('pr-iw').appendTo($previewContainer);
+    $('<label>').addClass('pr-il').text('Is list minimezed?  (1 false, 0 true)').appendTo($minimizedWrapper);
+    const $minimizedInput = $('<input>').addClass('pr-if').attr({
+        type: 'text',
+        value: url.get('minimized') || ''
+    }).appendTo($minimizedWrapper);
+
+
     const $buttonContainer = $('<div>').addClass('pr-sr-cn').appendTo($previewContainer);
     $('<button>').addClass('pr-sr-bt').text('Search').on('click', () => {
         if ($accountInput.val()) {
@@ -39,6 +54,8 @@ export const previewScreen = ($page, url, message = null) => {
             if ($offsetInput.val()) url += `&offset=${$offsetInput.val()}`;
             if ($limitInput.val()) url += `&limit=${$limitInput.val()}`;
             if ($collectionInput.val()) url += `&collection=${$collectionInput.val()}`;
+            if ($testnetInput.val()) url += `&testnet=${$testnetInput.val()}`;
+            if ($minimizedInput.val()) url += `&minimized=${$minimizedInput.val()}`;
             window.location.href = url;
         }
     }).appendTo($buttonContainer);

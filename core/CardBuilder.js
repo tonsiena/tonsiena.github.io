@@ -12,7 +12,7 @@ export const CardBuilder = {
      },
      cardAddress:() => {
         return $('<a>').addClass('detail-address')
-                .attr('href', `https://${CardBuilder.testnet == true ? "testnet." : "" }tonscan.org/collection/${new TonWeb.Address(CardBuilder.address).toString(true, true, false, false)}`)
+                .attr('href', `https://${CardBuilder.testnet == 1 ? "testnet." : "" }tonscan.org/collection/${new TonWeb.Address(CardBuilder.address).toString(true, true, false, false)}`)
                 .text(CardBuilder.address);
      },
      cardDetail:(key, value) => {

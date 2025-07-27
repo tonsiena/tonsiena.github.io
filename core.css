@@ -48,16 +48,3 @@ overlay {
 overlay.active {
     display: flex;
 }
-
-
-@media screen and (max-width: 450px) {
-    page, overlay {
-        min-width: 100vw;
-        max-width: 100vw;
-        min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 51px);
-        max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 51px);
-        border-radius: 0px;
-        border: none;
-        overflow: auto;
-    }
-}

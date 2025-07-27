@@ -6,7 +6,7 @@ var $content, $archive, $page = $("page"), $overlay = $("overlay"), urlparams;
 
 function loadCollections(urladdress, todo){
         Collections.address = urladdress;
-        $.getJSON(`https://${Collections.testnet == true ? "testnet." : "" }toncenter.com/api/v3/nft/items?owner_address=${Collections.address}&limit=${Collections.limit <= 1000 ? Collections.limit : 1000}&offset=${Collections.offset}${Collections.collection ? "&collection_address=" + Collections.collection : ""}`)
+        $.getJSON(`https://${Collections.testnet == 1 ? "testnet." : "" }toncenter.com/api/v3/nft/items?owner_address=${Collections.address}&limit=${Collections.limit <= 1000 ? Collections.limit : 1000}&offset=${Collections.offset}${Collections.collection ? "&collection_address=" + Collections.collection : ""}`)
             .then(res => todo(res)).catch(error => previewScreen($page, urlparams,  error.responseJSON.error));
 }
 
@@ -45,7 +45,7 @@ function initTabs() {
 class onAddressIdentification {
     constructor(address, todo) {
         if (address)
-            $.getJSON(`https://${Collections.testnet == true ? "testnet." : "" }tonapi.io/v2/accounts/${address}`)
+            $.getJSON(`https://${Collections.testnet == 1 ? "testnet." : "" }tonapi.io/v2/accounts/${address}`)
                 .then(res => todo(res)).catch(error => previewScreen($page, urlparams, "Address doesn't exist or some error occured"));
         else previewScreen($page, urlparams, "Please enter address");
     }
@@ -69,7 +69,7 @@ function onStart() {
     Collections.collection = urlparams.get("collection") || "";
     Collections.offset = Number(urlparams.get("offset")) || 0;
     Collections.limit = Number(urlparams.get("limit")) || 1000;
-    Collections.testnet = urlparams.get("testnet") || false;
+    Collections.testnet = Number(urlparams.get("testnet")) || 0;
     Collections.minimized = Number(urlparams.get("minimized")) || 0;
 
     $page.html('<div class="alert-message">Loading...</div>');
