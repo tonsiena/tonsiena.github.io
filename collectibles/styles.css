@@ -80,7 +80,7 @@ tab {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 51px);
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
     justify-self: center;
     padding: 0px 20px;
     margin-top: 20px;
@@ -314,10 +314,10 @@ tab {
         overflow: hidden;
     }
 
-    .alert-e-message {
+    .alert-e-message, .alert-message{
             width: calc(90% - 40px);
-    };
-    
+    }
+
     page,
     overlay {
         min-width: 100vw;
