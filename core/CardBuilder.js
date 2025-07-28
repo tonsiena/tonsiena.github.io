@@ -29,6 +29,13 @@ export const CardBuilder = {
                CardBuilder.cardDetail("Cover image", CardBuilder.data?.extra?.cover_image),
                CardBuilder.cardDetail("Uri", CardBuilder.data?.extra?.uri));
      },
+    cardContent: () => {
+           var $cardcontent = $('<div>').addClass("card-content");
+                    
+           $cardcontent.append(CardBuilder.cardHeader(), CardBuilder.cardAddress());
+           if(CardBuilder.minimized === 1) $cardcontent.append(CardBuilder.cardFooter());
+           return $cardcontent;
+    },
     cardExpand: () => {
         if(!CardBuilder.minimized){
         var $cardexpand =  $('<p>').addClass('detail-expand').text('expand');
@@ -43,13 +50,9 @@ export const CardBuilder = {
     card: () => {
         var $card;
         if (CardBuilder.data?.valid) {
-            var className = "card-content"
-            if(CardBuilder.minimized === 1) className += " expanded";
+   
             $card = $('<li>').addClass('card').append(
-                $('<div>').addClass(className)
-                    .append(CardBuilder.cardHeader(),
-                        CardBuilder.cardAddress(),
-                        CardBuilder.cardFooter()),
+                CardBuilder.cardContent(),
                 CardBuilder.cardExpand());
         } else {
             $card = $('<li>').addClass('card').append(

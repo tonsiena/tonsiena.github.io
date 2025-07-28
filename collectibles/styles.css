@@ -7,7 +7,7 @@ header {
     width: 580px;
     max-width: 600px;
     padding: 0px 10px;
-    border-bottom: 1px solid #ffffff20;
+    /* border-bottom: 1px solid #ffffff20; */
 }
 
 nav {
@@ -31,7 +31,8 @@ tab {
 }
 
 .content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -87,6 +88,17 @@ tab {
     border-radius: 10px;
     color: grey;
     font-size: 20px;
+    word-break: break-all;
+}
+
+.addr-message {
+    background-color: var(--card-color);
+    width: calc(100% - 42px);
+    padding: 10px 20px;
+    margin: 10px 0px;
+    white-space: pre-line;
+    word-wrap: break-word;
+    /* border: 1px solid #ffffff20; */
 }
 
 .alert-e-message {
@@ -106,18 +118,18 @@ tab {
 }
 
 .card {
-    width: calc(100% - 42px);
+    width: calc(390px - 42px);
     flex-direction: column;
     background: var(--card-color);
     display: flex;
     padding: 20px;
     font-size: 15px;
+    height: calc(100% - 45px);
     border: 1px solid #ffffff20;
+    justify-content: space-between;
 }
 
 .card-content {
-    transition: max-height 1s ease;
-    max-height: 65px;
     overflow: hidden;
     gap: 5px;
     display: flex;
@@ -307,15 +319,26 @@ tab {
     color: var(--link-color)
 }
 
+@media screen and (max-width: 799px) {
+.content {
+    display: flex;
+    width: 100%;
+}
+.card {
+    width: calc(100vw - 100px)
+}
+}
 @media screen and (max-width: 450px) {
 
     html,
     body {
         overflow: hidden;
+        flex-direction: column-reverse;
     }
 
-    .alert-e-message, .alert-message{
-            width: calc(90% - 40px);
+    .alert-e-message,
+    .alert-message {
+        width: calc(90% - 40px);
     }
 
     page,
@@ -333,6 +356,7 @@ tab {
         align-items: center;
         overflow: auto;
         padding-bottom: 40px;
+        display: flex;
     }
 
     .card {

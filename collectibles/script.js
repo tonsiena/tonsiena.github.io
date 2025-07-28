@@ -12,7 +12,7 @@ function loadCollections(urladdress, todo) {
 
 const initTabs = () => {
     $content = $('<ul>', { class: 'content', id: 'content-main' }).appendTo($page);
-    $archive = $('<ul>', { class: 'content', id: 'content-archive' }).hide().appendTo($page);
+    $archive = $('<ul>', { class: 'content', id: 'content-archive' }).hide().appendTo($page)
 
     const toggleTab = isArchive => {
         $content.toggle(!isArchive);
@@ -23,9 +23,14 @@ const initTabs = () => {
 
     $('#tab-arch').on('click', () => toggleTab(true));
     $('#tab-main').on('click', () => toggleTab(false));
-    $('#tab-menu').on('click', () => {
-        $page.toggle();
-        $overlay.toggle();
+
+};
+
+const initTabsMenu = () => {
+ $('#tab-menu').on('click', () => {
+        $page.fadeToggle();
+        $overlay.fadeToggle();
+
     });
 
     $('<p>', { class: 'info-channel', text: 'official telegram channel' })
@@ -35,8 +40,7 @@ const initTabs = () => {
     $('<p>', { class: 'info-channel', text: 'contact dev' })
         .append($('<a>', { href: 'https://t.me/sheasame', text: '@sheasame', target: '_blank' }))
         .appendTo($overlay);
-};
-
+}
 class onAddressIdentification {
     constructor(address, todo) {
         if (address)
@@ -46,14 +50,38 @@ class onAddressIdentification {
     }
 }
 
-function buildCollectionList(address, metadata) {
+function getAddrMessage(udata, div){
+    var $addrmessage = $('<p>', { class: 'addr-message' })
+            .append(
+                'Вы смотрите адрес кошелька: ',
+                $('<a>', {
+                    href: `https://${Collections.testnet ? 'testnet.' : ''}tonscan.org/address/${udata.address}`,
+                    text: udata.address,
+                    target: '_blank'
+                }),
+                $('<br>'),
+                `Баланс кошелька: ${(udata.balance / 1e9).toFixed(2)} TON`,
+                $('<br>'),
+                `Последняя транзакция в: ${udata.last_activity ? new Date(udata.last_activity * 1000).toLocaleString('ru-RU', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }) : 'Неизвестно'}`
+            );
+    $addrmessage.appendTo(div);
+}
+function buildCollectionList(udata, metadata) {
     $page.empty();
+    getAddrMessage(udata, $page);
+
     initTabs();
-    $("<p>").addClass("alert-e-message").text(address).appendTo($page);
     const targetType = Collections.collection ? "nft_items" : "nft_collections";
     Object.entries(metadata).forEach(([addr, { token_info: [data] }]) => {
         if (data.type === targetType) {
-            CardBuilder.build(address, data, (data.valid && data.image) ? $content : $archive, Collections.testnet, Collections.minimized)
+            CardBuilder.build(udata.address, data, (data.valid && data.image) ? $content : $archive, Collections.testnet, Collections.minimized)
         }
     });
 }
@@ -69,12 +97,12 @@ function onStart() {
         minimized: Number(urlparams.get("minimized")) || 0
     });
 
-    initTabs();
+    initTabsMenu();
     $page.html('<div class="alert-message">Loading...</div>');
 
-    new onAddressIdentification(urlparams.get("account"), ({ address }) => {
-        loadCollections(address, ({ nft_items, metadata }) => {
-            if (nft_items.length) buildCollectionList(address, metadata);
+    new onAddressIdentification(urlparams.get("account"), (data) => {
+        loadCollections(data.address, ({ nft_items, metadata }) => {
+            if (nft_items.length) buildCollectionList(data, metadata);
             else previewScreen($page, urlparams, "NFT wasn't found on this address");
         })
     })
