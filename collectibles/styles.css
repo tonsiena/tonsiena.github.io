@@ -49,19 +49,8 @@
             font-weight: bold;
             display: flex;
             width: 100%;
-            justify-content: start;
+            justify-content: center;
         }
-
-        .menu-button {
-            background: none;
-            border: none;
-            color: #ffffff;
-            font-size: 24px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-
         .page {
             width: 100%;
             max-width: 800px;
@@ -100,7 +89,7 @@
         }
 
         .card:hover {
-                        background-color: #ffffff20;
+            background-color: #ffffff20;
         }
 
         .card-header {
@@ -109,17 +98,17 @@
         }
 
         .card-title {
-   font-size: 18px;
-    flex: 1;
-    display: block;
-    align-items: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 100%;
-    overflow: hidden;
-    text-decoration: none;
-    margin-right: 10px;
-    color: white;
+            font-size: 18px;
+            flex: 1;
+            display: block;
+            align-items: center;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+            overflow: hidden;
+            text-decoration: none;
+            margin-right: 10px;
+            color: white;
         }
 
         .card-description {
@@ -128,9 +117,7 @@
             width: calc(100% - 30px);
             text-decoration: none;
             display: -webkit-box;
-            /* Для многострочного текста */
             -webkit-line-clamp: 5;
-            /* Количество отображаемых строк */
             -webkit-box-orient: vertical;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -143,164 +130,94 @@
             border-radius: 10px;
         }
 
-        .menu {
-            color: #ffffff;
-            z-index: 999;
-            transition: all 0.3s ease;
+
+        .pr-cn {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex-direction: column;
+            gap: 15px;
             padding: 20px;
-            position: fixed;
+            margin-top: 20px;
+            border-radius: 15px;
+            width: 100%;
+            background-color: var(--card-color);
+            justify-self: center;
         }
 
-      
-
-        .menu ul {
-            list-style: none;
+        .pr-iw {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
 
-        .menu li {
-            margin: 15px 0;
-        }
-
-        .menu a {
-            color: #ffffff;
-            text-decoration: none;
+        .pr-il {
             font-size: 16px;
-            opacity: 0.8;
+            font-weight: 500;
+            padding-left: 5px;
+            color: var(--link-color)
         }
 
-        .menu a:hover {
+        .pr-if {
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid var(--link-color);
+            background-color: var(--card-color);
+            color: var(--text-color);
+            opacity: 0.5;
+        }
+
+        .pr-if:focus {
             opacity: 1;
         }
 
-
-        
-.pr-cn {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 15px;
-    width: 100%;
-    background-color: var(--card-color);
-    justify-self: center;
-}
-
-.pr-iw {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.pr-il {
-    font-size: 16px;
-    font-weight: 500;
-    padding-left: 5px;
-    color: var(--link-color)
-}
-
-.pr-if {
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid var(--link-color);
-    background-color: var(--card-color);
-    color: var(--text-color);
-    opacity: 0.5;
-}
-
-.pr-if:focus {
-    opacity: 1;
-}
-
-.pr-sr-cn {
-    display: flex;
-    gap: 10px;
-}
-
-.pr-sr-bt {
-    background-color: var(--link-color);
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    width: 100%;
-}
-
-.alert-message,
-.alert-e-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 51px);
-    width: calc(100% - 60px);
-    justify-self: center;
-    padding: 0px 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    word-break: break-all;
-}
-
-.addr-message {
-    width: calc(100% - 42px);
-    padding: 10px 20px;
-    margin: 10px 0px;
-    white-space: pre-line;
-    word-wrap: break-word;
-}
-
-.alert-e-message {
-    height: 30px;
-}
-
-  /* ПК: меню по центру */
-        @media (min-width: 801px) {
-            .menu {
-                top: 60px;
-                width: 100%;
-                height: calc(100% - 60px);
-                display: none;
-                justify-content: center;
-            }
-
-            .menu.active {
-                display: flex;
-            }
-
-
-            .menu ul {
-                list-style: none;
-                width: 100%;
-                max-width: 800px;
-                padding: 0px 20px;
-                background-color: #101010;
-                border-radius: 20px;
-            }
-
-      
+        .pr-sr-cn {
+            display: flex;
+            gap: 10px;
         }
 
-        /* Мобильные: меню снизу */
-        @media (max-width: 800px) {
-            .menu {
-                top: 60px;
-                width: 100%;
-                max-width: 800px;
-                height: calc(100% - 60px);
-                display: none;
-                background-color: #070707;
-            }
-                  .pr-cn {
-display: flex;
-            }
+        .pr-sr-bt {
+            background-color: var(--link-color);
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
 
-            .menu.active {
+        .alert-message,
+        .alert-e-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 120px);
+            width: 100%;
+            justify-self: center;
+            padding: 0px 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            word-break: break-all;
+        }
+
+        .addr-message {
+            width: calc(100% - 42px);
+            padding: 10px 20px;
+            margin: 10px 0px;
+            white-space: pre-line;
+            word-wrap: break-word;
+        }
+
+        .alert-e-message {
+            height: 30px;
+        }
+
+        @media (max-width: 450px) {
+            .pr-cn {
                 display: flex;
             }
         }
