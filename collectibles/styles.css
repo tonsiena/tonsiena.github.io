@@ -50,7 +50,7 @@
             color: #ffffff;
             font-size: 24px;
             font-weight: bold;
-            display: flex;
+            display: none;
             width: 100%;
             padding-left: 5px;
         }
