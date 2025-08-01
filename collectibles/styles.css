@@ -54,10 +54,10 @@
         }
 
         .page {
-            width: calc(100% - 60px);
+            width: calc(100% - 20px);
             max-width: 800px;
             margin: 0 auto;
-            padding: 95px 20px 20px 20px;
+            padding: 95px 10px 20px 10px;
             backdrop-filter: blur(5px);
             min-height: calc(100vh - 95px);
             display: flex;
