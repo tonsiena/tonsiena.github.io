@@ -40,6 +40,10 @@ function buildCollectionList(udata, metadata) {
     });
 }
 
+const tg = window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+
 function sliceAddress(string, length) {
     string = new TonWeb.utils.Address(string).toString(true, true, true);
   if (string.length < length) return string;
