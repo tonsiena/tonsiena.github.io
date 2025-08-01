@@ -23,11 +23,12 @@
 
         header {
             position: fixed;
-            top: 0;
+            top: 0px;
             left: 0;
             right: 0;
             height: 60px;
             display: flex;
+            padding-top: 25px;
             align-items: center;
             justify-content: center;
             z-index: 1000;
@@ -53,12 +54,12 @@
         }
 
         .page {
-            width: 100%;
+            width: calc(100% - 60px);
             max-width: 800px;
             margin: 0 auto;
-            padding: 60px 0px 20px 20px;
+            padding: 95px 20px 20px 20px;
             backdrop-filter: blur(5px);
-            min-height: calc(100vh - 60px);
+            min-height: calc(100vh - 95px);
             display: flex;
             flex-direction: column;
         }
@@ -138,7 +139,6 @@
             grid-template-columns: 1fr 1fr;
             flex-direction: column;
             gap: 15px;
-            padding: 20px;
             border-radius: 15px;
             width: 100%;
             background-color: var(--card-color);
