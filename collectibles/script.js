@@ -4,7 +4,7 @@ var $ = jQuery, urlparams, Collections = {},
 
 function buildCollectionList(udata, metadata) {
     const $content = $(".content").empty();
-        $('<p>').addClass('alert-e-message').text(sliceAddress(Collections.collection || Collections.address, 20)).appendTo($(".header-content"))
+        $('<p>').addClass('alert-e-message').text(sliceAddress(Collections.collection || Collections.address, 20)).appendTo($(".content"))
 
     Object.entries(metadata).forEach(([addr, { token_info: [data] }]) => {
         console.log(addr)
