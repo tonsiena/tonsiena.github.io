@@ -43,6 +43,9 @@ function buildCollectionList(udata, metadata) {
 }
 
 const tg = window.Telegram.WebApp;
+window.Telegram.WebView.postEvent('web_app_set_bottom_bar_color', false, {color: "#1a2026"});
+
+window.Telegram.WebView.postEvent('web_app_set_header_color', false, {color: "#1a2026"});
 tg.ready();
 tg.expand();
 if (window.history.length > 1) {
