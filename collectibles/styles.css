@@ -10,7 +10,7 @@
         }
 
         body {
-            background-color: #070707;
+            background-color: #1a2026;
             font-family: Arial, sans-serif;
             overflow-x: hidden;
         }
@@ -26,23 +26,24 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 95px;
+            height: 80px;
             display: flex;
-            padding-top: 35px;
+            /* padding-top: 35px; */
             align-items: center;
             justify-content: center;
             z-index: 1000;
-            background-color: #070707;
-            flex-direction: row;
+            background-color: #1a2026;
         }
 
         .header-content {
             width: 100%;
-            max-width: 750px;
+            max-width: 400px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
+            flex-direction: column;
+
         }
 
         .logo {
@@ -51,13 +52,14 @@
             font-weight: bold;
             display: flex;
             width: 100%;
+            padding-left: 5px;
         }
 
         .page {
             width: calc(100% - 20px);
-            max-width: 800px;
+            max-width: 400px;
             margin: 0 auto;
-            padding: 95px 10px 20px 10px;
+            padding: 80px 10px 20px 10px;
             backdrop-filter: blur(5px);
             min-height: calc(100vh - 95px);
             display: flex;
@@ -100,6 +102,12 @@
             width: 100%;
         }
 
+        body {
+            font-family: ProductSans, -apple-system, system-ui, sans-serif;
+            font-variant-ligatures: none;
+            -webkit-font-smoothing: antialiased;
+        }
+
         .card-title {
             font-size: 18px;
             flex: 1;
@@ -135,21 +143,28 @@
 
 
         .pr-cn {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
             flex-direction: column;
-            gap: 15px;
-            border-radius: 15px;
+            gap: 2px;
             width: 100%;
-            background-color: var(--card-color);
             justify-self: center;
+            border-radius: 15px;
+            border: 5px solid #1a2026;
+            background-color: #212a33;
+
         }
+
+
+
 
         .pr-iw {
             display: flex;
             flex-direction: column;
             gap: 5px;
+            border-bottom: 1px solid #1a2026;
+
         }
+
 
         .pr-il {
             font-size: 16px;
@@ -160,13 +175,19 @@
 
         .pr-if {
             padding: 10px;
+            height: 40px;
             font-size: 14px;
-            border-radius: 10px;
             outline: none;
-            border: 1px solid var(--link-color);
-            background-color: var(--card-color);
-            color: var(--text-color);
+            /* border: 1px solid var(--link-color); */
+            border: none;
+            color: #8a98a6;
+            background-color: transparent;
             opacity: 0.5;
+
+        }
+
+        .pr-if::placeholder {
+            color: #8a98a6;
         }
 
         .pr-if:focus {
@@ -179,16 +200,20 @@
         }
 
         .pr-sr-bt {
-            background-color: var(--link-color);
+            background-color: #248bda;
             color: #fff;
             padding: 10px 20px;
             font-size: 14px;
             border: none;
-            border-radius: 4px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
             cursor: pointer;
+            padding-top: 10px;
+            border-top: 15px solid #1a2026;
             transition: background-color 0.2s;
             width: 100%;
-            height: 35px;
+            height: 55px;
+            outline: none;
         }
 
         .alert-message,
@@ -196,15 +221,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 40px;
-            width: 50%;
             justify-self: center;
-            margin-top: 2px;
-            font-size: 15px;
-            word-break: break-all;
-            background-color: #afafaf1a;
-            border-radius: 15px;
-            padding: 0px 10px;
+            height: 40px;
+            font-size: 14px;
+            justify-content: start;
+            padding-left: 5px;
+            background-color: transparent;
+            width: 100%;
+            color: #8794a1
         }
 
         .addr-message {
@@ -220,7 +244,7 @@
             align-items: center;
             gap: 8px;
             margin: 10px 0;
-            width: 100%;
+            width: calc(100% - 10px);
             justify-content: space-between;
         }
 
@@ -237,6 +261,12 @@
             height: 0;
         }
 
+        .switch-label {
+            padding-left: 10px;
+            font-size: 14px;
+            color: white;
+        }
+
         .slider {
             position: absolute;
             cursor: pointer;
@@ -244,7 +274,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #ccc;
+            background-color: #e3695d;
             transition: 0.4s;
             border-radius: 20px;
         }
@@ -256,13 +286,13 @@
             width: 16px;
             left: 2px;
             bottom: 2px;
-            background-color: white;
+            background-color: #202932;
             transition: 0.4s;
             border-radius: 50%;
         }
 
         input:checked+.slider {
-            background-color: #4caf50;
+            background-color: #248bda;
         }
 
         input:checked+.slider:before {
@@ -275,23 +305,13 @@
                 display: flex;
             }
 
-            .logo {
-                font-size: 18px;
-                justify-content: center;
-            }
 
             .header-content {
                 flex-direction: column;
             }
 
-            .alert-e-message {
-                height: 20px;
-                font-size: 12px;
-                justify-content: center;
-                background-color: transparent;
-                width: 100%;
-            }
-            
+
+
             h3 {
                 text-align: start;
             }

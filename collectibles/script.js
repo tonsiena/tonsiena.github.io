@@ -75,12 +75,12 @@ const previewScreen = (url, message = null) => {
     $page.empty();
 
     if (message)
-        $('<p>').addClass('alert-e-message').text(message).appendTo($(".header-content"))
+        $('<p>').addClass('alert-e-message').text(message).appendTo($(".page"))
     const $pc = $('<div>').addClass('pr-cn').appendTo($page);
 
     var inel = (text, type, placeholder, param, alt = '') => {
         var $wrapper = $('<div>').addClass('pr-iw').appendTo($pc);
-        var $label = $('<label>').addClass('pr-il').text(text).appendTo($wrapper);
+        // var $label = $('<label>').addClass('pr-il').text(text).appendTo($wrapper);
         var $input = $('<input>').addClass('pr-if').attr({
             type: type, placeholder: placeholder,
             value: url.get(param) || alt
