@@ -1,18 +1,22 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #070707;
+  background-color: #101010;
   color: #ffffff;
   height: 100vh;
   overflow: hidden;
 }
 
 .container {
-  padding-top: 00px; /* Отступ сверху */
   height: 100vh;
   box-sizing: border-box;
   overflow: auto;
 
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
 .screen {
@@ -22,12 +26,21 @@ body {
   justify-content: space-between;
   height: 100%;
   padding: 20px;
+  margin-top: 70px;
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: пкун;
+  font-size: 16px;
+  color: white;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  background-color: #070707;
+  border-bottom: 1px solid #ffffff20;
 }
 
 .grid {
@@ -36,6 +49,8 @@ h1 {
   gap: 10px;
   width: 100%;
   max-width: 600px;
+      padding-top: 60px; /* Отступ сверху */
+
 }
 
 .grid-item {
