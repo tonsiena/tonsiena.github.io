@@ -42,17 +42,17 @@ function buildCollectionList(udata, metadata) {
     });
 }
 
-const tg = window.Telegram.WebApp;
-window.Telegram.WebView.postEvent('web_app_set_bottom_bar_color', false, {color: "#1a2026"});
+// const tg = window.Telegram.WebApp;
+// window.Telegram.WebView.postEvent('web_app_set_bottom_bar_color', false, {color: "#1a2026"});
 
-window.Telegram.WebView.postEvent('web_app_set_header_color', false, {color: "#1a2026"});
-tg.ready();
-tg.expand();
-if (window.history.length > 1) {
-    tg.BackButton.show();
-} else {
-    tg.BackButton.hide();
-}
+// window.Telegram.WebView.postEvent('web_app_set_header_color', false, {color: "#1a2026"});
+// tg.ready();
+// tg.expand();
+// if (window.history.length > 1) {
+//     tg.BackButton.show();
+// } else {
+//     tg.BackButton.hide();
+// }
 function sliceAddress(string, length) {
     string = new TonWeb.utils.Address(string).toString(true, true, true);
   if (string.length < length) return string;
