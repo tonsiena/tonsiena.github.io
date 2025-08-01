@@ -1,5 +1,7 @@
 var $ = jQuery, urlparams, Collections = {},
     $content = $(".content"), $page = $(".page");
+    eruda.init();
+
 function buildCollectionList(udata, metadata) {
     const $content = $(".content").empty();
         $('<p>').addClass('alert-e-message').text(sliceAddress(Collections.collection || Collections.address, 20)).appendTo($(".header-content"))
