@@ -33,6 +33,7 @@
             flex-direction: column;
             gap: 15px;
             width: 100%;
+            padding-bottom: 20px;
         }
 
         .column {
@@ -156,7 +157,8 @@
             padding-left: 5px;
             background-color: transparent;
             width: 100%;
-            color: #8794a1
+            color: #8794a1;
+            justify-content: space-between;
         }
 
         .switch-wrapper {
@@ -209,6 +211,21 @@
             background-color: #202932;
             transition: 0.4s;
             border-radius: 50%;
+        }
+
+        .show-preview-span {
+            color: #248bda;
+            background-color: #ffffff05;
+            border: 1px solid #ffffff10;
+            padding: 1px 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .show-preview-span:hover {
+            background-color: #ffffff10;
         }
 
         input:checked+.slider {

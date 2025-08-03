@@ -7,7 +7,9 @@ Siena.webApp();
 function buildCollectionList(udata, metadata) {
     Elements.$content.empty()
     .append($('<p>').addClass('alert-message')
-    .text(Siena.sliceAddress(RequestData?.account, 20)));
+    .text(Siena.sliceAddress(RequestData?.account, 20))
+    .append($('<span>').addClass('show-preview-span')
+    .text("edit").on("click", () => previewScreen("Please enter address"))));
 
     Object.entries(metadata).forEach(([addr, { token_info: [{ name, description, extra, type }] }]) => 
         type === "nft_collections" && buildCard(udata, name, description, extra));
