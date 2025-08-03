@@ -10,6 +10,8 @@ function buildCollectionList(udata, metadata) {
     .text(Siena.sliceAddress(RequestData?.account, 20))
     .append($('<span>').addClass('show-preview-span')
     .text("edit").on("click", () => previewScreen("Please enter address"))));
+    
+    scrollToTopButton();
 
     Object.entries(metadata).forEach(([addr, { token_info: [{ name, description, extra, type }] }]) => 
         type === "nft_collections" && buildCard(udata, name, description, extra));
@@ -52,6 +54,10 @@ const onAddressIdentification = (address, todo) =>  !address ? previewScreen("Pl
 
 const getTestnetPrefix = () => RequestData?.testnet == 1 ? "testnet." : "";
 
+const scrollToTopButton = () => $('<button>').addClass('scroll-to-top').text('↑').hide().on('click', () => $('html, body').animate({ scrollTop: 0 }, 400)).appendTo(Elements.$content);
+
+$(window).on('scroll', () => $('.scroll-to-top')?.toggle($(window).scrollTop() > 400));
+
 const previewScreen = (message = null) => {
     Elements.$content.empty();
 
@@ -78,7 +84,7 @@ const previewScreen = (message = null) => {
     const $bc = $('<div>').addClass('preview-search-container').appendTo($pc);
     $('<button>').addClass('preview-search-button').text('Search').on('click', () => {
         if ($ai.val()) {
-            onAddressIdentification($ai.val(), (data) => {
+            onAddressIdentification($ai.val().toLowerCase(), (data) => {
                 RequestData = {
                     offset: $oi.val() || 0,
                     limit: $li.val() || 1000,
