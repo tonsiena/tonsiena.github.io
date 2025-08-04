@@ -7,9 +7,9 @@ export const Siena = {
 
         if (typeof window.Telegram?.WebApp !== 'undefined') {
             const platform = window.Telegram.WebApp.platform;
-
+            alert(platform)
             if (platform === 'android' || platform === 'ios') {
-                Elements.$page.addClass("mobile")
+                  Elements.$page.addClass("mobile")
             }
         }
 
