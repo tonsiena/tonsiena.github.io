@@ -5,11 +5,11 @@ var $ = jQuery, RequestData, Elements = { $page: $(".page"),  $content: $(".cont
 Siena.webApp();
 
 function buildCollectionList(udata, metadata) {
-    Elements.$content.empty()
-    .append($('<p>').addClass('alert-message')
+    Elements.$content.empty();
+    $('<p>').addClass('alert-message')
     .text(Siena.sliceAddress(RequestData?.account, 20))
     .append($('<span>').addClass('show-preview-span')
-    .text("edit").on("click", () => previewScreen("Please enter address"))));
+    .text("edit").on("click", () => previewScreen("Please enter address"))).insertBefore(Elements.$content)
     
     scrollToTopButton();
 
@@ -61,7 +61,7 @@ $(window).on('scroll', () => $('.scroll-to-top')?.toggle($(window).scrollTop() >
 const previewScreen = (message = null) => {
     Elements.$content.empty();
 
-    if (message) $('<p>').addClass('alert-message').text(message).appendTo(Elements.$content)
+    if (message) $('<p>').addClass('hl-message').text(message).appendTo(Elements.$content)
 
     const $pc = $('<div>').addClass('preview').appendTo(Elements.$content);
 
