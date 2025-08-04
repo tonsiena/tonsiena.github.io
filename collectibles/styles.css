@@ -13,7 +13,7 @@
 
         h3 {
             padding-left: 5px;
-            color: #8794a1;
+            color: white;
         }
 
         .page {
@@ -22,20 +22,26 @@
             margin: 0 auto;
             min-height: 100vh;
             display: flex;
+            max-height: calc(100vh);
             flex-direction: column;
+            gap: 10px;
+        }
+
+        .page.mobile {
+            padding-top: 75px;
         }
 
         .content {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
             width: 100%;
             padding-bottom: 20px;
-            padding-top: 75px;
             overflow: auto;
-            padding: 0px 20px;
-            max-height: calc(100vh - 40px);
+            padding-left: 10px;
+            padding-right: 10px;
+            max-height: 100vh;
         }
 
         .column {
@@ -45,7 +51,7 @@
         }
 
         .card {
-            background-color: #ffffff10;
+            background-color: #212a33;
             border: 1px solid #ffffff10;
             border-radius: 15px;
             padding: 10px;
@@ -58,7 +64,7 @@
         }
 
         .card:hover {
-            background-color: #ffffff20;
+            background-color: #ffffff10;
         }
 
         .card-header {
@@ -174,6 +180,10 @@
             color: #8794a1;
         }
 
+        .alert-message div {
+            gap: 5px;
+            display: flex;
+        }
         .switch-wrapper {
             display: flex;
             align-items: center;
@@ -228,7 +238,7 @@
 
         .show-preview-span {
             color: #248bda;
-            background-color: #ffffff05;
+            background-color: #212a33;
             border: 1px solid #ffffff10;
             padding: 1px 8px;
             border-radius: 5px;
@@ -237,23 +247,20 @@
             text-align: center;
         }
 
-        .show-preview-span:hover {
+        .scroll-to-top:hover, .show-preview-span:hover{
             background-color: #ffffff10;
         }
 
         .scroll-to-top {
-            position: fixed;
-            top: 50px;
             right: calc(50% - 20px);
-            background: #171c22;
-            color: #fff;
+            background: #212a33;
+            color: #248bda;
             border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            border-radius: 5px;
+            width: 50px;
+            height: 22px;
             cursor: pointer;
-            font-size: 20px;
-            line-height: 40px;
+            font-size: 15px;
             text-align: center;
             z-index: 1000;
             border: 1px solid #ffffff10;

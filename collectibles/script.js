@@ -2,16 +2,15 @@ import { Siena } from "../core/tonsiena.js"
 
 var $ = jQuery, RequestData, Elements = { $page: $(".page"),  $content: $(".content") };
 
-Siena.webApp();
+Siena.webApp(Elements);
 
 function buildCollectionList(udata, metadata) {
     Elements.$content.empty();
     $('<p>').addClass('alert-message')
     .text(Siena.sliceAddress(RequestData?.account, 20))
-    .append($('<span>').addClass('show-preview-span')
-    .text("edit").on("click", () => previewScreen("Please enter address"))).insertBefore(Elements.$content)
+    .append($("<div>").append(scrollToTopButton(), $('<span>').addClass('show-preview-span')
+    .text("edit").on("click", () => previewScreen("Please enter address")))).insertBefore(Elements.$content)
     
-    scrollToTopButton();
 
     Object.entries(metadata).forEach(([addr, { token_info: [{ name, description, extra, type }] }]) => 
         type === "nft_collections" && buildCard(udata, name, description, extra));
@@ -54,9 +53,9 @@ const onAddressIdentification = (address, todo) =>  !address ? previewScreen("Pl
 
 const getTestnetPrefix = () => RequestData?.testnet == 1 ? "testnet." : "";
 
-const scrollToTopButton = () => $('<button>').addClass('scroll-to-top').text('↑').hide().on('click', () => $('html, body').animate({ scrollTop: 0 }, 400)).appendTo(Elements.$content);
+const scrollToTopButton = () => $('<button>').addClass('scroll-to-top').text('↑').hide().on('click', () => Elements.$content.animate({ scrollTop: 0 }, 400));
 
-$(window).on('scroll', () => $('.scroll-to-top')?.toggle($(window).scrollTop() > 400));
+Elements.$content.on('scroll', () => $('.scroll-to-top')?.toggle(Elements.$content.scrollTop() > 400));
 
 const previewScreen = (message = null) => {
     Elements.$content.empty();

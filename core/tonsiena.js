@@ -1,9 +1,17 @@
 export const Siena = {
     origin: "tonsiena.github.io",
-    webApp: () => {
+    webApp: (Elements) => {
         const telegram = window.Telegram.WebApp;
         telegram.ready();
         telegram.expand();
+
+        if (typeof window.Telegram?.WebApp !== 'undefined') {
+            const platform = window.Telegram.WebApp.platform;
+
+            if (platform === 'android' || platform === 'ios') {
+                Elements.$page.addClass("mobile")
+            }
+        }
 
         window.Telegram.WebView.postEvent('web_app_set_header_color', false, { color: "#1a2026" });
     },
