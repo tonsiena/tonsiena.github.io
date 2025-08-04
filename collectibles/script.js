@@ -18,11 +18,10 @@ function buildCard(udata, name, description, extra) {
     var $card, $header, $title;
     const onclick = () => alert(description);
         
-    $(`#content-column-${description ? 1 : 2}`)
-        .append($card = $('<div class="card">')
+    $card = $('<div class="card">')
         .append($header = $('<div class="card-header">')
         .append($title = $('<p class="card-title">')
-        .text(name || 'No name').on("click", onclick))));
+        .text(name || 'No name').on("click", onclick)));
 
     $('<img class="card-preview">')
         .attr('src', extra?._image_small || '../icons/nopic.png')
@@ -34,6 +33,8 @@ function buildCard(udata, name, description, extra) {
 
         buildColumn("With description", 1);
     } else buildColumn("No description", 2);
+
+    $(`#content-column-${description ? 1 : 2}`).append($card);
 }
 
 const buildColumn = (text, id) => 
@@ -57,7 +58,7 @@ Elements.$content.on('scroll', () => $('.scroll-to-top')?.toggle(Elements.$conte
 
 const previewScreen = (message = null) => {
     Elements.$content.empty();
-
+    if($(".alert-message")) $(".alert-message").remove();
     if (message) $('<p>').addClass('hl-message').text(message).appendTo(Elements.$content)
 
     const $pc = $('<div>').addClass('preview').appendTo(Elements.$content);
