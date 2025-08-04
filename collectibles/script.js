@@ -2,8 +2,6 @@ import { Siena } from "../core/tonsiena.js"
 
 var $ = jQuery, RequestData, Elements = { $page: $(".page"),  $content: $(".content") };
 
-Siena.webApp(Elements);
-
 function buildCollectionList(udata, metadata) {
     Elements.$content.empty();
     $('<p>').addClass('alert-message')
@@ -100,4 +98,7 @@ const previewScreen = (message = null) => {
     }).appendTo($bc)
 };
 
-$(document).ready(() => previewScreen("Please enter address"));
+$(document).ready(() =>{
+    Siena.webApp(Elements);
+    previewScreen("Please enter address");
+});

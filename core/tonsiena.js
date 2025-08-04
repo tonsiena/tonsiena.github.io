@@ -5,14 +5,8 @@ export const Siena = {
         telegram.ready();
         telegram.expand();
 
-        if (typeof window.Telegram?.WebApp !== 'undefined') {
-            const platform = window.Telegram.WebApp.platform;
-            alert(platform)
-            if (platform === 'android' || platform === 'ios') {
-                  Elements.$page.addClass("mobile")
-            }
-        }
-
+        if(Siena.isMobile())  Elements.$page.addClass("mobile")
+       
         window.Telegram.WebView.postEvent('web_app_set_header_color', false, { color: "#1a2026" });
     },
     sliceAddress: (string, length) => {
@@ -20,5 +14,10 @@ export const Siena = {
         if (string.length < length) return string;
         return string.slice(0, length / 2) + "..." + string.slice(-length / 2);
     },
-    isDomains: (RequestData) => RequestData?.collection === "0:80D78A35F955A14B679FAA887FF4CD5BFC0F43B4A4EEA2A7E6927F3701B273C2"
+    isDomains: (RequestData) => RequestData?.collection === "0:80D78A35F955A14B679FAA887FF4CD5BFC0F43B4A4EEA2A7E6927F3701B273C2",
+    isMobile: () => {
+        const ua = navigator.userAgent.toLowerCase();
+
+        return /android|iphone|ipad|ipod/.test(ua);
+    }
 }
