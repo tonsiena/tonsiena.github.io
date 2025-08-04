@@ -1,23 +1,24 @@
 import { Siena } from "../core/tonsiena.js"
 
-var $ = jQuery, RequestData, Elements = { $page: $(".page"),  $content: $(".content") };
+var $ = jQuery, RequestData, Elements = { $page: $(".page"), $content: $(".content") };
 
-function buildCollectionList(udata, metadata) {
+var buildCollectionList = (udata, metadata) => {
     Elements.$content.empty();
     $('<p>').addClass('alert-message')
-    .text(Siena.sliceAddress(RequestData?.account, 20))
-    .append($("<div>").append(scrollToTopButton(), $('<span>').addClass('show-preview-span')
-    .text("edit").on("click", () => previewScreen("Please enter address")))).insertBefore(Elements.$content)
-    
+        .text(Siena.sliceAddress(RequestData?.account, 20))
+        .append($("<div>").append(scrollToTopButton(), $('<span>').addClass('show-preview-span')
+            .text("edit").on("click", () => previewScreen("Please enter address")))).insertBefore(Elements.$content)
 
-    Object.entries(metadata).forEach(([addr, { token_info: [{ name, description, extra, type }] }]) => 
-        type === "nft_collections" && buildCard(udata, name, description, extra));
+    var target = RequestData.collection ? "nft_items" : "nft_collections";
+    Object.entries(metadata).forEach(([addr, { token_info: [{ name, description, extra, type }] }]) =>
+        type === target && buildCard(udata, addr, name, description, extra));
 }
 
-function buildCard(udata, name, description, extra) {
+function buildCard(udata, addr, name, description, extra) {
     var $card, $header, $title;
-    const onclick = () => alert(description);
-        
+
+    const onclick = () => window.location.href = "http://tonsiena.github.io/collectibles/?account=" + udata.address + "&collection=" + addr;
+
     $card = $('<div class="card">')
         .append($header = $('<div class="card-header">')
         .append($title = $('<p class="card-title">')
@@ -28,7 +29,7 @@ function buildCard(udata, name, description, extra) {
         .attr('alt', 'Preview').appendTo($header);
 
     if (description) {
-        if (!Siena.isDomains()) $('<p class="card-description">')
+        if (!Siena.isDomains(RequestData) && !Siena.isNumbers(RequestData)) $('<p class="card-description">')
             .text(description).on("click", onclick).appendTo($card);
 
         buildColumn("With description", 1);
@@ -37,17 +38,13 @@ function buildCard(udata, name, description, extra) {
     $(`#content-column-${description ? 1 : 2}`).append($card);
 }
 
-const buildColumn = (text, id) => 
+const buildColumn = (text, id) =>
     !document.querySelector("#content-column-" + id) && Elements.$content
     .append($('<h3>').text(text), $('<div class="column">').attr('id', 'content-column-' + id));
-    
-function loadCollections(todo) {
-    $.getJSON(`https://${getTestnetPrefix()}toncenter.com/api/v3/nft/items?owner_address=${RequestData.account}&limit=${Math.min(RequestData.limit, 1000)}&offset=${RequestData.offset}${RequestData.collection ? "&collection_address=" + RequestData.collection : ""}`)
-        .then(todo).catch(error => previewScreen(error.responseJSON?.error));
-}
 
-const onAddressIdentification = (address, todo) =>  !address ? previewScreen("Please enter address") : $.getJSON(`https://${getTestnetPrefix()}tonapi.io/v2/accounts/${address}`)
-        .then(todo).catch(e => previewScreen("Address doesn't exist or some error occured"));
+
+    const onAddressIdentification = (address, todo) => !address ? previewScreen("Please enter address") : $.getJSON(`https://${getTestnetPrefix()}tonapi.io/v2/accounts/${address}`)
+    .then(todo).catch(e => previewScreen("Address doesn't exist or some error occured"));
 
 
 const getTestnetPrefix = () => RequestData?.testnet == 1 ? "testnet." : "";
@@ -58,7 +55,7 @@ Elements.$content.on('scroll', () => $('.scroll-to-top')?.toggle(Elements.$conte
 
 const previewScreen = (message = null) => {
     Elements.$content.empty();
-    if($(".alert-message")) $(".alert-message").remove();
+    if ($(".alert-message")) $(".alert-message").remove();
     if (message) $('<p>').addClass('hl-message').text(message).appendTo(Elements.$content)
 
     const $pc = $('<div>').addClass('preview').appendTo(Elements.$content);
@@ -90,16 +87,39 @@ const previewScreen = (message = null) => {
                     collection: $ci.val() || null,
                     testnet: $tc.is(':checked') || false
                 }
-                loadCollections(({ nft_items, metadata }) => {
-                    if (!nft_items.length) return previewScreen("NFT wasn't found on this address");
-                    buildCollectionList(data, metadata);
-                });
+
+                window.location.href = "http://tonsiena.github.io/collectibles/?account=" + data.address;
             });
         }
     }).appendTo($bc)
 };
 
-$(document).ready(() =>{
+var loadCollections = (ts, todo) => $.getJSON(`https://${ts}toncenter.com/api/v3/nft/items?owner_address=${RequestData.account}&limit=${Math.min(RequestData.limit, 1000)}&offset=${RequestData.offset}${RequestData.collection ? "&collection_address=" + RequestData.collection : ""}`)
+        .then(todo).catch(error => previewScreen(error.responseJSON?.error));
+
+var parseUrl = () => {
+    const url = new URL(window.location.href);
+    const params = new URLSearchParams(url.search);
+
+    const account = params.get('account');
+    if (account) {
+        RequestData = {
+            offset: params.get('offset') || 0,
+            limit: params.get('limit') || 1000,
+            account: account,
+            collection: params.get('collection') || null,
+            testnet: params.get('testnet') || false
+        }
+        onAddressIdentification(account, (data) => {
+            loadCollections(getTestnetPrefix(), ({ nft_items, metadata }) => {
+                if (!nft_items.length) return previewScreen("NFT wasn't found on this address");
+                buildCollectionList(data, metadata);
+            });
+        });
+
+    } else previewScreen("Please enter address");
+}
+$(document).ready(() => {
     Siena.webApp(Elements);
-    previewScreen("Please enter address");
+    parseUrl();
 });
