@@ -24,11 +24,11 @@
             display: flex;
             max-height: calc(100vh);
             flex-direction: column;
-            gap: 10px;
         }
 
         .page.mobile {
             padding-top: 75px;
+            background-color: #101418;
         }
 
         .content {
@@ -37,10 +37,9 @@
             flex-direction: column;
             gap: 10px;
             width: 100%;
-            padding-bottom: 20px;
+            padding: 10px 20px;
             overflow: auto;
-            padding-left: 20px;
-            padding-right: 20px;
+
             max-height: 100vh;
             background-color: #1a2026;
         }
@@ -166,8 +165,7 @@
             padding: 10px 20px;
             color: #8794a1;
             justify-content: space-between;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            border-bottom: 1px solid #ffffff20;
         }
 
         .hl-message {

@@ -8,7 +8,7 @@ var buildCollectionList = (udata, metadata) => {
         .text(Siena.sliceAddress(RequestData?.account, 20))
         .append($("<div>").append(scrollToTopButton(), $('<span>').addClass('back-page-span')
             .text("back").on("click", () => window.history.back()))).insertBefore(Elements.$content)
-    if(Siena.isMobile())  Elements.$alert.addClass("mobile")
+    if(Siena.isMobile())  Elements.$page.addClass("mobile")
 
     var target = RequestData.collection ? "nft_items" : "nft_collections";
     Object.entries(metadata).forEach(([addr, { token_info: [{ name, description, extra, type }] }]) =>
