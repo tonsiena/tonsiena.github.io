@@ -1,13 +1,12 @@
+const debug = false;
 export const Siena = {
-    origin: "tonsiena.github.io",
-    webApp: (Elements) => {
+    origin: debug ? "http://127.0.0.1:5500" : "https://tonsiena.github.io",
+    webApp: () => {
         const telegram = window.Telegram.WebApp;
         telegram.ready();
         telegram.expand();
-
-        if(Siena.isMobile())  Elements.$page.addClass("mobile")
        
-        window.Telegram.WebView.postEvent('web_app_set_header_color', false, { color: "#1a2026" });
+        window.Telegram.WebView.postEvent('web_app_set_header_color', false, { color: "#101418" });
     },
     sliceAddress: (string, length) => {
         string = new TonWeb.utils.Address(string).toString(true, true, true);

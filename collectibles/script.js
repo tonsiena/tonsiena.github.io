@@ -4,10 +4,11 @@ var $ = jQuery, RequestData, Elements = { $page: $(".page"), $content: $(".conte
 
 var buildCollectionList = (udata, metadata) => {
     Elements.$content.empty();
-    $('<p>').addClass('alert-message')
+    Elements.$alert = $('<p>').addClass('alert-message')
         .text(Siena.sliceAddress(RequestData?.account, 20))
-        .append($("<div>").append(scrollToTopButton(), $('<span>').addClass('show-preview-span')
-            .text("edit").on("click", () => previewScreen("Please enter address")))).insertBefore(Elements.$content)
+        .append($("<div>").append(scrollToTopButton(), $('<span>').addClass('back-page-span')
+            .text("back").on("click", () => window.history.back()))).insertBefore(Elements.$content)
+    if(Siena.isMobile())  Elements.$alert.addClass("mobile")
 
     var target = RequestData.collection ? "nft_items" : "nft_collections";
     Object.entries(metadata).forEach(([addr, { token_info: [{ name, description, extra, type }] }]) =>
@@ -17,7 +18,7 @@ var buildCollectionList = (udata, metadata) => {
 function buildCard(udata, addr, name, description, extra) {
     var $card, $header, $title;
 
-    const onclick = () => window.location.href = "http://tonsiena.github.io/collectibles/?account=" + udata.address + "&collection=" + addr;
+    const onclick = () => window.location.href = Siena.origin + "/collectibles/?account=" + udata.address + "&collection=" + addr;
 
     $card = $('<div class="card">')
         .append($header = $('<div class="card-header">')
@@ -88,7 +89,7 @@ const previewScreen = (message = null) => {
                     testnet: $tc.is(':checked') || false
                 }
 
-                window.location.href = "http://tonsiena.github.io/collectibles/?account=" + data.address;
+                window.location.href = Siena.origin + "/collectibles/?account=" + data.address;
             });
         }
     }).appendTo($bc)
@@ -120,6 +121,6 @@ var parseUrl = () => {
     } else previewScreen("Please enter address");
 }
 $(document).ready(() => {
-    Siena.webApp(Elements);
+    Siena.webApp();
     parseUrl();
 });
