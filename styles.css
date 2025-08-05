@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a2026;
+    font-family: ProductSans, -apple-system, system-ui, sans-serif;
+    font-variant-ligatures: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.infoli {
+    color: grey;
+    margin: 0px 20px;
+    padding: 5px 10px;
+    background-color: #ffffff05;
+    border: 1px solid #ffffff10;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 50px);
+    word-wrap: break-word;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.infoli h2 {
+    color: white;
+    display: flex;
+    font-size: 16px;
+}
+
+.content {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-preview {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    margin: 10px 0px;
+    border-radius: 25px;
+}
