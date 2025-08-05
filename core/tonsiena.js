@@ -1,4 +1,4 @@
-const debug = false;
+const debug = true;
 export const Siena = {
     origin: debug ? "http://127.0.0.1:5500" : "https://tonsiena.github.io",
     webApp: (Elements) => {
@@ -21,5 +21,8 @@ export const Siena = {
         const ua = navigator.userAgent.toLowerCase();
 
         return /android|iphone|ipad|ipod/.test(ua);
+    },
+    getUrlParams: () => {
+       return new URLSearchParams(new URL(window.location.href).search);
     }
 }

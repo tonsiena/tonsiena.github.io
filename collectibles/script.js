@@ -11,14 +11,16 @@ var buildCollectionList = (udata, metadata) => {
 
     var target = RequestData.collection ? "nft_items" : "nft_collections";
     Object.entries(metadata).forEach(([addr, { token_info: [{ name, description, extra, type }] }]) =>
-        type === target && buildCard(udata, addr, name, description, extra));
+        type === target && buildCard(udata, addr, name, description, extra, target));
 }
 
-function buildCard(udata, addr, name, description, extra) {
+function buildCard(udata, addr, name, description, extra, target) {
     var $card, $header, $title;
 
-    const onclick = () => window.location.href = Siena.origin + "/collectibles/?account=" + udata.address + "&collection=" + addr;
-
+    const onclick = () => {
+        if(target === "nft_collections") window.location.href = Siena.origin + "/collectibles/?account=" + udata.address + "&collection=" + addr;
+        else window.location.href = Siena.origin + "/nft/?item=" + addr;
+    }
     $card = $('<div class="card">')
         .append($header = $('<div class="card-header">')
         .append($title = $('<p class="card-title">')
@@ -49,7 +51,7 @@ const buildColumn = (text, id) =>
 
 const getTestnetPrefix = () => RequestData?.testnet == 1 ? "testnet." : "";
 
-const scrollToTopButton = () => $('<button>').addClass('scroll-to-top').text('↑').hide().on('click', () => Elements.$content.animate({ scrollTop: 0 }, 400));
+const scrollToTopButton = () => $('<button>').addClass('scroll-to-top').text('top').hide().on('click', () => Elements.$content.animate({ scrollTop: 0 }, 400));
 
 Elements.$content.on('scroll', () => $('.scroll-to-top')?.toggle(Elements.$content.scrollTop() > 400));
 
