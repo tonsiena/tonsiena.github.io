@@ -15,10 +15,10 @@ const $a = (href, text) => $(`<a href="${href}">${text}</a>`)
 
 $(document).ready(() => {
 
-    const startParam = WebApp.initDataUnsafe?.start_param || "";
+    const startParam = window.Telegram.WebApp.initDataUnsafe?.start_param || "";
   const params = Siena.getUrlParams();
   var nftAddress = startParam || params.get("item");
-  
+
   if (startParam.startsWith("nft_"))
      nftAddress = startParam.replace("nft_", "");
 
