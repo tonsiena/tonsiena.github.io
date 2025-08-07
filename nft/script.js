@@ -14,7 +14,7 @@ const $a = (href, text) => $(`<a href="${href}">${text}</a>`)
 
 
 $(document).ready(() => {
-
+Siena.webApp();
     const startParam = window.Telegram.WebApp.initDataUnsafe?.start_param || "";
   const params = Siena.getUrlParams();
   var nftAddress = startParam || params.get("item");

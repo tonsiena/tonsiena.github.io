@@ -6,7 +6,7 @@ export const Siena = {
         telegram.ready();
         telegram.expand();
         
-        if(Siena.isMobile())  Elements.$page.addClass("mobile")
+        if(Siena.isMobile() && Elements)  Elements.$page.addClass("mobile")
 
         window.Telegram.WebView.postEvent('web_app_set_header_color', false, { color: "#101418" });
     },
