@@ -5,11 +5,11 @@
 }
 
 body {
-    background-color: #1a2026;
+    background-color: #101418;
     font-family: ProductSans, -apple-system, system-ui, sans-serif;
     font-variant-ligatures: none;
     -webkit-font-smoothing: antialiased;
-    max-width: 420px;
+    max-width: 400px;
     justify-self: center;
 }
 

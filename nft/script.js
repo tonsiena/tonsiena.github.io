@@ -17,7 +17,7 @@ $(document).ready(() => {
 Siena.webApp();
     const startParam = window.Telegram.WebApp.initDataUnsafe?.start_param || "";
   const params = Siena.getUrlParams();
-  var nftAddress = startParam || params.get("item");
+  var nftAddress = startParam || params.get("item") || "EQDJwE01Ltyvrh2l29xF9sARHMLjYVlg0pNFDFAKt6ElqKcj";
 
   if (startParam.startsWith("nft_"))
      nftAddress = startParam.replace("nft_", "");
