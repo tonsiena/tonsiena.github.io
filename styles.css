@@ -50,6 +50,10 @@ body {
     visibility: visible;
 }
 
+body.modal-open {
+   overflow: hidden;
+}
+
 .modal-content {
     background-color: #191d20;
     border-radius: 10px;

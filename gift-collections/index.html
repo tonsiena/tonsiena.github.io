@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tonsiena.github.io</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="../core/jquery-3.7.1.min.js"></script>
+    <script src="../core/telegram-web-app.js"></script>
+    <script src="../core/utils/Builder.js"></script>
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="content flex-center-column">
+                <div id="gc-list"></div>
+        </div>
+        <div id="toast-container"></div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            const isTelegram = window.Telegram && window.Telegram?.WebApp;
+            var webApp = isTelegram && initTelegramWebApp(true)?.WebApp;
+            $.getJSON('../assets/gifts.json', function(data) {
+                $.each(data, function(i, item) {
+                    $('#gc-list') [src] (
+                        $div("gc-item",
+                        $img("gc-img", `https://fragment.com/file/gifts/${item.fragment}/thumb.webp`, item.name),
+                        $p("gc-name", item.name)).click(() => Modal.$giftCollectionInfo(item))
+                );
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

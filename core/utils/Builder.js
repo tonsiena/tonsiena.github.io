@@ -20,19 +20,27 @@ const origin = true ? "https://tonsiena.github.io" : "http://127.0.0.1:5500",
         setTimeout(() => $message.remove(), 2500);
     },
     Modal = {
-        $closeButton: () => $p("modal-close-btn", "Close").click(() => $(".modal").remove()),
+        $closeButton: () => $p("modal-close-btn", "Close").click(() => {
+            $(".modal").remove();
+            $("body").removeClass("modal-open");
+        }),
         copyandclose: text => {
             navigator.clipboard.writeText(text).catch(console.error)
             $toast("copied");
             $(".modal").remove();
+            $("body").removeClass("modal-open");
         },
         openModal: (...children) => {
             var content = $div("modal-content", ...children)
             $div("modal modal-open", content,
                 Modal.$closeButton())[to]($("body"));
             $("body").on("click", ".modal", function (e) {
-                if (e.target === this) $(this).remove();
+                if (e.target === this){
+                    $(this).remove();
+                    $("body").removeClass("modal-open");
+                }
             });
+            $("body").addClass("modal-open");
             return content;
         },
         $metadata: metaitem =>
@@ -57,6 +65,34 @@ const origin = true ? "https://tonsiena.github.io" : "http://127.0.0.1:5500",
                 ["testnet non-bounceable:\n\n", addr.toString(true, true, false, true)]].forEach(([label, value]) => $li("modal-address").text(label + value).click(() => Modal.copyandclose(value))[to](content))
             
     }),
+            $giftCollectionInfo: item =>
+            Modal.openModal(
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "name"),
+                    $span('gc-m-val', item.name)),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "address"),
+                    $span('gc-m-val', item.address)),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "id"),
+                    $span('gc-m-val', item.id)),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "fragment"),
+                    $a("https://fragment.com/gifts/astralshard" + item.fragment, "https://fragment.com/gifts/astralshard" + item.fragment)),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "gift image"),
+                    $a(`https://fragment.com/file/gifts/${item.fragment}/thumb.webp`, `https://fragment.com/file/gifts/${item.fragment}/thumb.webp`)),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "collection image"),
+                    $a(`https://nft.fragment.com/collection/${item.fragment}.webp`,  `https://nft.fragment.com/collection/${item.fragment}.webp`)),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "emojies"),
+                    $a(`https://t.me/addemoji/${item.emoji}`,  `https://t.me/addemoji/${item.emoji}`)),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "stickers"),
+                    $a(`https://t.me/addstickers/${item.stickers}`,  `https://t.me/stickers/${item.stickers}`)),
+   
+            ),
     }
     getFriendlyAddress = address => new TonWeb.utils.Address(address).toString(true, true, true, false),
     isMobile = () => {
