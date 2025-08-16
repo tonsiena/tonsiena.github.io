@@ -1,690 +1,1207 @@
 [
     {
-        "address": "EQBG-g6ahkAUGWpefWbx-D_9sQ8oWbvy6puuq78U2c4NUDFS",
-        "name": "Plush Pepes",
-        "fragment": "plushpepe",
-        "id": "5936013938331222567",
-        "emoji": "model0emoji_5936013938331222567_by_GiftChangesHelper2Bot",
-        "stickers": "model0_5936013938331222567_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQD9ikZq6xPgKjzmdBG0G0S80RvUJjbwgHrPZXDKc_wsE84w",
-        "name": "Durov’s Caps",
-        "fragment": "durovscap",
-        "id": "5915521180483191380",
-        "emoji": "gift0emoji_5915521180483191380_by_GiftChangesHelper4Bot",
-        "stickers": "gift0_5915521180483191380_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQCE80Aln8YfldnQLwWMvOfloLGgmPY0eGDJz9ufG3gRui3D",
-        "name": "Loot Bags",
-        "fragment": "lootbag",
-        "id": "5868659926187901653",
-        "emoji": "gift_emoji_5868659926187901653_by_GiftChangesHelper3Bot",
-        "stickers": "gift_5868659926187901653_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQA4i58iuS9DUYRtUZ97sZo5mnkbiYUBpWXQOe3dEUCcP1W8",
-        "name": "Precious Peaches",
-        "fragment": "preciouspeach",
-        "id": "5933671725160989227",
-        "emoji": "gift0emoji_5933671725160989227_by_GiftChangesHelper2Bot",
-        "stickers": "gift0_5933671725160989227_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQC1gud6QO8NdJjVrqr7qFBMO0oQsktkvzhmIRoMKo8vxiyL",
-        "name": "Toy Bears",
-        "fragment": "toybear",
-        "id": "5868220813026526561",
-        "emoji": "gift_emoji_5868220813026526561_by_GiftChangesHelper1Bot",
-        "stickers": "gift_5868220813026526561_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQBI07PXew94YQz7GwN72nPNGF6htSTOJkuU4Kx_bjTZv32U",
-        "name": "Swiss Watches",
-        "fragment": "swisswatch",
-        "id": "5936043693864651359",
-        "emoji": "gift_emoji_5936043693864651359_by_GiftChangesHelper3Bot",
-        "stickers": "gift_5936043693864651359_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQCrGA9slCoksgD-NyRDjtHySKN0Ts8k6hdueJkUkZZdD4_K",
-        "name": "Signet Rings",
-        "fragment": "signetring",
-        "id": "5936085638515261992",
-        "emoji": "model0emoji_5936085638515261992_by_GiftChangesHelper2Bot",
-        "stickers": "model0_5936085638515261992_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQACcQpR2fmdeENWdE2YGQWHVxSTyA8Zq4_k7rk_IaxCRXNe",
-        "name": "Vintage Cigars",
-        "fragment": "vintagecigar",
-        "id": "5857140566201991735",
-        "emoji": "gift0emoji_5857140566201991735_by_GiftChangesHelper3Bot",
-        "stickers": "gift0_5857140566201991735_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQATuUGdvrjLvTWE5ppVFOVCqU2dlCLUnKTsu0n1JYm9la10",
-        "name": "Scared Cats",
-        "fragment": "scaredcat",
-        "id": "5837059369300132790",
-        "emoji": "gift0emoji_5837059369300132790_by_GiftChangesHelper2Bot",
-        "stickers": "gift0_5837059369300132790_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQC6zjid8vJNEWqcXk10XjsdDLRKbcPZzbHusuEW6FokOWIm",
-        "name": "Lol Pops",
-        "fragment": "lolpop",
-        "id": "5170594532177215681",
-        "emoji": "gift_emoji_5170594532177215681_by_GiftChangesHelper5Bot",
-        "stickers":"gift_5170594532177215681_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQC4XEulxb05Le5gF6esMtDWT5XZ6tlzlMBQGNsqffxpdC5U",
-        "name": "Heart Lockets",
-        "fragment": "heartlocket",
-        "id": "5868455043362980631",
-        "emoji": "SailorHeartsdgldjgd_da3a_emoji_by_GiftChangesHelper1Bot",
-        "stickers": "SailorHeartsdgldjgd_da3a_by_GiftChangesHelper1Bot"
-    },
-    {
         "address": "EQDIReleOkTxCD4g_XEm8xj0LYNg6-zMsTGAAwCA-vEbkGBu",
         "name": "Astral Shards",
         "fragment": "astralshard",
+        "supply": 10000,
         "id": "5933629604416717361",
         "emoji": "gift_emoji_5933629604416717361_by_GiftChangesHelper5Bot",
-        "stickers": "gift_5933629604416717361_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQDTro-ogJbS7o-OBD6bt2NysPt7SnGm5zfuRXGB1nE_rbGa",
-        "name": "Kissed Frogs",
-        "fragment": "kissedfrog",
-        "id": "5845776576658015084",
-        "emoji": "gift0emoji_5845776576658015084_by_GiftChangesHelper4Bot",
-        "stickers": "gift0_5845776576658015084_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQAwnP7dGfE_WO0xiCiulkAXUG1K1bWH1vE1k64T4G-7gruO",
-        "name": "Easter Eggs",
-        "fragment": "easteregg",
-        "id": "5773668482394620318",
-        "emoji": "gift_emoji_5773668482394620318_by_GiftChangesHelper2Bot",
-        "stickers": "gift_5773668482394620318_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQDL7HMbca0FufrjHFcRoiLkEiOXkXoO_vH2gVUN8JNp4khK",
-        "name": "Ion Gems",
-        "fragment": "iongem",
-        "id": "5843762284240831056",
-        "emoji": "gift_emoji_5843762284240831056_by_GiftChangesHelper2Bot",
-        "stickers": "gift_5843762284240831056_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQCa1I09fE9UoTV6awM6QC9-fkv51hoii24w1tJoFfigG_ax",
-        "name": "Party Sparklers",
-        "fragment": "partysparkler",
-        "id": "6003643167683903930",
-        "emoji": "gift_emoji_6003643167683903930_by_GiftChangesHelper2Bot",
-        "stickers": "gift_6003643167683903930_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQD6mH9bwbn6S3M_tCRWOvqAIW8M34kRwbI01niGLRPeDPsl",
-        "name": "Spy Agarics",
-        "fragment": "spyagaric",
-        "id": "5821261908354794038",
-        "emoji": "gift0emoji_5821261908354794038_by_GiftChangesHelper3Bot",
-        "stickers": "gift0_5821261908354794038_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQCNsmpHqRSY_Dxnyh6P0MMO7zcABf8sVvG0wr245pBzO3B3",
-        "name": "Voodoo Dolls",
-        "fragment": "voodoodoll",
-        "id": "5836780359634649414",
-        "emoji": "gift_emoji_5836780359634649414_by_GiftChangesHelper4Bot",
-        "stickers": "gift_5836780359634649414_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQCt2C3yCRNX267B3l6h1QsU6agm4ZgTAb7NpVGiFKlBXOAA",
-        "name": "Genie Lamps",
-        "fragment": "genielamp",
-        "id": "5933531623327795414",
-        "emoji": "gift_emoji_5933531623327795414_by_GiftChangesHelper2Bot",
-        "stickers": "gift_5933531623327795414_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQCZxxFMS-y1hcGADL6EPB7usNstQqD9u-yBaYpXVVMr75NF",
-        "name": "Mini Oscars",
-        "fragment": "minioscar",
-        "id": "5879737836550226478",
-        "emoji": "gift_emoji_5879737836550226478_by_GiftChangesHelper5Bot",
-        "stickers": "gift_5879737836550226478_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQDJsN9OJBhKGZoWZWtkEpzkCfIu16Z9UzTWbYjeLpuHdT5f",
-        "name": "Perfume Bottles",
-        "fragment": "perfumebottle",
-        "id": "5913517067138499193",
-        "emoji": "model0emoji_5913517067138499193_by_GiftChangesHelper2Bot",
-        "stickers": "model0_5913517067138499193_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQBayCY2wZwrVBExNfLL8v9K0mHNmrQTntZldgpYiRwB_QKK",
-        "name": "Neko Helmets",
-        "fragment": "nekohelmet",
-        "id": "5933793770951673155",
-        "emoji": "gift_emoji_5933793770951673155_by_GiftChangesHelper4Bot",
-        "stickers": "gift_5933793770951673155_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQCWh1lPltyTwCWxCXm4umL5tPZoXR8kTIcT-pd0JqoadLHo",
-        "name": "Diamond Rings",
-        "fragment": "diamondring",
-        "id": "5868503709637411929",
-        "emoji": "gift_emoji_5868503709637411929_by_GiftChangesHelper3Bot",
-        "stickers": "gift_5868503709637411929_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQAqtF5tZIgNZal80ChzdPMvZCN8OEbJCVJPn_0xNPghQJPW",
-        "name": "Gem Signets",
-        "fragment": "gemsignet",
-        "id": "5859442703032386168",
-        "emoji": "gift_emoji_5859442703032386168_by_GiftChangesHelper1Bot",
-        "stickers": "gift_5859442703032386168_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQAtFU9GrGfix4UG9DOivN58QxvgBJUaAZ_pdZBZCmbhKo4P",
-        "name": "Magic Potions",
-        "fragment": "magicpotion",
-        "id": "5846226946928673709",
-        "emoji": "gift0emoji_5846226946928673709_by_GiftChangesHelper4Bot",
-        "stickers": "gift0_5846226946928673709_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQCMBgeRNOjZo6A_GpF4G66VTA8V4vpSitIZzJP3Qz4ZO5YM",
-        "name": "Bonded Rings",
-        "fragment": "bondedring",
-        "id": "5870661333703197240",
-        "emoji": "gift_emoji_5870661333703197240_by_GiftChangesHelper6Bot",
-        "stickers": "gift_5870661333703197240_by_GiftChangesHelper6Bot"
-    },
-    {
-        "address": "EQCyAMkb6bNyNlKPH0tJbubk1VVjASqyq9sZwkJ8AbxMkxxU",
-        "name": "Trapped Hearts",
-        "fragment": "trappedheart",
-        "id": "5841391256135008713",
-        "emoji": "gift0emoji_5841391256135008713_by_GiftChangesHelper4Bot",
-        "stickers": "gift0_5841391256135008713_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQADvJxMxCHA7fRlYjoceBORf7RwKs0rzjVaKepQACMnZzG7",
-        "name": "Top Hats",
-        "fragment": "tophat",
-        "id": "5897593557492957738",
-        "emoji": "gift_emoji_5897593557492957738_by_GiftChangesHelper2Bot",
-        "stickers": "gift_5897593557492957738_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQCefrjhCD2_7HRIr2lmwt9ZaqeG_tdseBvADC66833kBS3y",
-        "name": "Homemade Cakes",
-        "fragment": "homemadecake",
-        "id": "5783075783622787539",
-        "emoji": "gift0emoji_5783075783622787539_by_GiftChangesHelper3Bot",
-        "stickers": "gift0_5783075783622787539_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQDRrfw5pgIC4e6NafUAx52Z9Ym6q1k26xxaXR_qx0LKJJ7D",
-        "name": "Light Swords",
-        "fragment": "lightsword",
-        "id": "5897581235231785485",
-        "emoji": "gift_emoji_5897581235231785485_by_GiftChangesHelper5Bot",
-        "stickers": "gift_5897581235231785485_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQBw2tO5UaJ4c_YXt3I8y5KD0k37staZxedV2O5HmryiK0dN",
-        "name": "Sharp Tongues",
-        "fragment": "sharptongue",
-        "id": "5841689550203650524",
-        "emoji": "gift0emoji_5841689550203650524_by_GiftChangesHelper4Bo",
-        "stickers": "gift0_5841689550203650524_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQAOYYJib8K6-91TjeOYRbWEtbtRJHXKoWltnULwdaqd7mR5",
-        "name": "Electric Skulls",
-        "fragment": "electricskull",
-        "id": "5846192273657692751",
-        "emoji": "gift_emoji_5846192273657692751_by_GiftChangesHelper6Bot",
-        "stickers": "gift_5846192273657692751_by_GiftChangesHelper6Bot"
+        "stickers": "gift_5933629604416717361_by_GiftChangesHelper5Bot",
+        "dates": [
+            "01.12.2024",
+            "08.12.2024",
+            "31.01.2025"
+        ]
     },
     {
         "address": "EQCwEFfUbbR-22fn3VgxUpBil7bwBQqEHm7wgQYbWY9c08YJ",
         "name": "B-Day Candles",
         "fragment": "bdaycandle",
+        "supply": 500000,
         "id": "5782984811920491178",
         "emoji": "gift_emoji_5782984811920491178_by_GiftChangesHelper1Bot",
-        "stickers": "gift_5782984811920491178_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQA401QqpXtBnwIaDbFjwd5yXfP2mYiCusbJ3Zcw9eXR9CqL",
-        "name": "Jacks-in-the-Box",
-        "fragment": "jackinthebox",
-        "id": "6005659564635063386",
-        "emoji": "gift_emoji_6005659564635063386_by_GiftChangesHelper2Bot",
-        "stickers": "gift_6005659564635063386_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQBMcfMAZlMUr1W3X8kdEw3fJMUAaWH4-XcmE5R5RfFIY0E2",
-        "name": "Desk Calendars",
-        "fragment": "deskcalendar",
-        "id": "5782988952268964995",
-        "emoji": "gift_emoji_5782988952268964995_by_GiftChangesHelper5Bot",
-        "stickers": "gift_5782988952268964995_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQCDBbQYbv3n91TwywBRD9YrJNuNVmbD3Sprpq6hWIDHVu4p",
-        "name": "Sakura Flowers",
-        "fragment": "sakuraflower",
-        "id": "5167939598143193218",
-        "emoji": "gift_emoji_5167939598143193218_by_GiftChangesHelper1Bot",
-        "stickers": "gift_5167939598143193218_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQBD8aBKC4NsnYMqtkCfPQk2EVnieynJQp1UgZVyx1VmR5Ml",
-        "name": "Witch Hats",
-        "fragment": "witchhat",
-        "id": "5821384757304362229",
-        "emoji": "gift_emoji_5821384757304362229_by_GiftChangesHelper2Bot",
-        "stickers": "gift_5821384757304362229_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQA_kx2WOydXWzYUYO1DP80aHl4yhlLGYhxjPAtRPNjMgfYM",
-        "name": "Tama Gadgets",
-        "fragment": "tamagadget",
-        "id": "6023752243218481939",
-        "emoji": "gift_emoji_6023752243218481939_by_GiftChangesHelper4Bot",
-        "stickers": "gift_6023752243218481939_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQA8DCWyCWyywgOKYORerRoSVevWrUQ_FjKQgNihxY1227x7",
-        "name": "Spiced Wines",
-        "fragment": "spicedwine",
-        "id": "5913442287462908725",
-        "emoji": "gift0emoji_5913442287462908725_by_GiftChangesHelper3Bot",
-        "stickers": "gift0_5913442287462908725_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQDumy3bnZYzV4bSWMSSZkmXqx50XuH5d9RlX_yEi2FNlivk",
-        "name": "Eternal Roses",
-        "fragment": "eternalrose",
-        "id": "5882125812596999035",
-        "emoji": "model0emoji_5882125812596999035_by_GiftChangesHelper1Bot",
-        "stickers": "model0_5882125812596999035_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQB5P3ZP2PjLION52Y1SNAux1do4-ZOqMWotXS-fdMpqHcCH",
-        "name": "Holiday Drinks",
-        "fragment": "holidaydrink",
-        "id": "6003735372041814769",
-        "emoji": "gift_emoji_6003735372041814769_by_GiftChangesHelper2Bot",
-        "stickers": "gift_6003735372041814769_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQD7yDu2WCgd9Uzx1dF_DQkWK7IZJJ4Mp9M9g1rGUUiQE43m",
-        "name": "Love Potions",
-        "fragment": "lovepotion",
-        "id": "5868348541058942091",
-        "emoji": "gift_emoji_5868348541058942091_by_GiftChangesHelper1Bot",
-        "stickers": "gift_5868348541058942091_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQDQ6DjRabTYSAxf2xrZsnsXtqcIm1bj9dF5x_h8lNjWPmH4",
-        "name": "Evil Eyes",
-        "fragment": "evileye",
-        "id": "5825480571261813595",
-        "emoji": "gift0emoji_5825480571261813595_by_GiftChangesHelper2Bot",
-        "stickers": "gift0_5825480571261813595_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQBCe75G0AhjqC64B7H_BHP0wgfONX_x98rszmsEwndDVAjG",
-        "name": "Ginger Cookies",
-        "fragment": "gingercookie",
-        "id": "5983484377902875708",
-        "emoji": "gift_emoji_5983484377902875708_by_GiftChangesHelper5Bot",
-        "stickers": "gift_5983484377902875708_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQAlROpjm1k1mW30r61qRx3lYHsZkTKXVSiaHEIhOlnYA4oy",
-        "name": "Heroic Helmets",
-        "fragment": "heroichelmet",
-        "id": "5895328365971244193",
-        "emoji": "RomanHelmet_f831_emoji_by_GiftChangesHelper1Bot",
-        "stickers": "RomanHelmet_f831_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQDr4xn5_GoCzDxhGJMek7fv3nm6W7bhRvlDSBjcNZul52tZ",
-        "name": "Record Players",
-        "fragment": "recordplayer",
-        "id": "5856973938650776169",
-        "emoji": "gift_emoji_5856973938650776169_by_GiftChangesHelper6Bot",
-        "stickers": "gift_5856973938650776169_by_GiftChangesHelper6Bot"
-    },
-    {
-        "address": "EQAwzubeoJwnqmmBuTPpnUSurRzWPB8ERzcfzx55Z2YjE0jx",
-        "name": "Jelly Bunnies",
-        "fragment": "jellybunny",
-        "id": "5915502858152706668",
-        "emoji": "gift0emoji_5915502858152706668_by_GiftChangesHelper4Bot",
-        "stickers": "gift0_5915502858152706668_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQAtgbhSHOqTxjuRLLOAab6T66FPcQWTNd_DT3VgCG1-tHJw",
-        "name": "Crystal Balls",
-        "fragment": "crystalball",
-        "id": "5841336413697606412",
-        "emoji": "gift_emoji_5841336413697606412_by_GiftChangesHelper3Bot",
-        "stickers": "gift_5841336413697606412_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQAZjuUJmbP-V4Ryowjexh7bIcdNrrojr0WKSpdggB0zbst5",
-        "name": "Nail Bracelets",
-        "fragment": "nailbracelet",
-        "id": "5870720080265871962",
-        "emoji": "NailBracelet_a964_emoji_by_GiftChangesHelper1Bot",
-        "stickers": "NailBracelet_a964_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQBzZLNIr4lie0pTfrbRsANJOtFYwY5gmngRfs84Ras5-aVN",
-        "name": "Eternal Candles",
-        "fragment": "eternalcandle",
-        "id": "5821205665758053411",
-        "emoji": "gift_emoji_5821205665758053411_by_GiftChangesHelper1Bot",
-        "stickers": "gift_5821205665758053411_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQB6AtBPOuTtQml8oSA7X8ZqJ5QmcOYYqoz92sQYXGUQrxyB",
-        "name": "Hex Pots",
-        "fragment": "hexpot",
-        "id": "5825801628657124140",
-        "emoji": "gift0emoji_5825801628657124140_by_GiftChangesHelper2Bot",
-        "stickers": "gift0_5825801628657124140_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQBdlKhLzezYFMCWSWTCnhpKC1uyczaBUOj3EtPjcatUsTrC",
-        "name": "Mad Pumpkins",
-        "fragment": "madpumpkin",
-        "id": "5841632504448025405",
-        "emoji": "gift_emoji_5841632504448025405_by_GiftChangesHelper1Bot",
-        "stickers": "gift_5841632504448025405_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQBaOL8mH5YywkXjkps65X1OLPNH7pns4YcfLmaVpFaoNKZn",
-        "name": "Skull Flowers",
-        "fragment": "skullflower",
-        "id": "5839038009193792264",
-        "emoji": "gift0emoji_5839038009193792264_by_GiftChangesHelper2Bot",
-        "stickers": "gift0_5839038009193792264_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQAoJw7BpOcBD3y9voMuEQ-qhS3K4gtM-6EePLxkzk8iSifX",
-        "name": "Snoop Doggs",
-        "fragment": "snoopdogg",
-        "id": "6014591077976114307",
-        "emoji": "Dogs_2eda_emoji_by_GiftChangesHelper1Bot",
-        "stickers": "Dogs_2eda_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQBG2o0lp-6Oy86NGEJm717BeTDAw_F5ELkgaX2l9UsfavWE",
-        "name": "Flying Brooms",
-        "fragment": "flyingbroom",
-        "id": "5837063436634161765",
-        "emoji": "gift_emoji_5837063436634161765_by_GiftChangesHelper2Bot",
-        "stickers": "gift_5837063436634161765_by_GiftChangesHelper2Bot"
+        "stickers": "gift_5782984811920491178_by_GiftChangesHelper1Bot",
+        "dates": [
+            "10.10.2024",
+            "09.06.2025",
+            "31.01.2025"
+        ]
     },
     {
         "address": "EQB4x3sT1DVdODzay3H-4VJIdOooS5-kTgyKcYMZWogPOsiq",
         "name": "Berry Boxes",
         "fragment": "berrybox",
+        "supply": 100000,
         "id": "5882252952218894938",
         "emoji": "gift0emoji_5882252952218894938_by_GiftChangesHelper3Bot",
-        "stickers": "gift0_5882252952218894938_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQC8WVW9DSN4PPfFlCW2AHJkXxBUHBFsvnhXiYqSTpD7tXsp",
-        "name": "Winter Wreaths",
-        "fragment": "winterwreath",
-        "id": "5983259145522906006",
-        "emoji": "gift_emoji_5983259145522906006_by_GiftChangesHelper3Bot",
-        "stickers": "gift_5983259145522906006_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQBBLRFtC_3PLxNpWX5nfchwapk7eWcG3dzKoxbV6cWzqROo",
-        "name": "Pet Snakes",
-        "fragment": "petsnake",
-        "id": "6023917088358269866",
-        "emoji": "gift_emoji_6023917088358269866_by_GiftChangesHelper5Bot",
-        "stickers": "gift_6023917088358269866_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQBT9PbZBR6FGcZBSnwgo-DLpc0r7_X_8dlhG5UA6v9l9uJM",
-        "name": "Cookie Hearts",
-        "fragment": "cookieheart",
-        "id": "6001538689543439169",
-        "emoji": "gift_emoji_6001538689543439169_by_GiftChangesHelper2Bot",
-        "stickers": "gift_6001538689543439169_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQAaTIR7oJyowDiumYLVN0oe61kGE3I6EPEn7WgHPGuWAeCy",
-        "name": "Santa Hats",
-        "fragment": "santahat",
-        "id": "5983471780763796287",
-        "emoji": "gift0emoji_5983471780763796287_by_GiftChangesHelper2Bot",
-        "stickers": "gift0_5983471780763796287_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQBcNxMCTyEHkcQ5cK3fO_3Ebjf6JcA5JJ_OJV4npDN-604P",
-        "name": "Sleigh Bells",
-        "fragment": "sleighbell",
-        "id": "5981026247860290310",
-        "emoji": "gift_emoji_5981026247860290310_by_GiftChangesHelper4Bot",
-        "stickers": "gift_5981026247860290310_by_GiftChangesHelper4Bot"
-    },
-    {
-        "address": "EQBAXR68f1UgRhToFR_bXY1zPJy5O6sm2St0CRTo92BTxGiH",
-        "name": "Star Notepads",
-        "fragment": "starnotepad",
-        "id": "5936017773737018241",
-        "emoji": "gift_emoji_5936017773737018241_by_GiftChangesHelper5Bot",
-        "stickers": "gift_5936017773737018241_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQAPNu648fe_uqUoeH6V_-fIDJYea_5Xu2rXn6iZFil49bMY",
-        "name": "Snow Globes",
-        "fragment": "snowglobe",
-        "id": "5981132629905245483",
-        "emoji": "gift_emoji_5981132629905245483_by_GiftChangesHelper3Bot",
-        "stickers": "gift_5981132629905245483_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQB8zLzEOFQK3qTyMYgPD8BuzmNwblnouqaB80PW-s2E7nct",
-        "name": "Hanging Stars",
-        "fragment": "hangingstar",
-        "id": "5915733223018594841",
-        "emoji": "gift_emoji_5915733223018594841_by_GiftChangesHelper3Bot",
-        "stickers": "gift_5915733223018594841_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQC65Yy6N04vHoeCJ0yo4qll5eu-ZaWbS5nxsdilxymhmSus",
-        "name": "Hypno Lollipops",
-        "fragment": "hypnolollipop",
-        "id": "5170594532177215681",
-        "emoji": "gift_emoji_5170594532177215681_by_GiftChangesHelper2Bot",
-        "stickers": "gift_5170594532177215681_by_GiftChangesHelper2Bot"
+        "stickers": "gift0_5882252952218894938_by_GiftChangesHelper3Bot",
+        "dates": [
+            "13.11.2024",
+            "21.11.2024",
+            "01.01.2025"
+        ]
     },
     {
         "address": "EQDx-SqQEhP9Rzfi2cqdehTVUvQbArsUz1X7t-ul8IiKZpYb",
         "name": "Big Years",
         "fragment": "bigyear",
+        "supply": 200000,
         "id": "6028283532500009446",
         "emoji": "gift_emoji_6028283532500009446_by_GiftChangesHelper2Bot",
-        "stickers": "gift_6028283532500009446_by_GiftChangesHelper2Bot"
+        "stickers": "gift_6028283532500009446_by_GiftChangesHelper2Bot",
+        "dates": [
+            "01.01.2025",
+            "13.01.2025",
+            "13.05.2025"
+        ]
     },
     {
-        "address": "EQCBK_JBASAA5XVz1D17Pn--kQaMWm0b9wReVtsEdRO4Tgy9",
-        "name": "Jester Hats",
-        "fragment": "jesterhat",
-        "id": "5933590374185435592",
-        "emoji": "gift_emoji_5933590374185435592_by_GiftChangesHelper1Bot",
-        "stickers": "gift_5933590374185435592_by_GiftChangesHelper1Bot"
-    },
-    {
-        "address": "EQDLM65t0shS7gZAg0lMltGHYhsU94PzsMJHhYibmRV7kdUs",
-        "name": "Candy Canes",
-        "fragment": "candycane",
-        "id": "6003373314888696650",
-        "emoji": "gift_emoji_6003373314888696650_by_GiftChangesHelper2Bot",
-        "stickers": "gift_6003373314888696650_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQC2lsUy1SKxJEJBwj5ZCfVnLPvAqDqy5c26Xg8xS_pDTXGk",
-        "name": "Lunar Snakes",
-        "fragment": "lunarsnake",
-        "id": "6028426950047957932",
-        "emoji": "gift_emoji_6028426950047957932_by_GiftChangesHelper2Bot",
-        "stickers": "gift_6028426950047957932_by_GiftChangesHelper2Bot"
+        "address": "EQCMBgeRNOjZo6A_GpF4G66VTA8V4vpSitIZzJP3Qz4ZO5YM",
+        "name": "Bonded Rings",
+        "fragment": "bondedring",
+        "supply": 9000,
+        "id": "5870661333703197240",
+        "emoji": "gift_emoji_5870661333703197240_by_GiftChangesHelper6Bot",
+        "stickers": "gift_5870661333703197240_by_GiftChangesHelper6Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "13.05.2025"
+        ]
     },
     {
         "address": "EQDpxJ6VAwUA-tX6w8ACnoAJLrP3hKWmieBl71uv1_qKRD3x",
         "name": "Bow Ties",
         "fragment": "bowtie",
+        "supply": 100000,
         "id": "5895544372761461960",
         "emoji": "BowTieSkins_ae12_emoji_by_GiftChangesHelper2Bot",
-        "stickers": "BowTieSkins_ae12_by_GiftChangesHelper2Bot"
+        "stickers": "BowTieSkins_ae12_by_GiftChangesHelper2Bot",
+        "dates": [
+            "23.02.2025",
+            "18.03.2025",
+            "25.05.2025"
+        ]
     },
     {
         "address": "EQA3-i1IUFjWyDhaIoCGdYUB4nt2IYaT3T-95CHPrSvV3AfX",
         "name": "Bunny Muffins",
         "fragment": "bunnymuffin",
+        "supply": 100000,
         "id": "5935936766358847989",
         "emoji": "gift_emoji_5935936766358847989_by_GiftChangesHelper5Bot",
-        "stickers": "gift_5935936766358847989_by_GiftChangesHelper5Bot"
+        "stickers": "gift_5935936766358847989_by_GiftChangesHelper5Bot",
+        "dates": [
+            "01.12.2024",
+            "05.12.2024",
+            "31.01.2025"
+        ]
     },
     {
-        "address": "EQDCPq7QSUvCmq7kBhmDulxVdeFHKFc1wT9MQxnesanl1Hql",
-        "name": "Low Riders",
-        "fragment": "lowrider",
-        "id": "6014675319464657779",
-        "emoji": "Cars_776b_emoji_by_GiftChangesHelper4Bot",
-        "stickers": "Cars_776b_by_GiftChangesHelper4Bot"
+        "address": "EQDLM65t0shS7gZAg0lMltGHYhsU94PzsMJHhYibmRV7kdUs",
+        "name": "Candy Canes",
+        "fragment": "candycane",
+        "supply": 400000,
+        "id": "6003373314888696650",
+        "emoji": "gift_emoji_6003373314888696650_by_GiftChangesHelper2Bot",
+        "stickers": "gift_6003373314888696650_by_GiftChangesHelper2Bot",
+        "dates": [
+            "23.12.2024",
+            "29.12.2024",
+            "07.03.2025"
+        ]
     },
     {
-        "address": "EQCehrkZtKDtVe0qyvBAsrHx3hW-hroQyDrS_MZOOVYth2DG",
-        "name": "Jingle Bells",
-        "fragment": "jinglebells",
-        "id": "6001473264306619020",
-        "emoji": "gift_emoji_6001473264306619020_by_GiftChangesHelper1Bot",
-        "stickers": "gift_6001473264306619020_by_GiftChangesHelper1Bot"
+        "address": "EQBT9PbZBR6FGcZBSnwgo-DLpc0r7_X_8dlhG5UA6v9l9uJM",
+        "name": "Cookie Hearts",
+        "fragment": "cookieheart",
+        "supply": 400000,
+        "id": "6001538689543439169",
+        "emoji": "gift_emoji_6001538689543439169_by_GiftChangesHelper2Bot",
+        "stickers": "gift_6001538689543439169_by_GiftChangesHelper2Bot",
+        "dates": [
+            "23.12.2024",
+            "28.12.2024",
+            "30.01.2025"
+        ]
     },
     {
-        "address": "EQDycOgkLwcfPDokh8q-2DIUzVhPetdFuZmwrFYFP6i1nZ_u",
-        "name": "Restless Jars",
-        "fragment": "restlessjar",
-        "id": "5870784783948186838",
-        "emoji": "RestlessJar_1ee5_emoji_by_GiftChangesHelper2Bot",
-        "stickers": "RestlessJar_1ee5_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQAIM-5QzZGXYTSZR1RGeT2g9rNpYmNPQ09_HtvaInHaTyPX",
-        "name": "Snow Mittens",
-        "fragment": "snowmittens",
-        "id": "5980789805615678057",
-        "emoji": "gift_emoji_5980789805615678057_by_GiftChangesHelper3Bot",
-        "stickers": "gift_5980789805615678057_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQDqHwSzU4I_U44vSM9EDP4HGGKWy9yWjbzkpCa3K8iMBEVD",
-        "name": "Love Candles",
-        "fragment": "lovecandle",
-        "id": "5915550639663874519",
-        "emoji": "gift_emoji_5915550639663874519_by_GiftChangesHelper6Bot",
-        "stickers": "gift_5915550639663874519_by_GiftChangesHelper6Bot"
-    },
-    {
-        "address": "EQA72Uevr_MHvzYwSCHJUK-uC6kd-w8kbxzhJ49WIiG-o6CD",
-        "name": "Snoop Cigars",
-        "fragment": "snoopcigar",
-        "id": "6012435906336654262",
-        "emoji": "SnoopsCigars_3eca_emoji_by_GiftChangesHelper3Bot",
-        "stickers": "SnoopsCigars_3eca_by_GiftChangesHelper3Bot"
-    },
-    {
-        "address": "EQDvZ_9Z3tJ9k6eELLtTeuQAz4yOOWyYFZfzqNv2dGJiHvrF",
-        "name": "Westside Signs",
-        "fragment": "westsidesign",
-        "id": "6014697240977737490",
-        "emoji": "WestSide_91ce_emoji_by_GiftChangesHelper5Bot",
-        "stickers": "WestSide_91ce_by_GiftChangesHelper5Bot"
-    },
-    {
-        "address": "EQDz_VecErEBTLOTiR1tq0VS3lZuHHqhYmhZbthcrbFk7ztK",
-        "name": "Xmas Stockings",
-        "fragment": "xmasstocking",
-        "id": "6003767644426076664",
-        "emoji": "gift_emoji_6003767644426076664_by_GiftChangesHelper6Bot",
-        "stickers": "gift_6003767644426076664_by_GiftChangesHelper6Bot"
-    },
-    {
-        "address": "EQCgaTxb2wA_3Bi8Ec4FFNu8CauoHo0VPpnwxdrhAgOrOXvA",
-        "name": "Swag Bags",
-        "fragment": "swagbag",
-        "id": "6012607142387778152",
-        "emoji": "SwagBags_2178_emoji_by_GiftChangesHelper2Bot",
-        "stickers": "SwagBags_2178_by_GiftChangesHelper2Bot"
-    },
-    {
-        "address": "EQBbUKx5CalEly2TekDNeFbv4e02pj6xsAqXZP0X_AprKj4I",
-        "name": "Snake Boxes",
-        "fragment": "snakebox",
-        "id": "6023679164349940429",
-        "emoji": "gift_emoji_6023679164349940429_by_GiftChangesHelper5Bot",
-        "stickers": "gift_6023679164349940429_by_GiftChangesHelper5Bot"
+        "address": "EQAtgbhSHOqTxjuRLLOAab6T66FPcQWTNd_DT3VgCG1-tHJw",
+        "name": "Crystal Balls",
+        "fragment": "crystalball",
+        "supply": 30000,
+        "id": "5841336413697606412",
+        "emoji": "gift_emoji_5841336413697606412_by_GiftChangesHelper3Bot",
+        "stickers": "gift_5841336413697606412_by_GiftChangesHelper3Bot",
+        "dates": [
+            "29.10.2024",
+            "30.10.2024",
+            "01.02.2025"
+        ]
     },
     {
         "address": "EQA0JBiVCjdgqkiHiYmIgTUBbZI6mNbnSymqf0HFC7FhxpuT",
         "name": "Cupid Charms",
         "fragment": "cupidcharm",
+        "supply": 40000,
         "id": "5868561433997870501",
         "emoji": "CupidCharm_768a_emoji_by_GiftChangesHelper4Bot",
-        "stickers": "CupidCharm_768a_by_GiftChangesHelper4Bot"
+        "stickers": "CupidCharm_768a_by_GiftChangesHelper4Bot",
+               "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "04.07.2025"
+        ]
     },
     {
-        "address": "EQA2lHcvZWW_bN_2NMKrkEUv9xz6fx8wTE5upa8u1neZb6hJ",
-        "name": "Lush Bouquets",
-        "fragment": "lushbouquet",
-        "id": "5871002671934079382",
-        "emoji": "LovingGift_3bcc_emoji_by_GiftChangesHelper1Bot",
-        "stickers": "LovingGift_3bcc_by_GiftChangesHelper1Bot"
+        "address": "EQBMcfMAZlMUr1W3X8kdEw3fJMUAaWH4-XcmE5R5RfFIY0E2",
+        "name": "Desk Calendars",
+        "fragment": "deskcalendar",
+        "supply": 500000,
+        "id": "5782988952268964995",
+        "emoji": "gift_emoji_5782988952268964995_by_GiftChangesHelper5Bot",
+        "stickers": "gift_5782988952268964995_by_GiftChangesHelper5Bot",
+        "dates": [
+            "10.10.2024",
+            "22.03.2025",
+            "30.01.2025"
+        ]
     },
     {
-        "address": "EQAo_snApDDqF6GKV0xe_T5oe28r842gJtgmkgPMhX0-dRkh",
-        "name": "Whip Cupcakes",
-        "fragment": "whipcupcake",
-        "id": "5933543975653737112",
-        "emoji": "Cupcakes_b1d4_emoji_by_GiftChangesHelper1Bot",
-        "stickers": "Cupcakes_b1d4_by_GiftChangesHelper1Bot"
+        "address": "EQCWh1lPltyTwCWxCXm4umL5tPZoXR8kTIcT-pd0JqoadLHo",
+        "name": "Diamond Rings",
+        "fragment": "diamondring",
+        "supply": 35000,
+        "id": "5868503709637411929",
+        "emoji": "gift_emoji_5868503709637411929_by_GiftChangesHelper3Bot",
+        "stickers": "gift_5868503709637411929_by_GiftChangesHelper3Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "14.02.2025"
+        ]
     },
     {
-        "address": "EQDjBdu3zS-JT94OwIup4KVNaQjxDzGcIPRJ24Ha0Y8jLw83",
-        "name": "Valentine Boxes",
-        "fragment": "valentinebox",
-        "id": "5868595669182186720",
-        "emoji": "heartshapedbox_9c79_emoji_by_GiftChangesHelper3Bot",
-        "stickers": "heartshapedbox_9c79_by_GiftChangesHelper3Bot"
+        "address": "EQD9ikZq6xPgKjzmdBG0G0S80RvUJjbwgHrPZXDKc_wsE84w",
+        "name": "Durov’s Caps",
+        "fragment": "durovscap",
+        "supply": 5000,
+        "id": "5915521180483191380",
+        "emoji": "gift0emoji_5915521180483191380_by_GiftChangesHelper4Bot",
+        "stickers": "gift0_5915521180483191380_by_GiftChangesHelper4Bot",
+        "dates": [
+            "24.11.2024",
+            "24.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQAwnP7dGfE_WO0xiCiulkAXUG1K1bWH1vE1k64T4G-7gruO",
+        "name": "Easter Eggs",
+        "fragment": "easteregg",
+        "supply": 180000,
+        "id": "5773668482394620318",
+        "emoji": "gift_emoji_5773668482394620318_by_GiftChangesHelper2Bot",
+        "stickers": "gift_5773668482394620318_by_GiftChangesHelper2Bot",
+        "dates": [
+            "19.04.2025",
+            "20.04.2025",
+            "20.04.2025"
+        ]
+    },
+    {
+        "address": "EQAOYYJib8K6-91TjeOYRbWEtbtRJHXKoWltnULwdaqd7mR5",
+        "name": "Electric Skulls",
+        "fragment": "electricskull",
+        "supply": 10000,
+        "id": "5846192273657692751",
+        "emoji": "gift_emoji_5846192273657692751_by_GiftChangesHelper6Bot",
+        "stickers": "gift_5846192273657692751_by_GiftChangesHelper6Bot",
+        "dates": [
+            "01.11.2024",
+            "01.11.2024",
+            "07.03.2025"
+        ]
+    },
+    {
+        "address": "EQBzZLNIr4lie0pTfrbRsANJOtFYwY5gmngRfs84Ras5-aVN",
+        "name": "Eternal Candles",
+        "fragment": "eternalcandle",
+        "supply": 50000,
+        "id": "5821205665758053411",
+        "emoji": "gift_emoji_5821205665758053411_by_GiftChangesHelper1Bot",
+        "stickers": "gift_5821205665758053411_by_GiftChangesHelper1Bot",
+        "dates": [
+            "23.10.2024",
+            "24.10.2024",
+            "01.02.2025"
+        ]
+    },
+    {
+        "address": "EQDumy3bnZYzV4bSWMSSZkmXqx50XuH5d9RlX_yEi2FNlivk",
+        "name": "Eternal Roses",
+        "supply": 50000,
+        "fragment": "eternalrose",
+        "id": "5882125812596999035",
+        "emoji": "model0emoji_5882125812596999035_by_GiftChangesHelper1Bot",
+        "stickers": "model0_5882125812596999035_by_GiftChangesHelper1Bot",
+        "dates": [
+            "13.11.2024",
+            "15.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQDQ6DjRabTYSAxf2xrZsnsXtqcIm1bj9dF5x_h8lNjWPmH4",
+        "name": "Evil Eyes",
+        "fragment": "evileye",
+        "supply": 120000,
+        "id": "5825480571261813595",
+        "emoji": "gift0emoji_5825480571261813595_by_GiftChangesHelper2Bot",
+        "stickers": "gift0_5825480571261813595_by_GiftChangesHelper2Bot",
+        "dates": [
+            "24.10.2024",
+            "01.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQBG2o0lp-6Oy86NGEJm717BeTDAw_F5ELkgaX2l9UsfavWE",
+        "name": "Flying Brooms",
+        "fragment": "flyingbroom",
+        "supply": 30000,
+        "id": "5837063436634161765",
+        "emoji": "gift_emoji_5837063436634161765_by_GiftChangesHelper2Bot",
+        "stickers": "gift_5837063436634161765_by_GiftChangesHelper2Bot",
+        "dates": [
+            "29.10.2024",
+            "29.10.2024",
+            "01.02.2025"
+        ]
+    },
+    {
+        "address": "EQAqtF5tZIgNZal80ChzdPMvZCN8OEbJCVJPn_0xNPghQJPW",
+        "name": "Gem Signets",
+        "fragment": "gemsignet",
+        "supply": 10000,
+        "id": "5859442703032386168",
+        "emoji": "gift_emoji_5859442703032386168_by_GiftChangesHelper1Bot",
+        "stickers": "gift_5859442703032386168_by_GiftChangesHelper1Bot",
+        "dates": [
+            "05.11.2024",
+            "09.11.2024",
+            "19.05.2025"
+        ]
+    },
+    {
+        "address": "EQCt2C3yCRNX267B3l6h1QsU6agm4ZgTAb7NpVGiFKlBXOAA",
+        "name": "Genie Lamps",
+        "fragment": "genielamp",
+        "supply": 15000,
+        "id": "5933531623327795414",
+        "emoji": "gift_emoji_5933531623327795414_by_GiftChangesHelper2Bot",
+        "stickers": "gift_5933531623327795414_by_GiftChangesHelper2Bot",
+        "dates": [
+            "01.12.2024",
+            "28.12.2024",
+            "29.01.2025"
+        ]
+    },
+    {
+        "address": "EQBCe75G0AhjqC64B7H_BHP0wgfONX_x98rszmsEwndDVAjG",
+        "name": "Ginger Cookies",
+        "fragment": "gingercookie",
+        "supply": 300000,
+        "id": "5983484377902875708",
+        "emoji": "gift_emoji_5983484377902875708_by_GiftChangesHelper5Bot",
+        "stickers": "gift_5983484377902875708_by_GiftChangesHelper5Bot",
+        "dates": [
+            "17.12.2024",
+            "18.12.2024",
+            "03.02.2025"
+        ]
+    },
+    {
+        "address": "EQB8zLzEOFQK3qTyMYgPD8BuzmNwblnouqaB80PW-s2E7nct",
+        "name": "Hanging Stars",
+        "fragment": "hangingstar",
+        "supply": 100000,
+        "id": "5915733223018594841",
+        "emoji": "gift_emoji_5915733223018594841_by_GiftChangesHelper3Bot",
+        "stickers": "gift_5915733223018594841_by_GiftChangesHelper3Bot",
+        "dates": [
+            "24.11.2024",
+            "27.11.2024",
+            "30.01.2025"
+        ]
+    },
+    {
+        "address": "EQC4XEulxb05Le5gF6esMtDWT5XZ6tlzlMBQGNsqffxpdC5U",
+        "name": "Heart Lockets",
+        "fragment": "heartlocket",
+        "supply": 2000,
+        "id": "5868455043362980631",
+        "emoji": "SailorHeartsdgldjgd_da3a_emoji_by_GiftChangesHelper1Bot",
+        "stickers": "SailorHeartsdgldjgd_da3a_by_GiftChangesHelper1Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "30.05.2025"
+        ]
+    },
+    {
+        "address": "EQAlROpjm1k1mW30r61qRx3lYHsZkTKXVSiaHEIhOlnYA4oy",
+        "name": "Heroic Helmets",
+        "fragment": "heroichelmet",
+        "supply": 8000,
+        "id": "5895328365971244193",
+        "emoji": "RomanHelmet_f831_emoji_by_GiftChangesHelper1Bot",
+        "stickers": "RomanHelmet_f831_by_GiftChangesHelper1Bot",
+        "dates": [
+            "23.02.2025",
+            "10.03.2025",
+            "25.05.2025"
+        ]
+    },
+    {
+        "address": "EQB6AtBPOuTtQml8oSA7X8ZqJ5QmcOYYqoz92sQYXGUQrxyB",
+        "name": "Hex Pots",
+        "fragment": "hexpot",
+        "supply": 120000,
+        "id": "5825801628657124140",
+        "emoji": "gift0emoji_5825801628657124140_by_GiftChangesHelper2Bot",
+        "stickers": "gift0_5825801628657124140_by_GiftChangesHelper2Bot",
+        "dates": [
+            "24.10.2024",
+            "03.11.2025",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQB5P3ZP2PjLION52Y1SNAux1do4-ZOqMWotXS-fdMpqHcCH",
+        "name": "Holiday Drinks",
+        "fragment": "holidaydrink",
+        "supply": 200000,
+        "id": "6003735372041814769",
+        "emoji": "gift_emoji_6003735372041814769_by_GiftChangesHelper2Bot",
+        "stickers": "gift_6003735372041814769_by_GiftChangesHelper2Bot",
+        "dates": [
+            "23.12.2024",
+            "29.12.2024",
+            "13.05.2025"
+        ]
+    },
+    {
+        "address": "EQCefrjhCD2_7HRIr2lmwt9ZaqeG_tdseBvADC66833kBS3y",
+        "name": "Homemade Cakes",
+        "fragment": "homemadecake",
+        "supply": 500000,
+        "id": "5783075783622787539",
+        "emoji": "gift0emoji_5783075783622787539_by_GiftChangesHelper3Bot",
+        "stickers": "gift0_5783075783622787539_by_GiftChangesHelper3Bot",
+        "dates": [
+            "10.10.2024",
+            "30.03.2025",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQC65Yy6N04vHoeCJ0yo4qll5eu-ZaWbS5nxsdilxymhmSus",
+        "name": "Hypno Lollipops",
+        "fragment": "hypnolollipop",
+        "supply": 300000,
+        "id": "5170594532177215681",
+        "emoji": "gift_emoji_5170594532177215681_by_GiftChangesHelper2Bot",
+        "stickers": "gift_5170594532177215681_by_GiftChangesHelper2Bot",
+        "dates": [
+            "24.10.2024",
+            "27.11.2024",
+            "01.02.2025"
+        ]
+    },
+    {
+        "address": "EQDL7HMbca0FufrjHFcRoiLkEiOXkXoO_vH2gVUN8JNp4khK",
+        "name": "Ion Gems",
+        "fragment": "iongem",
+        "supply": 5000,
+        "id": "5843762284240831056",
+        "emoji": "gift_emoji_5843762284240831056_by_GiftChangesHelper2Bot",
+        "stickers": "gift_5843762284240831056_by_GiftChangesHelper2Bot",
+        "dates": [
+            "30.10.2024",
+            "30.10.2024",
+            "03.02.2025"
+        ]
+    },
+    {
+        "address": "EQA401QqpXtBnwIaDbFjwd5yXfP2mYiCusbJ3Zcw9eXR9CqL",
+        "name": "Jacks-in-the-Box",
+        "fragment": "jackinthebox",
+        "supply": 100000,
+        "id": "6005659564635063386",
+        "emoji": "gift_emoji_6005659564635063386_by_GiftChangesHelper2Bot",
+        "stickers": "gift_6005659564635063386_by_GiftChangesHelper2Bot",
+        "dates": [
+            "01.04.2025",
+            "01.03.2025",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQAwzubeoJwnqmmBuTPpnUSurRzWPB8ERzcfzx55Z2YjE0jx",
+        "name": "Jelly Bunnies",
+        "fragment": "jellybunny",
+        "supply": 200000,
+        "id": "5915502858152706668",
+        "emoji": "gift0emoji_5915502858152706668_by_GiftChangesHelper4Bot",
+        "stickers": "gift0_5915502858152706668_by_GiftChangesHelper4Bot",
+        "dates": [
+            "24.11.2024",
+            "26.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQCBK_JBASAA5XVz1D17Pn--kQaMWm0b9wReVtsEdRO4Tgy9",
+        "name": "Jester Hats",
+        "fragment": "jesterhat",
+        "supply": 400000,
+        "id": "5933590374185435592",
+        "emoji": "gift_emoji_5933590374185435592_by_GiftChangesHelper1Bot",
+        "stickers": "gift_5933590374185435592_by_GiftChangesHelper1Bot",
+        "dates": [
+            "01.12.2024",
+            "15.12.2024",
+            "29.01.2025"
+        ]
+    },
+    {
+        "address": "EQCehrkZtKDtVe0qyvBAsrHx3hW-hroQyDrS_MZOOVYth2DG",
+        "name": "Jingle Bells",
+        "fragment": "jinglebells",
+        "supply": 200000,
+        "id": "6001473264306619020",
+        "emoji": "gift_emoji_6001473264306619020_by_GiftChangesHelper1Bot",
+        "stickers": "gift_6001473264306619020_by_GiftChangesHelper1Bot",
+        "dates": [
+            "23.12.2024",
+            "30.12.2024",
+            "30.01.2025"
+        ]
     },
     {
         "address": "EQCBcMPpEjKJysTb534Nvt3FXQgkzVyhaaBDIyrcaKD1PsFF",
         "name": "Joyful Bundles",
         "fragment": "joyfulbundle",
+        "supply": 150000,
         "id": "5870862540036113469",
         "emoji": "Love_YOU_package_1886_8f61_emoji_by_GiftChangesHelper2Bot",
-        "stickers": "Love_YOU_package_1886_8f61_by_GiftChangesHelper2Bot"
+        "stickers": "Love_YOU_package_1886_8f61_by_GiftChangesHelper2Bot",
+          "dates": [
+            "14.02.2025",
+            "10.03.2025",
+            "04.07.2025"
+        ]
+        
+    },
+    {
+        "address": "EQDTro-ogJbS7o-OBD6bt2NysPt7SnGm5zfuRXGB1nE_rbGa",
+        "name": "Kissed Frogs",
+        "fragment": "kissedfrog",
+        "supply": 15000,
+        "id": "5845776576658015084",
+        "emoji": "gift0emoji_5845776576658015084_by_GiftChangesHelper4Bot",
+        "stickers": "gift0_5845776576658015084_by_GiftChangesHelper4Bot",
+        "dates": [
+            "01.11.2024",
+            "01.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQDRrfw5pgIC4e6NafUAx52Z9Ym6q1k26xxaXR_qx0LKJJ7D",
+        "name": "Light Swords",
+        "fragment": "lightsword",
+        "supply": 150000,
+        "id": "5897581235231785485",
+        "emoji": "gift_emoji_5897581235231785485_by_GiftChangesHelper5Bot",
+        "stickers": "gift_5897581235231785485_by_GiftChangesHelper5Bot",
+        "dates": [
+            "23.02.2025",
+            "24.02.2025",
+            "19.05.2025"
+        ]
+    },
+    {
+        "address": "EQC6zjid8vJNEWqcXk10XjsdDLRKbcPZzbHusuEW6FokOWIm",
+        "name": "Lol Pops",
+        "fragment": "lolpop",
+        "supply": 500000,
+        "id": "5170594532177215681",
+        "emoji": "gift_emoji_5170594532177215681_by_GiftChangesHelper5Bot",
+        "stickers": "gift_5170594532177215681_by_GiftChangesHelper5Bot",
+        "dates": [
+            "28.09.2024",
+            "06.10.2024",
+            "03.02.2025"
+        ]
+    },
+    {
+        "address": "EQCE80Aln8YfldnQLwWMvOfloLGgmPY0eGDJz9ufG3gRui3D",
+        "name": "Loot Bags",
+        "fragment": "lootbag",
+        "supply": 15000,
+        "id": "5868659926187901653",
+        "emoji": "gift_emoji_5868659926187901653_by_GiftChangesHelper3Bot",
+        "stickers": "gift_5868659926187901653_by_GiftChangesHelper3Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "14.02.2025"
+        ]
+    },
+    {
+        "address": "EQDqHwSzU4I_U44vSM9EDP4HGGKWy9yWjbzkpCa3K8iMBEVD",
+        "name": "Love Candles",
+        "fragment": "lovecandle",
+        "supply": 50000,
+        "id": "5915550639663874519",
+        "emoji": "gift_emoji_5915550639663874519_by_GiftChangesHelper6Bot",
+        "stickers": "gift_5915550639663874519_by_GiftChangesHelper6Bot",
+        "dates": [
+            "24.11.2024",
+            "30.11.2024",
+            "30.01.2025"
+        ]
+    },
+    {
+        "address": "EQD7yDu2WCgd9Uzx1dF_DQkWK7IZJJ4Mp9M9g1rGUUiQE43m",
+        "name": "Love Potions",
+        "fragment": "lovepotion",
+        "supply": 35000,
+        "id": "5868348541058942091",
+        "emoji": "gift_emoji_5868348541058942091_by_GiftChangesHelper1Bot",
+        "stickers": "gift_5868348541058942091_by_GiftChangesHelper1Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "14.02.2025"
+        ]
+    },
+    {
+        "address": "EQDCPq7QSUvCmq7kBhmDulxVdeFHKFc1wT9MQxnesanl1Hql",
+        "name": "Low Riders",
+        "fragment": "lowrider",
+        "supply": 24000,
+        "id": "6014675319464657779",
+        "emoji": "Cars_776b_emoji_by_GiftChangesHelper4Bot",
+        "stickers": "Cars_776b_by_GiftChangesHelper4Bot",
+        "dates": [
+            "09.07.2025",
+            "09.07.2025",
+            "09.07.2025"
+        ]
+    },
+    {
+        "address": "EQC2lsUy1SKxJEJBwj5ZCfVnLPvAqDqy5c26Xg8xS_pDTXGk",
+        "name": "Lunar Snakes",
+        "fragment": "lunarsnake",
+        "supply": 400000,
+        "id": "6028426950047957932",
+        "emoji": "gift_emoji_6028426950047957932_by_GiftChangesHelper2Bot",
+        "stickers": "gift_6028426950047957932_by_GiftChangesHelper2Bot",
+        "dates": [
+            "01.01.2025",
+            "05.01.2025",
+            "29.01.2025"
+        ]
+    },
+    {
+        "address": "EQA2lHcvZWW_bN_2NMKrkEUv9xz6fx8wTE5upa8u1neZb6hJ",
+        "name": "Lush Bouquets",
+        "fragment": "lushbouquet",
+        "supply": 180000,
+        "id": "5871002671934079382",
+        "emoji": "LovingGift_3bcc_emoji_by_GiftChangesHelper1Bot",
+        "stickers": "LovingGift_3bcc_by_GiftChangesHelper1Bot",
+        "dates": [
+            "14.02.2025",
+            "27.02.2025",
+            "09.06.2025"
+        ]
+    },
+    {
+        "address": "EQBdlKhLzezYFMCWSWTCnhpKC1uyczaBUOj3EtPjcatUsTrC",
+        "name": "Mad Pumpkins",
+        "fragment": "madpumpkin",
+        "supply": 30000,
+        "id": "5841632504448025405",
+        "emoji": "gift_emoji_5841632504448025405_by_GiftChangesHelper1Bot",
+        "stickers": "gift_5841632504448025405_by_GiftChangesHelper1Bot",
+        "dates": [
+            "30.10.2024",
+            "01.11.2024",
+            "31.01.2025"
+        ]
+    },
+    {
+        "address": "EQAtFU9GrGfix4UG9DOivN58QxvgBJUaAZ_pdZBZCmbhKo4P",
+        "name": "Magic Potions",
+        "fragment": "magicpotion",
+        "supply": 5000,
+        "id": "5846226946928673709",
+        "emoji": "gift0emoji_5846226946928673709_by_GiftChangesHelper4Bot",
+        "stickers": "gift0_5846226946928673709_by_GiftChangesHelper4Bot",
+        "dates": [
+            "01.11.2024",
+            "01.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQCZxxFMS-y1hcGADL6EPB7usNstQqD9u-yBaYpXVVMr75NF",
+        "name": "Mini Oscars",
+        "fragment": "minioscar",
+        "supply": 10000,
+        "id": "5879737836550226478",
+        "emoji": "gift_emoji_5879737836550226478_by_GiftChangesHelper5Bot",
+        "stickers": "gift_5879737836550226478_by_GiftChangesHelper5Bot",
+        "dates": [
+            "13.11.2024",
+            "19.11.2024",
+            "03.02.2025"
+        ]
+    },
+    {
+        "address": "EQAZjuUJmbP-V4Ryowjexh7bIcdNrrojr0WKSpdggB0zbst5",
+        "name": "Nail Bracelets",
+        "fragment": "nailbracelet",
+        "supply": 5000,
+        "id": "5870720080265871962",
+        "emoji": "NailBracelet_a964_emoji_by_GiftChangesHelper1Bot",
+        "stickers": "NailBracelet_a964_by_GiftChangesHelper1Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "22.05.2025"
+        ]
+    },
+    {
+        "address": "EQBayCY2wZwrVBExNfLL8v9K0mHNmrQTntZldgpYiRwB_QKK",
+        "name": "Neko Helmets",
+        "fragment": "nekohelmet",
+        "supply": 18000,
+        "id": "5933793770951673155",
+        "emoji": "gift_emoji_5933793770951673155_by_GiftChangesHelper4Bot",
+        "stickers": "gift_5933793770951673155_by_GiftChangesHelper4Bot",
+        "dates": [
+            "08.03.2025",
+            "11.03.2025",
+            "08.03.2025"
+        ]
+    },
+    {
+        "address": "EQCa1I09fE9UoTV6awM6QC9-fkv51hoii24w1tJoFfigG_ax",
+        "name": "Party Sparklers",
+        "fragment": "partysparkler",
+        "supply": 400000,
+        "id": "6003643167683903930",
+        "emoji": "gift_emoji_6003643167683903930_by_GiftChangesHelper2Bot",
+        "stickers": "gift_6003643167683903930_by_GiftChangesHelper2Bot",
+        "dates": [
+            "23.12.2024",
+            "30.12.2024",
+            "29.01.2025"
+        ]
+    },
+    {
+        "address": "EQDJsN9OJBhKGZoWZWtkEpzkCfIu16Z9UzTWbYjeLpuHdT5f",
+        "name": "Perfume Bottles",
+        "fragment": "perfumebottle",
+        "supply": 10000,
+        "id": "5913517067138499193",
+        "emoji": "model0emoji_5913517067138499193_by_GiftChangesHelper2Bot",
+        "stickers": "model0_5913517067138499193_by_GiftChangesHelper2Bot",
+        "dates": [
+            "24.11.2024",
+            "30.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQBBLRFtC_3PLxNpWX5nfchwapk7eWcG3dzKoxbV6cWzqROo",
+        "name": "Pet Snakes",
+        "fragment": "petsnake",
+        "supply": 400000,
+        "id": "6023917088358269866",
+        "emoji": "gift_emoji_6023917088358269866_by_GiftChangesHelper5Bot",
+        "stickers": "gift_6023917088358269866_by_GiftChangesHelper5Bot",
+        "dates": [
+            "30.12.2024",
+            "31.12.2024",
+            "13.05.2025"
+        ]
+    },
+    {
+        "address": "EQBG-g6ahkAUGWpefWbx-D_9sQ8oWbvy6puuq78U2c4NUDFS",
+        "name": "Plush Pepes",
+        "fragment": "plushpepe",
+        "supply": 3000,
+        "id": "5936013938331222567",
+        "emoji": "model0emoji_5936013938331222567_by_GiftChangesHelper2Bot",
+        "stickers": "model0_5936013938331222567_by_GiftChangesHelper2Bot",
+        "dates": [
+            "01.12.2024",
+            "01.12.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQA4i58iuS9DUYRtUZ97sZo5mnkbiYUBpWXQOe3dEUCcP1W8",
+        "name": "Precious Peaches",
+        "fragment": "preciouspeach",
+        "supply": 5000,
+        "id": "5933671725160989227",
+        "emoji": "gift0emoji_5933671725160989227_by_GiftChangesHelper2Bot",
+        "stickers": "gift0_5933671725160989227_by_GiftChangesHelper2Bot",
+        "dates": [
+            "01.12.2024",
+            "01.12.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQDr4xn5_GoCzDxhGJMek7fv3nm6W7bhRvlDSBjcNZul52tZ",
+        "name": "Record Players",
+        "fragment": "recordplayer",
+        "supply": 100000,
+        "id": "5856973938650776169",
+        "emoji": "gift_emoji_5856973938650776169_by_GiftChangesHelper6Bot",
+        "stickers": "gift_5856973938650776169_by_GiftChangesHelper6Bot",
+        "dates": [
+            "05.11.2024",
+            "23.12.2024",
+            "23.02.2025"
+        ]
+    },
+    {
+        "address": "EQDycOgkLwcfPDokh8q-2DIUzVhPetdFuZmwrFYFP6i1nZ_u",
+        "name": "Restless Jars",
+        "fragment": "restlessjar",
+        "supply": 150000,
+        "id": "5870784783948186838",
+        "emoji": "RestlessJar_1ee5_emoji_by_GiftChangesHelper2Bot",
+        "stickers": "RestlessJar_1ee5_by_GiftChangesHelper2Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "22.05.2025"
+        ]
+    },
+    {
+        "address": "EQCDBbQYbv3n91TwywBRD9YrJNuNVmbD3Sprpq6hWIDHVu4p",
+        "name": "Sakura Flowers",
+        "fragment": "sakuraflower",
+        "supply": 100000,
+        "id": "5167939598143193218",
+        "emoji": "gift_emoji_5167939598143193218_by_GiftChangesHelper1Bot",
+        "stickers": "gift_5167939598143193218_by_GiftChangesHelper1Bot",
+        "dates": [
+            "28.09.2024",
+            "05.10.2024",
+            "23.02.2025"
+        ]
+    },
+    {
+        "address": "EQAaTIR7oJyowDiumYLVN0oe61kGE3I6EPEn7WgHPGuWAeCy",
+        "name": "Santa Hats",
+        "fragment": "santahat",
+        "supply": 150000,
+        "id": "5983471780763796287",
+        "emoji": "gift0emoji_5983471780763796287_by_GiftChangesHelper2Bot",
+        "stickers": "gift0_5983471780763796287_by_GiftChangesHelper2Bot",
+        "dates": [
+            "17.12.2024",
+            "28.12.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQATuUGdvrjLvTWE5ppVFOVCqU2dlCLUnKTsu0n1JYm9la10",
+        "name": "Scared Cats",
+        "fragment": "scaredcat",
+        "supply": 20000,
+        "id": "5837059369300132790",
+        "emoji": "gift0emoji_5837059369300132790_by_GiftChangesHelper2Bot",
+        "stickers": "gift0_5837059369300132790_by_GiftChangesHelper2Bot",
+        "dates": [
+            "29.10.2024",
+            "29.10.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQBw2tO5UaJ4c_YXt3I8y5KD0k37staZxedV2O5HmryiK0dN",
+        "name": "Sharp Tongues",
+        "fragment": "sharptongue",
+        "supply": 10000,
+        "id": "5841689550203650524",
+        "emoji": "gift0emoji_5841689550203650524_by_GiftChangesHelper4Bo",
+        "stickers": "gift0_5841689550203650524_by_GiftChangesHelper4Bot",
+        "dates": [
+            "30.10.2024",
+            "31.10.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQCrGA9slCoksgD-NyRDjtHySKN0Ts8k6hdueJkUkZZdD4_K",
+        "name": "Signet Rings",
+        "fragment": "signetring",
+        "supply": 30000,
+        "id": "5936085638515261992",
+        "emoji": "model0emoji_5936085638515261992_by_GiftChangesHelper2Bot",
+        "stickers": "model0_5936085638515261992_by_GiftChangesHelper2Bot",
+        "dates": [
+            "01.12.2024",
+            "09.12.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQBaOL8mH5YywkXjkps65X1OLPNH7pns4YcfLmaVpFaoNKZn",
+        "name": "Skull Flowers",
+        "fragment": "skullflower",
+        "supply": 30000,
+        "id": "5839038009193792264",
+        "emoji": "gift0emoji_5839038009193792264_by_GiftChangesHelper2Bot",
+        "stickers": "gift0_5839038009193792264_by_GiftChangesHelper2Bot",
+        "dates": [
+            "29.10.2024",
+            "30.10.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQBcNxMCTyEHkcQ5cK3fO_3Ebjf6JcA5JJ_OJV4npDN-604P",
+        "name": "Sleigh Bells",
+        "fragment": "sleighbell",
+        "supply": 50000,
+        "id": "5981026247860290310",
+        "emoji": "gift_emoji_5981026247860290310_by_GiftChangesHelper4Bot",
+        "stickers": "gift_5981026247860290310_by_GiftChangesHelper4Bot",
+        "dates": [
+            "17.12.2024",
+            "01.01.2025",
+            "23.02.2025"
+        ]
+    },
+    {
+        "address": "EQBbUKx5CalEly2TekDNeFbv4e02pj6xsAqXZP0X_AprKj4I",
+        "name": "Snake Boxes",
+        "fragment": "snakebox",
+        "supply": 400000,
+        "id": "6023679164349940429",
+        "emoji": "gift_emoji_6023679164349940429_by_GiftChangesHelper5Bot",
+        "stickers": "gift_6023679164349940429_by_GiftChangesHelper5Bot",
+        "dates": [
+            "30.12.2024",
+            "01.01.2025",
+            "13.05.2025"
+        ]
+    },
+    {
+        "address": "EQA72Uevr_MHvzYwSCHJUK-uC6kd-w8kbxzhJ49WIiG-o6CD",
+        "name": "Snoop Cigars",
+        "fragment": "snoopcigar",
+        "supply": 120000,
+        "id": "6012435906336654262",
+        "emoji": "SnoopsCigars_3eca_emoji_by_GiftChangesHelper3Bot",
+        "stickers": "SnoopsCigars_3eca_by_GiftChangesHelper3Bot",
+        "dates": [
+            "09.07.2025",
+            "09.07.2025",
+            "09.07.2025"
+        ]
+    },
+    {
+        "address": "EQAoJw7BpOcBD3y9voMuEQ-qhS3K4gtM-6EePLxkzk8iSifX",
+        "name": "Snoop Doggs",
+        "fragment": "snoopdogg",
+        "supply": 600000,
+        "id": "6014591077976114307",
+        "emoji": "Dogs_2eda_emoji_by_GiftChangesHelper1Bot",
+        "stickers": "Dogs_2eda_by_GiftChangesHelper1Bot",
+        "dates": [
+            "09.07.2025",
+            "09.07.2025",
+            "09.07.2025"
+        ]
+    },
+    {
+        "address": "EQAPNu648fe_uqUoeH6V_-fIDJYea_5Xu2rXn6iZFil49bMY",
+        "name": "Snow Globes",
+        "fragment": "snowglobe",
+        "supply": 120000,
+        "id": "5981132629905245483",
+        "emoji": "gift_emoji_5981132629905245483_by_GiftChangesHelper3Bot",
+        "stickers": "gift_5981132629905245483_by_GiftChangesHelper3Bot",
+        "dates": [
+            "17.12.2024",
+            "30.12.2024",
+            "07.03.2025"
+        ]
+    },
+    {
+        "address": "EQAIM-5QzZGXYTSZR1RGeT2g9rNpYmNPQ09_HtvaInHaTyPX",
+        "name": "Snow Mittens",
+        "fragment": "snowmittens",
+        "supply": 90000,
+        "id": "5980789805615678057",
+        "emoji": "gift_emoji_5980789805615678057_by_GiftChangesHelper3Bot",
+        "stickers": "gift_5980789805615678057_by_GiftChangesHelper3Bot",
+        "dates": [
+            "17.12.2024",
+            "30.12.2024",
+            "07.03.2025"
+        ]
+    },
+    {
+        "address": "EQA8DCWyCWyywgOKYORerRoSVevWrUQ_FjKQgNihxY1227x7",
+        "name": "Spiced Wines",
+        "fragment": "spicedwine",
+        "supply": 400000,
+        "id": "5913442287462908725",
+        "emoji": "gift0emoji_5913442287462908725_by_GiftChangesHelper3Bot",
+        "stickers": "gift0_5913442287462908725_by_GiftChangesHelper3Bot",
+        "dates": [
+            "24.11.2024",
+            "28.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQD6mH9bwbn6S3M_tCRWOvqAIW8M34kRwbI01niGLRPeDPsl",
+        "name": "Spy Agarics",
+        "fragment": "spyagaric",
+        "supply": 100000,
+        "id": "5821261908354794038",
+        "emoji": "gift0emoji_5821261908354794038_by_GiftChangesHelper3Bot",
+        "stickers": "gift0_5821261908354794038_by_GiftChangesHelper3Bot",
+        "dates": [
+            "23.10.2024",
+            "24.10.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQBAXR68f1UgRhToFR_bXY1zPJy5O6sm2St0CRTo92BTxGiH",
+        "name": "Star Notepads",
+        "fragment": "starnotepad",
+        "supply": 200000,
+        "id": "5936017773737018241",
+        "emoji": "gift_emoji_5936017773737018241_by_GiftChangesHelper5Bot",
+        "stickers": "gift_5936017773737018241_by_GiftChangesHelper5Bot",
+        "dates": [
+            "01.12.2024",
+            "16.12.2024",
+            "04.02.2025"
+        ]
+    },
+    {
+        "address": "EQCgaTxb2wA_3Bi8Ec4FFNu8CauoHo0VPpnwxdrhAgOrOXvA",
+        "name": "Swag Bags",
+        "fragment": "swagbag",
+        "supply": 240000,
+        "id": "6012607142387778152",
+        "emoji": "SwagBags_2178_emoji_by_GiftChangesHelper2Bot",
+        "stickers": "SwagBags_2178_by_GiftChangesHelper2Bot",
+        "dates": [
+            "09.07.2025",
+            "09.07.2025",
+            "09.07.2025"
+        ]
+    },
+    {
+        "address": "EQBI07PXew94YQz7GwN72nPNGF6htSTOJkuU4Kx_bjTZv32U",
+        "name": "Swiss Watches",
+        "fragment": "swisswatch",
+        "supply": 50000,
+        "id": "5936043693864651359",
+        "emoji": "gift_emoji_5936043693864651359_by_GiftChangesHelper3Bot",
+        "stickers": "gift_5936043693864651359_by_GiftChangesHelper3Bot",
+        "dates": [
+            "01.12.2024",
+            "09.12.2024",
+            "01.02.2025"
+        ]
+    },
+    {
+        "address": "EQA_kx2WOydXWzYUYO1DP80aHl4yhlLGYhxjPAtRPNjMgfYM",
+        "name": "Tama Gadgets",
+        "fragment": "tamagadget",
+        "supply": 200000,
+        "id": "6023752243218481939",
+        "emoji": "gift_emoji_6023752243218481939_by_GiftChangesHelper4Bot",
+        "stickers": "gift_6023752243218481939_by_GiftChangesHelper4Bot",
+        "dates": [
+            "30.12.2024",
+            "30.01.2025",
+            "07.03.2025"
+        ]
+    },
+    {
+        "address": "EQADvJxMxCHA7fRlYjoceBORf7RwKs0rzjVaKepQACMnZzG7",
+        "name": "Top Hats",
+        "fragment": "tophat",
+        "supply": 40000,
+        "id": "5897593557492957738",
+        "emoji": "gift_emoji_5897593557492957738_by_GiftChangesHelper2Bot",
+        "stickers": "gift_5897593557492957738_by_GiftChangesHelper2Bot",
+        "dates": [
+            "23.02.2025",
+            "03.03.2025",
+            "23.02.2025"
+        ]
+    },
+    {
+        "address": "EQC1gud6QO8NdJjVrqr7qFBMO0oQsktkvzhmIRoMKo8vxiyL",
+        "name": "Toy Bears",
+        "fragment": "toybear",
+        "supply": 60000,
+        "id": "5868220813026526561",
+        "emoji": "gift_emoji_5868220813026526561_by_GiftChangesHelper1Bot",
+        "stickers": "gift_5868220813026526561_by_GiftChangesHelper1Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "14.02.2025"
+        ]
+    },
+    {
+        "address": "EQCyAMkb6bNyNlKPH0tJbubk1VVjASqyq9sZwkJ8AbxMkxxU",
+        "name": "Trapped Hearts",
+        "fragment": "trappedheart",
+        "supply": 30000,
+        "id": "5841391256135008713",
+        "emoji": "gift0emoji_5841391256135008713_by_GiftChangesHelper4Bot",
+        "stickers": "gift0_5841391256135008713_by_GiftChangesHelper4Bot",
+        "dates": [
+            "29.10.2024",
+            "29.10.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQDjBdu3zS-JT94OwIup4KVNaQjxDzGcIPRJ24Ha0Y8jLw83",
+        "name": "Valentine Boxes",
+        "fragment": "valentinebox",
+        "supply": 50000,
+        "id": "5868595669182186720",
+        "emoji": "heartshapedbox_9c79_emoji_by_GiftChangesHelper3Bot",
+        "stickers": "heartshapedbox_9c79_by_GiftChangesHelper3Bot",
+        "dates": [
+            "14.02.2025",
+            "14.02.2025",
+            "04.07.2025"
+        ]
+    },
+    {
+        "address": "EQACcQpR2fmdeENWdE2YGQWHVxSTyA8Zq4_k7rk_IaxCRXNe",
+        "name": "Vintage Cigars",
+        "fragment": "vintagecigar",
+        "supply": 50000,
+        "id": "5857140566201991735",
+        "emoji": "gift0emoji_5857140566201991735_by_GiftChangesHelper3Bot",
+        "stickers": "gift0_5857140566201991735_by_GiftChangesHelper3Bot",
+        "dates": [
+            "05.11.2024",
+            "20.11.2024",
+            "01.01.2025"
+        ]
+    },
+    {
+        "address": "EQCNsmpHqRSY_Dxnyh6P0MMO7zcABf8sVvG0wr245pBzO3B3",
+        "name": "Voodoo Dolls",
+        "fragment": "voodoodoll",
+        "supply": 30000,
+        "id": "5836780359634649414",
+        "emoji": "gift_emoji_5836780359634649414_by_GiftChangesHelper4Bot",
+        "stickers": "gift_5836780359634649414_by_GiftChangesHelper4Bot",
+        "dates": [
+            "29.10.2024",
+            "29.10.2024",
+            "31.01.2025"
+        ]
+    },
+    {
+        "address": "EQDvZ_9Z3tJ9k6eELLtTeuQAz4yOOWyYFZfzqNv2dGJiHvrF",
+        "name": "Westside Signs",
+        "fragment": "westsidesign",
+        "supply": 12000,
+        "id": "6014697240977737490",
+        "emoji": "WestSide_91ce_emoji_by_GiftChangesHelper5Bot",
+        "stickers": "WestSide_91ce_by_GiftChangesHelper5Bot",
+        "dates": [
+            "09.07.2025",
+            "09.07.2025",
+            "09.07.2025"
+        ]
+    },
+    {
+        "address": "EQAo_snApDDqF6GKV0xe_T5oe28r842gJtgmkgPMhX0-dRkh",
+        "name": "Whip Cupcakes",
+        "fragment": "whipcupcake",
+        "supply": 400000,
+        "id": "5933543975653737112",
+        "emoji": "Cupcakes_b1d4_emoji_by_GiftChangesHelper1Bot",
+        "stickers": "Cupcakes_b1d4_by_GiftChangesHelper1Bot",
+        "dates": [
+            "08.03.2025",
+            "08.03.2025",
+            "04.07.2025"
+        ]
+    },
+    {
+        "address": "EQC8WVW9DSN4PPfFlCW2AHJkXxBUHBFsvnhXiYqSTpD7tXsp",
+        "name": "Winter Wreaths",
+        "fragment": "winterwreath",
+        "supply": 200000,
+        "id": "5983259145522906006",
+        "emoji": "gift_emoji_5983259145522906006_by_GiftChangesHelper3Bot",
+        "stickers": "gift_5983259145522906006_by_GiftChangesHelper3Bot",
+        "dates": [
+            "17.12.2024",
+            "21.12.2024",
+            "07.03.2025"
+        ]
+    },
+    {
+        "address": "EQBD8aBKC4NsnYMqtkCfPQk2EVnieynJQp1UgZVyx1VmR5Ml",
+        "name": "Witch Hats",
+        "fragment": "witchhat",
+        "supply": 100000,
+        "id": "5821384757304362229",
+        "emoji": "gift_emoji_5821384757304362229_by_GiftChangesHelper2Bot",
+        "stickers": "gift_5821384757304362229_by_GiftChangesHelper2Bot",
+        "dates": [
+            "23.10.2024",
+            "24.10.2024",
+            "29.01.2025"
+        ]
+    },
+    {
+        "address": "EQDz_VecErEBTLOTiR1tq0VS3lZuHHqhYmhZbthcrbFk7ztK",
+        "name": "Xmas Stockings",
+        "fragment": "xmasstocking",
+        "supply": 600000,
+        "id": "6003767644426076664",
+        "emoji": "gift_emoji_6003767644426076664_by_GiftChangesHelper6Bot",
+        "stickers": "gift_6003767644426076664_by_GiftChangesHelper6Bot",
+        "dates": [
+            "23.12.2024",
+            "29.12.2024",
+            "13.05.2025"
+        ]
     }
 ]

@@ -19,7 +19,7 @@
                         $img("preview-card", collectionPreview || itemPreview, "Background"),
                         $div("preview-blur flex-center", $img("preview", itemPreview, 'Preview')),
                         $span("item-name", itemInfo.name),
-                        Modal.$metadata(itemMeta. testnet),
+                        Modal.$metadata(itemMeta, testnet),
                         $span("network-button flex-center-column", `switch to ${testnet.length == 0 ? "testnet":"mainnet"}`).click(() => window.location.href = `${origin}/nft/?${ testnet.length != 0 ? "":"t"}item=` + item.address)
                     ),
 

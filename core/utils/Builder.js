@@ -78,7 +78,7 @@ const origin = true ? "https://tonsiena.github.io" : "http://127.0.0.1:5500",
                     $span('gc-m-val', item.id)),
                 $p('gc-m-item')[src](
                     $span('gc-m-key', "fragment"),
-                    $a("https://fragment.com/gifts/astralshard" + item.fragment, "https://fragment.com/gifts/astralshard" + item.fragment)),
+                    $a("https://fragment.com/gifts/" + item.fragment, "https://fragment.com/gifts/" + item.fragment)),
                 $p('gc-m-item')[src](
                     $span('gc-m-key', "gift image"),
                     $a(`https://fragment.com/file/gifts/${item.fragment}/thumb.webp`, `https://fragment.com/file/gifts/${item.fragment}/thumb.webp`)),
@@ -91,6 +91,18 @@ const origin = true ? "https://tonsiena.github.io" : "http://127.0.0.1:5500",
                 $p('gc-m-item')[src](
                     $span('gc-m-key', "stickers"),
                     $a(`https://t.me/addstickers/${item.stickers}`,  `https://t.me/stickers/${item.stickers}`)),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "first sale"),
+                    $span('gc-m-val', item.dates[0])),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "last sale"),
+                    $span('gc-m-val', item.dates[1])),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "first upgraded"),
+                    $span('gc-m-val', item.dates[2])),
+                $p('gc-m-item')[src](
+                    $span('gc-m-key', "initial supply"),
+                    $span('gc-m-val', item.supply)),
    
             ),
     }
