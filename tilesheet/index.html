@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Создание сетки изображений 8x8</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="../core/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="content">
+            <br>
+            <canvas id="canvas"></canvas>
+            <br>
+        </div>
+           <div class="controls">
+                <button onclick="setTileSize('small')">64px</button>
+                <button onclick="setTileSize('medium')">128px</button>
+                <button onclick="setTileSize('big')">256px</button>
+                <button onclick="fetchModels()">Load</button>
+                <button onclick="fetchModels(true)">Load v2</button>
+                <button onclick="saveImage()">Save</button>
+            </div>
+        <ul id="giftList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
