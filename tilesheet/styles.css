@@ -103,7 +103,6 @@ a {
 }
 
 .info, .devinfo {
-    height: 20px;
     display: block;
     margin: 10px;
     gap: 5px;
