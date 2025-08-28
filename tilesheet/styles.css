@@ -13,6 +13,7 @@ body {
     font-family: Arial, sans-serif;
     height: 100%;
     width: 100%;
+    font-family: Cascadia Code,Courier New,Courier,monospace;
 }
 
 .page {
@@ -50,7 +51,9 @@ li {
     align-items: center;
     color: grey;
     font-size: 14px;
+    justify-content: space-between;
 }
+
 
 li:hover {
     color: white;
@@ -106,12 +109,12 @@ a {
     display: block;
     margin: 10px;
     gap: 5px;
-    font-size: 14px;
+    font-size: 13px;
     color: grey;
     width: calc(100% - 42px);
     text-align: center;
 }
-
+ 
 .info {
     padding-bottom: 20px;
 }
