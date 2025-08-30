@@ -46,14 +46,19 @@ li {
     height: 40px;
     display: flex;
     cursor: pointer;
-    padding: 0px 10px;
     justify-content: star;
     align-items: center;
     color: grey;
     font-size: 14px;
-    justify-content: space-between;
+    width: calc(100% - 10px);
+    padding-right: 10px;
+    gap: 2px;
 }
 
+.giftname {
+    display: flex;
+    flex:1;
+}
 
 li:hover {
     color: white;

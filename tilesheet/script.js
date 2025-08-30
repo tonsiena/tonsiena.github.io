@@ -209,16 +209,16 @@ const gifts = [{
   "name": "Snake Box", "count": 70,
 },
 {
-  "name": "Snow Globe", "count": 50,
-},
-{
-  "name": "Snow Mittens", "count": 100,
-},
-{
   "name": "Snoop Cigar", "count": 50,
 },
 {
   "name": "Snoop Dogg", "count": 50,
+},
+{
+  "name": "Snow Globe", "count": 50,
+},
+{
+  "name": "Snow Mittens", "count": 100,
 },
 {
   "name": "Spiced Wine", "count": 100,
@@ -278,12 +278,25 @@ const gifts = [{
 function generateGiftList() {
   const $ul = $('#giftList').empty();
   $.each(gifts, (index, gift) => {
-    $li().text(gift.name).on('click', () => {
+    var $lit = $li();
+    $lit[src]($createTileImage(index, "/tilesheet/gifts.png", 64, 64));
+    $lit[src](`<span class="giftname">${gift.name}</span>`);
+    $lit.on('click', () => {
       GN = gift.name;
       fetchModels();
-    }) [src] (`<span>${gift.count}</span`) [to] ($ul);
+    });
+    $lit[src](`<img src=""><span>${gift.count}</span`)[to]($ul);
   });
 }
+
+function $createTileImage(tileIndex, tilesetSrc, tileWidth, tileHeight) {
+  const pos = Math.floor(tileIndex * 64 / 512);
+  const col = tileIndex % 8 * 64;
+  const row = pos * 64;
+  const $img = $(`<img width="${tileWidth}" height="${tileHeight}" style="object-fit:none; transform:scale(0.5); object-position:-${col}px -${row}px; height=32px; width=32px;" src="${tilesetSrc}">`);
+  return $img;
+}
+
 
 $(generateGiftList);
 
@@ -293,9 +306,9 @@ async function fetchModels(type = false) {
     const response = await $.ajax({ url: `${url}${encodeURIComponent(GN)}/models.json`, dataType: 'json' });
 
     models = response
-    .map(model => ({ ...model, name: model.name }))
-    .sort((a, b) => a.name.localeCompare(b.name));
-    
+      .map(model => ({ ...model, name: model.name }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+
     const baseUrl = `${url}${encodeURIComponent(GN)}/png/`;
     URLS = models.map(model => {
       const name = type ? model.name.replace(/[’`]/g, "'").replace(/\//g, "\\") : model.name;
