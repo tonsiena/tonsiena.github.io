@@ -279,7 +279,7 @@ function generateGiftList() {
   const $ul = $('#giftList').empty();
   $.each(gifts, (index, gift) => {
     $li().text(gift.name).on('click', () => {
-      GN = gift;
+      GN = gift.name;
       fetchModels();
     }) [src] (`<span>${gift.count}</span`) [to] ($ul);
   });
@@ -292,7 +292,10 @@ async function fetchModels(type = false) {
   try {
     const response = await $.ajax({ url: `${url}${encodeURIComponent(GN)}/models.json`, dataType: 'json' });
 
-    models = response.map(model => ({ ...model, name: model.name }));
+    models = response
+    .map(model => ({ ...model, name: model.name }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+    
     const baseUrl = `${url}${encodeURIComponent(GN)}/png/`;
     URLS = models.map(model => {
       const name = type ? model.name.replace(/[’`]/g, "'").replace(/\//g, "\\") : model.name;
