@@ -86,11 +86,17 @@ function saveImage() {
 }
 
 
+function normalizeGiftName(gift) {
+  gift = decodeURIComponent(gift);
+  gift = gift.replace(/([a-z])([A-Z])/g, '$1 $2');
+  return gift;
+}
+
 $(document).ready(() => {
   const urlParams = new URLSearchParams(window.location.search);
   const data = urlParams.get('gift');
   if (data) {
-    GN = decodeURIComponent(data);
+    GN = normalizeGiftName(data);
     fetchModels();
   } else $("body").empty()[src](`<p class='empty'>Ошибка при получении названия подарка</p>`)
 })
