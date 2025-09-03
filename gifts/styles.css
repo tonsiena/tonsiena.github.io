@@ -60,9 +60,20 @@ li {
     gap: 2px;
 }
 
+li p {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
 .giftname {
     display: flex;
     flex:1;
+}
+
+.giftid {
+    opacity: 0.5;
 }
 
 li:hover {

@@ -12,7 +12,9 @@ function generateGiftList() {
   $.each(gifts, (index, gift) => {
     var $lit = $li();
     $lit[src]($createTileImage(index));
-    $lit[src](`<span class="giftname">${gift.name}</span>`);
+    $lit[src](`<p><span class="giftname">${gift.name}</span>
+                  <span class="giftid">${gift.id}</span></p>`);
+
     $lit.on('click', () => {
             const encodedData = encodeURIComponent(gift.name);
             window.location.href = `/tilesheet/?gift=${encodedData}`;
