@@ -19,7 +19,7 @@ function generateGiftList() {
             const encodedData = encodeURIComponent(gift.name);
             window.location.href = `/tilesheet/?gift=${encodedData}`;
     });
-    $lit[src](`<span>${gift.count}</span`)[to]($ul);
+    $lit[src](`<span class="mcount">${gift.count}</span`)[to]($ul);
   });
 }
 
@@ -42,3 +42,25 @@ $(document).ready(function () {
   });
 });
 
+const counts = [49, 50, 52, 55, 56, 58, 60, 62, 65, 70, 80, 90, 99, 100];
+
+const $buttonContainer = $('<div class="tabs">');
+
+$('<p>', {  class:'tab', text: 'All', click: () => filterList('all')}).appendTo($buttonContainer);
+
+counts.forEach(count => {
+  $('<p>', { class:'tab', text: `${count}`, click: () => filterList(count)}).appendTo($buttonContainer);
+});
+
+$('body').prepend($buttonContainer);
+
+function filterList(count) {
+  const $items = $('ul li span.mcount');
+  if (count === 'all') $items.parent().show();
+  else {
+    $items.each(function() {
+      const itemCount = parseInt($(this).text());
+      $(this).parent().toggle(itemCount === count);
+    });
+  }
+}
