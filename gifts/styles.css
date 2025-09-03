@@ -10,7 +10,6 @@ body {
     flex-direction: column;
     align-items: center;
     color: white;
-    font-family: Arial, sans-serif;
     height: 100%;
     width: 100%;
     font-family: Cascadia Code,Courier New,Courier,monospace;
@@ -36,7 +35,6 @@ ul {
 .tabs {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
-    height: 40px;
     width: calc(100% - 20px);
     max-width: 700px;
     gap: 5px;
@@ -116,6 +114,7 @@ span {
 
 a {
     color: rgba(0, 140, 255, 0.90);
+    text-decoration: none;
 }
 
 .info, .devinfo {

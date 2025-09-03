@@ -46,7 +46,7 @@ const counts = [49, 50, 52, 55, 56, 58, 60, 62, 65, 70, 80, 90, 99, 100];
 
 const $buttonContainer = $('<div class="tabs">');
 
-$('<p>', {  class:'tab', text: 'All', click: () => filterList('all')}).appendTo($buttonContainer);
+$('<p>', {  class:'tab', text: 'Все', click: () => filterList('all')}).appendTo($buttonContainer);
 
 counts.forEach(count => {
   $('<p>', { class:'tab', text: `${count}`, click: () => filterList(count)}).appendTo($buttonContainer);
