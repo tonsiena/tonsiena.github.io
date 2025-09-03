@@ -13,7 +13,7 @@ function generateGiftList() {
     var $lit = $li();
     $lit[src]($createTileImage(index));
     $lit[src](`<p><span class="giftname">${gift.name}</span>
-                  <span class="giftid">${gift.id}</span></p>`);
+                  <span class="giftid">${gift.id} #${index += 1}</span></p>`);
 
     $lit.on('click', () => {
             const encodedData = encodeURIComponent(gift.name);
