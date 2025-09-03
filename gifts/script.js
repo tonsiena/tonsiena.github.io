@@ -30,3 +30,13 @@ function $createTileImage(tileIndex) {
 }
 
 
+$(document).ready(function () {
+  $('#filterInput').on('input', function () {
+    const filterValue = $(this).val().toLowerCase();
+    $('#giftList li').each(function () {
+      const giftText = $(this).text().toLowerCase();
+      $(this).toggle(giftText.includes(filterValue));
+    });
+  });
+});
+
