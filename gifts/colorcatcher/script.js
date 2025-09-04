@@ -1,12 +1,12 @@
 $(() => {
-const canvas = $('#canvas')[0];
+    const canvas = $('#canvas')[0];
     const ctx = canvas.getContext('2d');
     const img = new Image();
     let mode = 'edgeColor', data, loaded = false;
 
     $.get('data.json').done(d => data = d);
 
-    $('#imageUpload').change(({target: {files}}) => {
+    $('#imageUpload').change(({ target: { files } }) => {
         if (!files[0]) return;
         img.src = URL.createObjectURL(files[0]);
         img.onload = () => {
@@ -21,12 +21,19 @@ const canvas = $('#canvas')[0];
 
     $('#edgeMode').click(() => $('#edgeMode').text(mode = mode === 'edgeColor' ? 'centerColor' : 'edgeColor'));
 
-    $(canvas).mousedown(({offsetX: x, offsetY: y}) => {
-        if(!loaded) return;
-        const {data: [r, g, b]} = ctx.getImageData(x, y, 1, 1);
+    $(canvas).on('mousedown touchstart', ({ offsetX: x, offsetY: y }) => {
+        if (!loaded) return;
+        if (event.type === 'touchstart') {
+            const touch = event.originalEvent.touches[0];
+            const rect = canvas.getBoundingClientRect();
+            x = touch.clientX - rect.left;
+            y = touch.clientY - rect.top;
+        }
+
+        const { data: [r, g, b] } = ctx.getImageData(x, y, 1, 1);
         const hex = rgbToHex(r, g, b);
-        const match = findClosestMatch({r, g, b});
-        const dist = colorDistance({r, g, b}, hexToRgb(match.hex[mode]));
+        const match = findClosestMatch({ r, g, b });
+        const dist = colorDistance({ r, g, b }, hexToRgb(match.hex[mode]));
         $('#output').html(`Цвет выбран: ${hex} <br><br> ${dist < 50 ? `Ближайший цвет: ${match.name}` : 'No close match'} <span class="color-swatch" style="background-color:${match.hex[mode]}"></span>`);
     });
 
