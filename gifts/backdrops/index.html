@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>tonsiena / gifts / backdrops </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/core/jquery-3.7.1.min.js"></script>
+    <script src="/core/utils/Builder.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <h3>Данные загружены с
+            <a href="https://changes.tg/" target="_blank">changes.tg</a>
+            подробнее:
+            <a href="https://t.me/giftchanges" target="_blank">@giftchanges</a>
+        </h3>
+        <input type="text" id="filterInput" placeholder="Поиск">
+        <table id="backdropTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Center Color</th>
+                    <th>Edge Color</th>
+                    <th>Pattern Color</th>
+                    <th>Text Color</th>
+                </tr>
+            </thead>
+            <tbody id="backdropTableBody"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
