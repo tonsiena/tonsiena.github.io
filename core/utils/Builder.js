@@ -18,4 +18,9 @@ const origin = true ? "https://tonsiena.github.io" : "http://127.0.0.1:5500",
     $toast = (text) => {
         let $message = $p('toast-message', text)[to]($("#toast-container"))
         setTimeout(() => $message.remove(), 2500);
+    },
+    rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join(''),
+    hexToRgb = (hex) => {
+        const n = parseInt(hex.slice(1), 16);
+        return { r: (n >> 16) & 255, g: (n >> 8) & 255, b: n & 255 };
     }
