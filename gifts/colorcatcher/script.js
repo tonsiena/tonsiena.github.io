@@ -21,10 +21,11 @@ $(() => {
 
     $('#edgeMode').click(() => $('#edgeMode').text(mode = mode === 'edgeColor' ? 'centerColor' : 'edgeColor'));
 
-    $(canvas).on('mousedown touchstart', ({ offsetX: x, offsetY: y }) => {
+    $(canvas).on('mousedown touchstart', (e) => {
         if (!loaded) return;
-        if (event.type === 'touchstart') {
-            const touch = event.originalEvent.touches[0];
+        var x = e.offsetX, y = e.offsetY;
+        if (e.type === 'touchstart') {
+            const touch = e.originalEvent.touches[0];
             const rect = canvas.getBoundingClientRect();
             x = touch.clientX - rect.left;
             y = touch.clientY - rect.top;
