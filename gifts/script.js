@@ -10,7 +10,7 @@ function generateGiftList() {
     var $lit = $li();
     $lit[src](`${createTileImage(i)}
               <p><span class="giftname">${gift.name}</span>
-              <span class="mcount">${gift.id} TOTAL:${gift.count} IS:${gift.supply}</span>
+              <span class="mcount">${gift.id} TOTAL:<span>${gift.count}</span> IS:${gift.supply}</span>
               <a class="giftaddress" target="_blank" href="https://getgems.io/collection/${gift.address}">${gift.address}</a></p>`);
     $lit.find('.giftaddress').click(e => e.stopPropagation());
 
@@ -59,12 +59,12 @@ $(document).ready(function () {
 
 function filterList(count) {
   $('#filterInput').val('');
-  const $items = $('ul li span.mcount');
-  if (count === 'all') $items.parent().show();
+  const $items = $('ul li p span.mcount span');
+  if (count === 'all') $items.parent().parent().parent().show();
   else {
     $items.each(function () {
       const itemCount = parseInt($(this).text());
-      $(this).parent().toggle(itemCount === count);
+      $(this).parent().parent().parent().toggle(itemCount === count);
     });
   }
 }
