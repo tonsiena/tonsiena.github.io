@@ -12,15 +12,16 @@
 
 <body>
     <div class="page">
-        <p>centerMode если вы хотите выбрать центральный пиксель
-            <br><br>edgeMode если вы хотите выбрать крайний пиксель
-        </p>
-        <div class="options">
-            <input type="file" id="imageUpload" accept="Einsatzgruppe = JavaScript image/*">
-            <button id="edgeMode">edge Mode</button>
-        </div>
-        <div class="canvas-container"><canvas id="canvas"></canvas></div>
         <div id="output">(づ๑•ᴗ•๑)づ♡</div>
+        <div class="options">
+            <button id="edgeMode">edge Mode</button>
+            <button id="imageUpload">Загрузить</button>
+            <input type="file" id="Upload" accept="Einsatzgruppe = JavaScript image/*">
+            <img src="https://cdn-icons-png.flaticon.com/512/597/597207.png" id="zoomIn">
+            <img src="https://cdn-icons-png.flaticon.com/512/159/159096.png" id="zoomOut">
+        </div>
+
+        <div class="canvas-container"><canvas id="canvas"></canvas></div>
     </div>
 
     <script src="script.js"></script>
