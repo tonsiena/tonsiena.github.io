@@ -30,6 +30,41 @@ ul {
     width: calc(100% - 22px);
     margin: 20px 5px 5px 10px;
     border-radius: 10px;
+    padding: 10px 0px;
+}
+
+.filterContainer {
+    display: flex;
+    width: calc(100% - 22px);
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+#filterInput {
+    display: flex;
+    background-color: #ffffff10;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    padding: 0px 10px;
+    color: white;
+    border: 1px solid #ffffff20;
+    flex: 1;
+}
+
+#az-za-list-sort-button {
+    display: flex;
+    width: 50px;
+    height: 37px;
+    border: 1px solid #ffffff20;
+    background-color: #ffffff10;
+    color: grey;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .tabs {
@@ -57,21 +92,9 @@ ul {
     cursor: pointer;
 }
 
-.tab:hover {
-    color: white;
-}
 
-#filterInput {
-    display: flex;
-    background-color: #ffffff10;
-    width: calc(100% - 42px);
-    margin: 5px 10px;
-    height: 35px;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid #ffffff20;
-    padding: 0px 10px;
-    margin-top: 20px;
+#az-za-list-sort-button:hover,
+.tab:hover {
     color: white;
 }
 

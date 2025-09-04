@@ -1,10 +1,11 @@
 let models = [], URLS = [];
 var gifts;
-$.get('list.json', function(data) {
+let isAscending = false;
+$.get('list.json', function (data) {
   gifts = data;
   $(generateGiftList);
-}).fail(function(error) {
-    console.error('Ошибка:', error);
+}).fail(function (error) {
+  console.error('Ошибка:', error);
 });
 
 function generateGiftList() {
@@ -16,8 +17,8 @@ function generateGiftList() {
                   <span class="giftid">${gift.id} #${index += 1}</span></p>`);
 
     $lit.on('click', () => {
-            const encodedData = encodeURIComponent(gift.name);
-            window.location.href = `/tilesheet/?gift=${encodedData}`;
+      const encodedData = encodeURIComponent(gift.name);
+      window.location.href = `/tilesheet/?gift=${encodedData}`;
     });
     $lit[src](`<span class="mcount">${gift.count}</span`)[to]($ul);
   });
@@ -46,21 +47,34 @@ const counts = [49, 50, 52, 55, 56, 58, 60, 62, 65, 70, 80, 90, 99, 100];
 
 const $buttonContainer = $('<div class="tabs">');
 
-$('<p>', {  class:'tab', text: 'Все', click: () => filterList('all')}).appendTo($buttonContainer);
+$('<p>', { class: 'tab', text: 'Все', click: () => filterList('all') }).appendTo($buttonContainer);
 
 counts.forEach(count => {
-  $('<p>', { class:'tab', text: `${count}`, click: () => filterList(count)}).appendTo($buttonContainer);
+  $('<p>', { class: 'tab', text: `${count}`, click: () => filterList(count) }).appendTo($buttonContainer);
 });
 
 $('body').prepend($buttonContainer);
 
 function filterList(count) {
+  $('#filterInput').val('');
   const $items = $('ul li span.mcount');
   if (count === 'all') $items.parent().show();
   else {
-    $items.each(function() {
+    $items.each(function () {
       const itemCount = parseInt($(this).text());
       $(this).parent().toggle(itemCount === count);
     });
   }
 }
+$('#az-za-list-sort-button').click(() => {
+  const $list = $('#giftList');
+  const $items = $('ul li span.giftname').get();
+  $items.sort((a, b) => {
+      const textA = a.textContent.toLowerCase();
+      const textB = b.textContent.toLowerCase();
+      return isAscending ? textA.localeCompare(textB) : textB.localeCompare(textA);
+    });
+    $list.empty().append($items.map(item => $(item).parent().parent()));
+    isAscending = !isAscending;
+    $('#az-za-list-sort-button').text(isAscending ? "A-Z" : "Z-A");
+});
