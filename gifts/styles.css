@@ -20,6 +20,9 @@ body {
     width: 100%;
     max-height: 100vh;
     max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 ul {
@@ -27,11 +30,10 @@ ul {
     flex-direction: column;
     background-color: #ffffff10;
     box-shadow: 0px 0px 2px grey;
-    width: calc(100% - 22px);
+    width: calc(90% - 22px);
     margin: 20px 5px 5px 10px;
     border-radius: 10px;
     gap: 2px;
-    overflow: hidden;
 }
 
 #giftList li:nth-child(odd) {
@@ -41,7 +43,7 @@ ul {
 
 .filterContainer {
     display: flex;
-    width: calc(100% - 22px);
+    width: calc(90% - 22px);
     margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -75,9 +77,8 @@ ul {
 
 .tabs {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
-    width: calc(100% - 20px);
-    max-width: 700px;
+    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    width: calc(90% - 20px);
     gap: 5px;
     margin: 0px 10px;
     margin-top: 20px;
@@ -154,20 +155,6 @@ span {
 a {
     color: rgba(0, 140, 255, 0.90);
     text-decoration: none;
-}
-
-.info, .devinfo {
-    display: block;
-    margin: 10px;
-    gap: 5px;
-    font-size: 13px;
-    color: grey;
-    width: calc(100% - 42px);
-    text-align: center;
-}
- 
-.info {
-    padding-bottom: 20px;
 }
 
 .mcount {

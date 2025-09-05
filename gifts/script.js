@@ -36,7 +36,7 @@ $(document).ready(function () {
     });
   });
 
-  const $tabs = $('<div class="tabs">').prependTo('body');
+  const $tabs = $('<div class="tabs">').prependTo('.page');
 
   $('<p>', { class: 'tab', text: 'Все' }).click(() => filterList('all')).appendTo($tabs);
 
