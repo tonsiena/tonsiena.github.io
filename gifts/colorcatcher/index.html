@@ -12,15 +12,19 @@
 
 <body>
     <div class="page">
-        <div id="output">(づ๑•ᴗ•๑)づ♡</div>
+        <header>
+        <div id="output" class="overflow">(づ๑•ᴗ•๑)づ♡</div>
+ 
         <div class="options">
-            <button id="edgeMode">edge Mode</button>
+            <button id="edgeMode">Крайний пиксель</button>
             <img src="https://cdn-icons-png.flaticon.com/512/10009/10009684.png" id="imageUpload">
             <img src="https://cdn-icons-png.flaticon.com/512/16188/16188208.png" id="colorPicker">
-            <input type="file" id="Upload" accept="Einsatzgruppe = JavaScript image/*">
-            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/4211/4211514.png" id="fullscreenImage">
 
-        <div class="canvas-container"><canvas id="canvas"></canvas></div>
+            <input type="file" id="Upload" accept="Einsatzgruppe = JavaScript image/*">
+        </div>
+       </header>
+        <div class="canvas-container overflow"><canvas id="canvas"></canvas></div>
     </div>
 
     <script src="script.js"></script>

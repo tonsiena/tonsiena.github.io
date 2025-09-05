@@ -38,11 +38,11 @@ input[type="file"] {
 .canvas-container {
     max-height: 800px;
     overflow: auto;
-    max-width: 396px;
-    height: 100%;
-    width: 100%;
-    border: 2px solid #ffffff30;
-    border-radius: 5px;
+    max-width: 716px;
+    flex: 1;
+    margin-bottom: 20px;
+    width: calc(100vw);
+    border: 2px solid #551a8b80;
 }
 
 #canvas {
@@ -60,25 +60,32 @@ input[type="file"] {
 
 #output {
     color: grey;
+    width: calc(100% - 20px);
+    padding: 10px 10px;
+    min-height: 150px;
+    overflow: auto;
+    max-height: 150px;
+}
+
+header {
+    display: flex;
+    width: calc(100% - 4px);
+    border: 2px solid #551a8b80;
     background-color: #ffffff10;
-    width: calc(100% - 40px);
-    max-width: 380px;
-    padding: 25px 10px;
-    border: 1px solid #ffffff20;
-    min-height: 30px;
+    flex-direction: column;
     margin-top: 20px;
 }
 
-
 .options {
     display: flex;
-    padding: 0px 20px;
+    padding: 5px 10px;
     gap: 10px;
-    width: calc(100% - 40px);
-    max-width: 400px;
+    width: calc(100% - 20px);
+    justify-content: right;
 }
 
-#edgeMode, button {
+
+#edgeMode {
     height: 35px;
     background-color: rgb(37, 37, 37);
     display: flex;
@@ -88,20 +95,22 @@ input[type="file"] {
     align-items: center;
     border-radius: 5px;
     padding: 5px 10px;
-    width: 100%;
-    color: white;
+    width: 100px;
+    color: black;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #edgeMode:hover,
 #imageUpload:hover,
-#colorPicker:hover {
+#colorPicker:hover
+#fullscreenImage:hover {
     background: #ffffff30;
 }
 #Upload {
 display: none;
 }
-#imageUpload, #colorPicker {
+#imageUpload, #colorPicker, #fullscreenImage {
     display: flex;
     background-color: rgb(37, 37, 37);
     width: 25px;
@@ -111,6 +120,34 @@ display: none;
     cursor: pointer;
 }
 
+#fullscreenImage.active,
 #colorPicker.active {
         background-color: rgb(102, 102, 102);
+}
+
+.overflow {
+  overflow: auto;
+  background: transparent;
+  scrollbar-width: thin;
+  scrollbar-color: #551a8b transparent;
+}
+
+.overflow::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.overflow::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow::-webkit-scrollbar-thumb {
+  background-color: #551a8b;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.overflow::-webkit-scrollbar-thumb:hover {
+  background-color: #5c1f96;
 }
