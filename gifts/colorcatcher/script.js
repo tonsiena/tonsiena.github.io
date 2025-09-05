@@ -2,7 +2,8 @@ $(() => {
     const canvas = $('#canvas')[0];
     const ctx = canvas.getContext('2d');
     const img = new Image();
-    let mode = 'edgeColor', data, loaded = false, scale = 1, scaleStep = 0.2;
+    let pickColor = false;
+    let mode = 'edgeColor', data, loaded = false;
 
     $.get('data.json').done(d => data = d);
 
@@ -19,24 +20,18 @@ $(() => {
     });
 
     $('#edgeMode').click(() => $('#edgeMode').text(mode = mode === 'edgeColor' ? 'centerColor' : 'edgeColor'));
-    $('#zoomIn').click(() => {
-        if (!loaded) return;
-        scale += scaleStep;
-        drawImage();
+
+    $('#colorPicker').click(() => {
+       $('#colorPicker').toggleClass("active");
+       pickColor = !pickColor;
     });
 
-    $('#zoomOut').click(() => {
-        if (!loaded) return;
-        if (scale > scaleStep) {
-            scale -= scaleStep;
-            drawImage();
-        }
-    });
 
     $('#imageUpload').click(() => $("#Upload").click());
 
     $(canvas).on('mousedown touchstart', (e) => {
         if (!loaded) return;
+        if (!pickColor) return;
         let x = e.offsetX, y = e.offsetY;
         if (e.type === 'touchstart') {
             const touch = e.originalEvent.touches[0];
@@ -45,25 +40,29 @@ $(() => {
             y = touch.clientY - rect.top;
         }
 
-        x = x / scale;
-        y = y / scale;
-
         if (x < 0 || x >= img.width || y < 0 || y >= img.height) return;
 
-        const { data: [r, g, b] } = ctx.getImageData(x * scale, y * scale, 1, 1);
+        const { data: [r, g, b] } = ctx.getImageData(x, y, 1, 1);
         const hex = rgbToHex(r, g, b);
         const match = findClosestMatch({ r, g, b });
         const dist = colorDistance({ r, g, b }, hexToRgb(match.hex[mode]));
+        drawImage(x, y);
         $('#output').html(`Цвет выбран: ${hex} <br><br> ${dist < 50 ? `Ближайший цвет: ${match.name}` : 'No close match'} <span class="color-swatch" style="background-color:${match.hex[mode]}"></span>`);
     });
 
-    const drawImage = () => {
-        canvas.width = img.width * scale;
-        canvas.height = img.height * scale;
+    const drawImage = (mx, my, width = 396, height = 396) => {
+        canvas.width = width;
+        canvas.height = height;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.scale(scale, scale);
-        ctx.drawImage(img, 0, 0);
-        ctx.scale(1 / scale, 1 / scale);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        if (mx && my) {
+            ctx.beginPath();
+            ctx.arc(mx, my, 4, 0, Math.PI * 2);
+            ctx.strokeStyle = "red";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+            ctx.closePath();
+        }   
     };
 
     const colorDistance = (c1, c2) => Math.sqrt((c1.r - c2.r) ** 2 + (c1.g - c2.g) ** 2 + (c1.b - c2.b) ** 2);
