@@ -13,22 +13,26 @@ body {
     color: white;
     height: 100%;
     width: 100%;
+    justify-content: center;
     font-family: Cascadia Code, Courier New, Courier, monospace;
 }
 
 .page {
-    height: 100%;
-    width: 100%;
-    max-height: 100vh;
-    max-width: 720px;
-    min-height: 100vh;
-    justify-content: start;
     display: flex;
+    max-width: 520px;
+    width: 90%;
+    height: 100%;
+    max-height: 700px;
+    justify-content: start;
     flex-direction: column;
     align-items: center;
-    overflow: auto;
+    overflow: hidden;
     gap: 10px;
+    background-color: #ffffff15;
+    border-radius: 10px;
+    border: 2px solid #7e57c280;
 }
+
 
 
 input[type="file"] {
@@ -40,9 +44,8 @@ input[type="file"] {
     overflow: auto;
     max-width: 716px;
     flex: 1;
-    margin-bottom: 20px;
     width: calc(100vw);
-    border: 2px solid #551a8b80;
+    border-top: 2px solid #7e57c280;
 }
 
 #canvas {
@@ -69,11 +72,10 @@ input[type="file"] {
 
 header {
     display: flex;
-    width: calc(100% - 4px);
-    border: 2px solid #551a8b80;
-    background-color: #ffffff10;
+    width: 100%;
+    border-bottom: 2px solid #7e57c280;
+    background-color: #7e57c220;
     flex-direction: column;
-    margin-top: 20px;
 }
 
 .options {
@@ -87,7 +89,7 @@ header {
 
 #edgeMode {
     height: 35px;
-    background-color: rgb(37, 37, 37);
+    background-color: #7e57c280;
     display: flex;
     border: none;
     outline: none;
@@ -112,7 +114,7 @@ display: none;
 }
 #imageUpload, #colorPicker, #fullscreenImage {
     display: flex;
-    background-color: rgb(37, 37, 37);
+    background-color: #7e57c280;
     width: 25px;
     height: 25px;
     padding: 5px;
@@ -122,7 +124,7 @@ display: none;
 
 #fullscreenImage.active,
 #colorPicker.active {
-        background-color: rgb(102, 102, 102);
+    background-color: #7e57c2;
 }
 
 .overflow {
