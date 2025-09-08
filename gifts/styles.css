@@ -12,27 +12,52 @@ body {
     color: white;
     height: 100%;
     width: 100%;
+    justify-content: center;
     font-family: Cascadia Code,Courier New,Courier,monospace;
 }
 
 .page {
-    height: 100%;
-    width: 100%;
-    max-height: 100vh;
-    max-width: 720px;
     display: flex;
+    max-width: 520px;
+    width: 90%;
+    height: 100%;
+    max-height: 700px;
+    justify-content: start;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
+    gap: 10px;
+    background-color: #ffffff05;
+    border-radius: 10px;
+    border: 2px solid #7e57c280;
 }
+
+
+.scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll ::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+.scroll ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 
 ul {
     display: flex;
     flex-direction: column;
     background-color: #ffffff10;
-    box-shadow: 0px 0px 2px grey;
-    width: calc(90% - 22px);
-    margin: 20px 5px 5px 10px;
-    border-radius: 10px;
+    width: calc(100%);
+    margin: 20px 0px 0px 10px;
     gap: 2px;
 }
 
@@ -159,4 +184,15 @@ a {
 
 .mcount {
     opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+
+    .page {
+        max-height: 100vh;
+        max-width: 100vw;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+    }
 }
