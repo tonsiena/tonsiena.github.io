@@ -9,7 +9,8 @@ $(() => {
 
     $('#Upload').change(({ target: { files } }) => {
         if (!files[0]) return;
-        img.src = URL.createObjectURL(files[0]);
+        const url = URL.createObjectURL(files[0]);
+        img.src = url;
         img.onload = () => imgOnLoad(url);
     });
 
