@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-  $.getJSON('/gifts/giftsizes.json')
-    .done(function (json) {
+  $.getJSON('/gifts/merged.json').done(function (json) {
+
       const $giftList = $('#giftList');
       $giftList.empty();
 
@@ -35,18 +35,18 @@ $(document).ready(function () {
       $message.text("");
 
       const [giftName, children] = Object.entries(giftObj)[0];
-      const items = Object.entries(children).map(([modelName, size]) => ({ modelName, size }));
+      const items = Object.entries(children).map(([model, {size, anim}]) => ({ model, size, anim }));
 
       let rowsHtml = '';
       $.each(items, function (_, item) {
-        rowsHtml += `<tr><td>${item.modelName}</td><td>${item.size}</td></tr>`;
+        rowsHtml += `<tr><td>${item.model}</td><td>${item.size}</td><td>${item.anim}</td></tr>`;
       });
 
       const tableHtml = `
         <table>
           <thead>
-            <tr><th colspan="2">${giftName}</th></tr>
-            <tr><th>Модель</th><th>Байты</th></tr>
+            <tr><th colspan="3">${giftName}</th></tr>
+            <tr><th>Модель</th><th>Размер файла</th><th>Название анимации</th></tr>
           </thead>
           <tbody>
             ${rowsHtml}
